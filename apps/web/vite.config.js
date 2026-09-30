@@ -14,10 +14,12 @@ export default defineConfig({
     sourcemap: false,
     rollupOptions: {
       output: {
-        manualChunks: {
-          'react-vendor': ['react', 'react-dom', 'react-router-dom'],
-          'motion-vendor': ['framer-motion'],
-          'chart-vendor': ['recharts'],
+        manualChunks(id) {
+          // Long-cacheable React core; everything else is split by route/usage
+          if (/node_modules\/(react|react-dom|scheduler|react-router|react-router-dom)\//.test(id)) {
+            return 'react-vendor';
+          }
+          return undefined;
         },
       },
     },
@@ -28,8 +30,5 @@ export default defineConfig({
   },
   preview: {
     port: 4173,
-  },
-  optimizeDeps: {
-    include: ['react', 'react-dom', 'framer-motion'],
   },
 });

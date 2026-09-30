@@ -2,21 +2,153 @@
 @tailwind components;
 @tailwind utilities;
 
-/* Footer interactive panel animations */
-@keyframes neon-border {
-  0%   { box-shadow: 0 0 5px #8b5cf6, 0 0 10px #8b5cf6, 0 0 20px #8b5cf6; }
-  50%  { box-shadow: 0 0 15px #8b5cf6, 0 0 30px #8b5cf6, 0 0 45px #8b5cf6; }
-  100% { box-shadow: 0 0 5px #8b5cf6, 0 0 10px #8b5cf6, 0 0 20px #8b5cf6; }
+/* Manrope (variable, OFL) — self-hosted Latin subsets only; latin is preloaded in index.html */
+@font-face {
+  font-family: 'Manrope Variable';
+  font-style: normal;
+  font-display: swap;
+  font-weight: 200 800;
+  src: url('/fonts/manrope-latin.woff2') format('woff2-variations'), url('/fonts/manrope-latin.woff2') format('woff2');
+  unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+0304, U+0308, U+0329,
+    U+2000-206F, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD;
+}
+@font-face {
+  font-family: 'Manrope Variable';
+  font-style: normal;
+  font-display: swap;
+  font-weight: 200 800;
+  src: url('/fonts/manrope-latin-ext.woff2') format('woff2-variations'), url('/fonts/manrope-latin-ext.woff2') format('woff2');
+  unicode-range: U+0100-02BA, U+02BD-02C5, U+02C7-02CC, U+02CE-02D7, U+02DD-02FF, U+1D00-1DBF, U+1E00-1E9F,
+    U+1EF2-1EFF, U+2020, U+20A0-20AB, U+20AD-20C0, U+2113, U+2C60-2C7F, U+A720-A7FF;
 }
 
-@keyframes flip-flop {
-  0%, 100% { transform: rotateX(0deg); }
-  50%       { transform: rotateX(30deg); }
+/* ─── Design tokens ──────────────────────────────────────────────────────────
+   Space-separated RGB so Tailwind opacity modifiers work (bg-ink/5 etc). */
+@layer base {
+  :root {
+    --paper: 246 245 241;      /* page background — warm off-white */
+    --surface: 255 255 255;    /* cards */
+    --sunken: 238 236 230;     /* alternate section band */
+    --ink: 14 17 22;           /* primary text */
+    --muted: 88 95 108;        /* secondary text (AA on paper) */
+    --line: 222 219 211;       /* hairlines */
+    --accent: 36 71 214;       /* cobalt */
+    --accent-soft: 231 236 253;
+    --on-accent: 255 255 255;
+    --night: 12 14 19;         /* always-dark bands */
+    color-scheme: light;
+  }
+
+  .dark {
+    --paper: 11 13 18;
+    --surface: 19 22 29;
+    --sunken: 15 18 24;
+    --ink: 236 237 240;
+    --muted: 156 163 176;
+    --line: 38 42 52;
+    --accent: 124 148 255;
+    --accent-soft: 27 34 64;
+    --on-accent: 10 12 20;
+    --night: 7 9 13;
+    color-scheme: dark;
+  }
+
+  html {
+    scroll-behavior: smooth;
+    -webkit-text-size-adjust: 100%;
+  }
+
+  body {
+    @apply bg-paper text-ink font-sans antialiased;
+    font-feature-settings: 'ss01', 'cv05';
+    text-rendering: optimizeLegibility;
+  }
+
+  /* Anchored sections clear the sticky navbar */
+  [id] {
+    scroll-margin-top: 5rem;
+  }
+
+  ::selection {
+    @apply bg-accent text-on-accent;
+  }
+
+  :focus-visible {
+    @apply outline-none ring-2 ring-accent ring-offset-2 ring-offset-paper;
+  }
 }
 
-.neon-flip {
-  animation: neon-border 2s infinite ease-in-out,
-             flip-flop 3s infinite ease-in-out;
-  transform-style: preserve-3d;
-  backface-visibility: hidden;
+@layer components {
+  /* Small uppercase label used above headings: "01 — Consult" */
+  .eyebrow {
+    @apply font-mono text-[0.7rem] font-medium uppercase tracking-[0.16em] text-muted;
+  }
+
+  .btn {
+    @apply inline-flex items-center justify-center gap-2 rounded-full px-6 py-3 text-[0.95rem] font-semibold
+      transition-colors duration-200 disabled:cursor-not-allowed disabled:opacity-50;
+  }
+  .btn-primary {
+    @apply btn bg-accent text-on-accent hover:bg-accent/90;
+  }
+  .btn-secondary {
+    @apply btn border border-ink/15 text-ink hover:border-ink/40 hover:bg-ink/[0.03];
+  }
+  .btn-on-dark {
+    @apply btn bg-white text-night hover:bg-white/90;
+  }
+  .btn-ghost-dark {
+    @apply btn border border-white/20 text-white hover:border-white/50;
+  }
+
+  .card {
+    @apply rounded-2xl border border-line bg-surface;
+  }
+
+  .chip {
+    @apply inline-flex items-center rounded-full border border-line bg-surface px-3 py-1 text-xs font-medium text-ink/80;
+  }
+
+  .link-underline {
+    @apply underline decoration-ink/25 underline-offset-4 transition-colors hover:decoration-accent;
+  }
+
+  /* Faint engineering grid used behind the hero portrait */
+  .bg-grid {
+    background-image:
+      linear-gradient(rgb(var(--ink) / 0.06) 1px, transparent 1px),
+      linear-gradient(90deg, rgb(var(--ink) / 0.06) 1px, transparent 1px);
+    background-size: 32px 32px;
+  }
+}
+
+/* ─── Scroll reveal ──────────────────────────────────────────────────────────
+   Content is only hidden once JS has added `.js` to <html>, so prerendered
+   HTML stays fully visible to crawlers and no-JS visitors. */
+.js .reveal {
+  opacity: 0;
+  transform: translateY(14px);
+  transition: opacity 0.6s ease, transform 0.6s cubic-bezier(0.2, 0.7, 0.2, 1);
+  transition-delay: var(--reveal-delay, 0ms);
+}
+.js .reveal.is-visible {
+  opacity: 1;
+  transform: none;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  html {
+    scroll-behavior: auto;
+  }
+  .js .reveal {
+    opacity: 1;
+    transform: none;
+    transition: none;
+  }
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.01ms !important;
+    transition-duration: 0.01ms !important;
+  }
 }

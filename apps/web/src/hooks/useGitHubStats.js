@@ -1,5 +1,4 @@
 import { useState, useEffect } from 'react';
-import axios from 'axios';
 
 const API_BASE = import.meta.env.VITE_API_URL || 'https://portfolio-server-kbti.onrender.com';
 
@@ -14,11 +13,13 @@ export function useGitHubStats() {
     const fetchStats = async () => {
       setLoading(true);
       try {
-        const res = await axios.get(`${API_BASE}/api/github-stats`);
+        const res = await fetch(`${API_BASE}/api/github-stats`);
+        if (!res.ok) throw new Error(`HTTP ${res.status}`);
+        const body = await res.json();
         if (!mounted) return;
-        const { commitsToday, repos, weeklyCommits } = res.data;
+        const { commitsToday, repos, weeklyCommits } = body;
         setStats({ commitsToday, repos, weeklyCommits });
-      } catch (err) {
+      } catch {
         if (!mounted) return;
         setError('GitHub stats unavailable');
       } finally {

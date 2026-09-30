@@ -1,77 +1,41 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
   <head>
     <meta charset="UTF-8" />
-    <link rel="icon" type="image/x-icon" href="/favicon.ico" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <meta name="theme-color" content="#4f46e5" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover" />
+    <meta name="theme-color" content="#f6f5f1" media="(prefers-color-scheme: light)" />
+    <meta name="theme-color" content="#0b0d12" media="(prefers-color-scheme: dark)" />
 
-    <!-- Primary SEO -->
-    <title>Benjamin Baya - Software Engineer</title>
+    <!-- Theme + reveal flag before first paint (prevents flash of wrong theme) -->
+    <script>
+      (function () {
+        var d = document.documentElement;
+        d.classList.add('js');
+        try {
+          var t = localStorage.getItem('theme');
+          if (t === 'dark' || (!t && window.matchMedia('(prefers-color-scheme: dark)').matches)) d.classList.add('dark');
+        } catch (e) {}
+      })();
+    </script>
+
+    <link rel="preload" href="/fonts/manrope-latin.woff2" as="font" type="font/woff2" crossorigin />
+    <link rel="icon" href="/favicon.svg" type="image/svg+xml" />
+    <link rel="icon" href="/favicon.ico" sizes="48x48" />
+    <link rel="apple-touch-icon" href="/apple-touch-icon.png" />
+    <link rel="manifest" href="/site.webmanifest" />
+    <link rel="sitemap" type="application/xml" href="/sitemap.xml" />
+
+    <!--head:start-->
+    <title>Benjamin Baya — Software Engineer & Business Technology Consultant</title>
     <meta
       name="description"
-      content="Benjamin Baya is a software engineer based in Kenya. He builds modern digital products — web apps, mobile apps, and SaaS platforms — individually and through Teevexa, his product development studio."
+      content="Benjamin Baya helps businesses build, automate and grow with technology: websites, web and mobile apps, business systems, AI automation, SEO and digital growth."
     />
-    <meta name="author" content="Benjamin Baya" />
-    <meta
-      name="keywords"
-      content="Benjamin Baya, Software Engineer, Full-Stack Developer, React, Flutter, Next.js, Flask, Node.js, Teevexa, Kenya, Web Development, Mobile Apps, SaaS"
-    />
-    <link rel="canonical" href="https://benjamin-baya.vercel.app" />
-
-    <!-- Open Graph -->
-    <meta property="og:type" content="website" />
-    <meta property="og:url" content="https://benjamin-baya.vercel.app" />
-    <meta property="og:title" content="Benjamin Baya — Software Engineer" />
-    <meta
-      property="og:description"
-      content="I build modern digital products — web apps, mobile apps, and SaaS platforms. Software Engineer at Teevexa, a product development studio based in Kenya."
-    />
-    <meta property="og:image" content="https://benjamin-baya.vercel.app/og-image.png" />
-    <meta property="og:image:width" content="1200" />
-    <meta property="og:image:height" content="630" />
-    <meta property="og:locale" content="en_US" />
-    <meta property="og:site_name" content="Benjamin Baya" />
-
-    <!-- Twitter / X Card -->
-    <meta name="twitter:card" content="summary_large_image" />
-    <meta name="twitter:url" content="https://benjamin-baya.vercel.app" />
-    <meta name="twitter:title" content="Benjamin Baya — Software Engineer" />
-    <meta
-      name="twitter:description"
-      content="I build modern digital products — web apps, mobile apps, and SaaS platforms. Software Engineer at Teevexa, a product development studio based in Kenya."
-    />
-    <meta name="twitter:image" content="https://benjamin-baya.vercel.app/og-image.png" />
-
-    <!-- JSON-LD Structured Data -->
-    <script type="application/ld+json">
-      {
-        "@context": "https://schema.org",
-        "@type": "Person",
-        "name": "Benjamin Baya",
-        "url": "https://benjamin-baya.vercel.app",
-        "sameAs": [
-          "https://github.com/b3njaminbaya",
-          "https://linkedin.com/in/b3njaminbaya",
-          "https://www.teevexa.com"
-        ],
-        "jobTitle": "Software Engineer",
-        "worksFor": {
-          "@type": "Organization",
-          "name": "Teevexa",
-          "url": "https://www.teevexa.com"
-        },
-        "knowsAbout": ["React", "Next.js", "TypeScript", "Flutter", "Flask", "Node.js", "PostgreSQL", "Spring Boot"],
-        "address": {
-          "@type": "PostalAddress",
-          "addressCountry": "KE"
-        }
-      }
-    </script>
+    <link rel="canonical" href="https://benjamin-baya.vercel.app/" />
+    <!--head:end-->
   </head>
   <body>
-    <noscript>You need to enable JavaScript to run this app.</noscript>
-    <div id="root"></div>
+    <div id="root"><!--app-html--></div>
     <script type="module" src="/src/main.jsx"></script>
   </body>
 </html>

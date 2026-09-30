@@ -1,6 +1,6 @@
 # Benjamin Baya — Portfolio
 
-Personal developer portfolio and API backend, built as an npm workspaces monorepo.
+Personal professional site and API backend, built as an npm workspaces monorepo.
 
 **Live:** [benjamin-baya.vercel.app](https://benjamin-baya.vercel.app)
 
@@ -19,43 +19,40 @@ Portfolio/
 
 ---
 
+## Positioning
+
+Personal professional site for Benjamin Baya: **"I help businesses build, automate and grow with technology."**
+Client journey: **Consult → Build → Automate → Grow**. Teevexa Ltd is presented as the delivery company behind larger projects.
+
 ## Tech Stack
 
 ### Frontend (`apps/web`)
-- **React 19** — UI framework
-- **Vite** — build tool
-- **Tailwind CSS** — utility-first styling
-- **Framer Motion** — animations and scroll effects
-- **React Router v6** — client-side routing
-- **Recharts** — dashboard data visualisation
-- **Lucide React** — icons
-- **simple-icons** — brand/technology icons
+- **React 19 + Vite**, **Tailwind CSS** (design tokens in `src/index.css`, light/dark)
+- **React Router 7** with **static prerendering** (`scripts/prerender.mjs`) — every indexable route ships real HTML
+- Self-hosted **Manrope** variable font (Latin subsets, preloaded)
+- **Recharts / react-github-calendar** only on the lazy `/activity` route
 
 ### Backend (`apps/api`)
-- **Express.js** — REST API server
-- **Groq API** (llama-3.1-8b-instant) — AI chatbot, free tier
-- **WakaTime API** — coding activity stats proxy
-- **GitHub API** — contribution data proxy
+- **Express.js** — chatbot (Groq, Llama 3.1, deterministic fallback), GitHub & WakaTime stats proxy
 
----
+## Content
 
-## Features
+All copy lives in data files — edit these, not components:
 
-- **Hero section** — animated typewriter introduction with CTA links
-- **About** — bio with Teevexa callout and consultation CTA
-- **Animated counters** — projects shipped, countries served, happy clients
-- **Experience timeline** — career and education history, alternating left-right layout
-- **Services** — what I build: web apps, mobile, SaaS, APIs, business systems
-- **Skills** — 4-column tech stack grid with proficiency levels
-- **Projects gallery** — filterable cards with GitHub and live demo links
-- **Developer dashboard** — live WakaTime + GitHub stats with charts
-- **Contact form** — direct email via FormSubmit
-- **Resume viewer** — dedicated `/resume` route with embedded PDF, download, and open-in-new-tab
-- **AI chatbot** — portfolio-aware assistant powered by Groq, with deterministic fallback
-- **Command palette** — `Cmd/Ctrl+K` quick navigation
-- **Scroll progress bar** — 2px gradient indicator at top of page
-- **Dark mode** — system-aware with manual toggle
-- **Fully responsive** — mobile, tablet, desktop
+| File | Contents |
+|---|---|
+| `src/data/site.js` | Identity, contact, booking URL, socials, `SITE_URL` |
+| `src/data/services.js` | Four pillars, client problems, process, consulting & growth areas |
+| `src/data/caseStudies.js` | Case studies (Problem / Solution / Role / Technology / Outcome) |
+| `src/data/profile.js` | Timeline, tech stack, education, certifications |
+| `src/seo.js` | Per-route titles, descriptions, canonical, OG/Twitter, JSON-LD |
+| `apps/api/knowledgeBase.js` | Chatbot knowledge base |
+
+## Routes
+
+`/` · `/work/:slug` (case studies) · `/activity` (noindex) · `404.html`
+
+Build output also includes `sitemap.xml` and `robots.txt` (generated from `SITE_URL`; override with `VITE_SITE_URL`).
 
 ---
 
