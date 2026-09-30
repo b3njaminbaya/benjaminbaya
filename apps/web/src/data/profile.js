@@ -36,7 +36,7 @@ export const TIMELINE = [
   {
     period: 'Sep 2026 – Present',
     title: 'Social Media & SEO',
-    org: 'Precious Furniture · client engagement',
+    org: 'Precious Furniture Kenya · client engagement',
     current: true,
     body: 'Social content for Facebook, Instagram and TikTok, Google and Meta Ads, pixel tracking, SEO and Google Business Profile.',
   },
@@ -90,7 +90,7 @@ export const ORGANISATIONS = [
   { name: 'Becof Organic Chemicals Limited', note: 'Client — commerce & operations platform' },
   { name: 'Esteric Kitchens & Interior Designs Ltd', note: 'Client — website & CRM' },
   { name: 'Melamart Enterprises Limited', note: 'Client — website & hire management' },
-  { name: 'Precious Furniture', note: 'Client — social media & SEO · current' },
+  { name: 'Precious Furniture Kenya', note: 'Client — social media & SEO · current' },
   { name: 'Sensys Kenya Ltd', note: 'Software Engineer Intern' },
   { name: 'Teevexa Ltd', note: 'Founder' },
 ];

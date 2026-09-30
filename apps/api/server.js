@@ -6,9 +6,12 @@ const rateLimit = require('express-rate-limit');
 const { buildContext, buildSystemPrompt, getFallbackResponse } = require('./knowledgeBase');
 
 const app = express();
+// Behind Render's proxy: use X-Forwarded-For so rate limits apply per visitor, not globally
+app.set('trust proxy', 1);
 const PORT = process.env.PORT || 5001;
 const GROQ_API_URL = 'https://api.groq.com/openai/v1/chat/completions';
-const GROQ_MODEL = 'llama-3.1-8b-instant';
+// Groq retires models periodically — override with GROQ_MODEL without a code change
+const GROQ_MODEL = process.env.GROQ_MODEL || 'openai/gpt-oss-20b';
 
 // ─── CORS ────────────────────────────────────────────────────────────────────
 const allowedOrigins = [
@@ -227,8 +230,10 @@ app.post('/api/chat', chatLimiter, async (req, res) => {
       },
       body: JSON.stringify({
         model: GROQ_MODEL,
-        max_tokens: 250,
+        max_completion_tokens: 500,
         temperature: 0.65,
+        reasoning_effort: 'low',
+        include_reasoning: false,
         messages: [
           { role: 'system', content: systemPrompt },
           ...historyMessages,

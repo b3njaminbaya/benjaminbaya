@@ -106,6 +106,7 @@ export const CASE_STUDIES = [
     pillars: ['Build', 'Automate', 'Grow'],
     image: 'esteric',
     imageAlt: 'Esteric Kitchens website: “Bespoke kitchens & interiors, crafted around the way you live”',
+    liveUrl: 'https://esteric-web.vercel.app',
     problem:
       'Esteric designs kitchens, interiors, wardrobes and landscapes. Enquiries, quotations and projects were tracked informally, and the business needed a professional online presence that staff could keep up to date themselves.',
     solution: [
@@ -118,8 +119,8 @@ export const CASE_STUDIES = [
     role: 'Designed and built the website and CRM end to end.',
     tech: ['Next.js', 'TypeScript', 'Prisma', 'Neon Postgres', 'Clerk', 'Vercel Blob', 'Resend'],
     outcome:
-      'Built and deployed on production-grade infrastructure. Business results haven’t been measured yet, so none are claimed here.',
-    links: [],
+      'The website and the staff CRM are both live. Business results haven’t been measured yet, so none are claimed here.',
+    links: [{ label: 'Visit the website', href: 'https://esteric-web.vercel.app' }],
   },
   {
     slug: 'melamart-enterprises',
@@ -133,6 +134,7 @@ export const CASE_STUDIES = [
     pillars: ['Build', 'Automate'],
     image: 'melamart',
     imageAlt: 'Melamart Enterprises website: “Reliable Scaffolding & Construction Equipment for Hire and Sale”',
+    liveUrl: 'https://melamart-enterprises.vercel.app',
     problem:
       'Melamart hires out and sells scaffolding and construction equipment from branches in Ruiru and Kikuyu. It needed customers to find it and request quotes easily, and a dependable way to manage hires, payments and late returns.',
     solution: [
@@ -142,15 +144,19 @@ export const CASE_STUDIES = [
     ],
     role: 'Built the public website; audited, secured and redesigned the existing admin system.',
     tech: ['React', 'TypeScript', 'Tailwind CSS', 'PHP', 'MySQL'],
-    outcome: 'Delivered to the client. Business results haven’t been measured, so none are claimed here.',
-    links: [],
+    outcome: 'The website and the admin system are both live. Business results haven’t been measured, so none are claimed here.',
+    links: [
+      { label: 'Visit the website', href: 'https://melamart-enterprises.vercel.app' },
+      { label: 'Website source', href: 'https://github.com/b3njaminbaya/melamart-enterprises-web' },
+      { label: 'Admin system source', href: 'https://github.com/b3njaminbaya/melamart-enterprises-admin' },
+    ],
   },
   {
     slug: 'precious-furniture',
-    shortName: 'Precious Furniture',
+    shortName: 'Precious Furniture Kenya',
     kind: 'client',
     label: 'Client · Digital marketing · Current',
-    client: 'Precious Furniture (@precious_funiture_ke)',
+    client: 'Precious Furniture Kenya',
     title: 'Social media, advertising and SEO for a furniture business',
     summary:
       'An ongoing digital-growth engagement: content, paid ads, tracking and search visibility, working together as one system.',
@@ -243,7 +249,8 @@ export const CASE_STUDIES = [
       'Small donations to community causes paid by M-Pesa STK push, with recurring giving, receipts, rewards and payouts to cause creators.',
     pillars: ['Build', 'Automate'],
     image: 'micro-donations',
-    imageAlt: 'Micro-Donations Platform interface listing causes to donate to',
+    imageAlt: 'Micro-Donations Platform homepage: “Small donations, sent in seconds, felt for years.”',
+    liveUrl: 'https://micro-donations-platform.vercel.app',
     problem:
       'Giving small amounts to a local cause should be as easy as sending money to a friend — which in East Africa means M-Pesa — and donors want to see where their money goes.',
     solution: [
@@ -254,8 +261,11 @@ export const CASE_STUDIES = [
     ],
     role: 'Designed and built end to end.',
     tech: ['React', 'Tailwind CSS', 'Flask', 'SQLAlchemy', 'M-Pesa Daraja API (STK Push, B2C)'],
-    outcome: 'A personal product build that hasn’t been launched commercially, so there are no usage figures.',
-    links: [{ label: 'Source on GitHub', href: 'https://github.com/b3njaminbaya/micro-donations-platform' }],
+    outcome: 'Live as a public demo. A personal product that hasn’t been launched commercially, so there are no usage figures.',
+    links: [
+      { label: 'Try the live demo', href: 'https://micro-donations-platform.vercel.app' },
+      { label: 'Source on GitHub', href: 'https://github.com/b3njaminbaya/micro-donations-platform' },
+    ],
   },
 ];
 

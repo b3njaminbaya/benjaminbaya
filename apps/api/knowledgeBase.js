@@ -64,14 +64,16 @@ const PORTFOLIO = {
       name: 'Esteric Kitchens & Interior Designs (client) — website & CRM',
       description: 'Marketing site with quote requests and portfolio, plus a CRM with a leads → customers → quotations → projects pipeline and data-driven roles.',
       tech: ['Next.js', 'Prisma', 'Neon Postgres', 'Clerk'],
+      url: 'https://esteric-web.vercel.app',
     },
     {
       name: 'Melamart Enterprises (client) — website & hire management',
-      description: 'Website for a scaffolding hire company with two branches; audited, secured and redesigned its equipment-hire admin system.',
+      description: 'Website for a scaffolding hire company with two branches; audited, secured and redesigned its equipment-hire admin system. Both are live.',
       tech: ['React', 'PHP', 'MySQL'],
+      url: 'https://melamart-enterprises.vercel.app',
     },
     {
-      name: 'Precious Furniture (client, current since Sep 2026) — digital marketing',
+      name: 'Precious Furniture Kenya (client, current since Sep 2026) — digital marketing',
       description: 'Social media content for FB/IG/TikTok, Google and Meta Ads, Google tag and Meta Pixel, SEO, Google Business Profile and Search Console. Results not yet measured.',
       tech: ['Meta Ads', 'Google Ads', 'Meta Pixel'],
     },
@@ -91,7 +93,7 @@ const PORTFOLIO = {
       name: 'Micro-Donations Platform (personal)',
       description: 'M-Pesa STK push donations (one-off and recurring), B2C payouts, receipts and rewards.',
       tech: ['React', 'Flask', 'M-Pesa Daraja API'],
-      url: 'https://github.com/b3njaminbaya/micro-donations-platform',
+      url: 'https://micro-donations-platform.vercel.app',
     },
   ],
 
@@ -183,10 +185,12 @@ function buildContext(message) {
 // ─── SYSTEM PROMPT ───────────────────────────────────────────────────────────
 
 function buildSystemPrompt(context) {
-  return `You are the website assistant for Benjamin Baya. Respond in first person on his behalf — use "I", not "he". Be warm, direct and concise (under 120 words). Sound like a practical consultant who also builds the technology, speaking to business owners in plain language rather than jargon.
+  return `You are the website assistant for Benjamin Baya. Respond in first person on his behalf — use "I", not "he". Be warm, direct and concise. Sound like a practical consultant who also builds the technology, speaking to business owners in plain language rather than jargon.
 
 Guidelines:
-- Only answer using the context provided below. Never invent clients, numbers, results, testimonials or prices.
+- Only answer using the context provided below. Never invent clients, numbers, results, testimonials, prices, services or tactics that aren't in the context. Don't describe the consultation as free.
+- Write plain text only — no markdown, no bold, no headings, no bullet symbols. Keep it under 100 words.
+- When asked about projects, mention the two or three most relevant ones, not the full list, and be clear which are client work, which are Buzlin Holdings products (my employer) and which are personal builds.
 - Focus on the visitor's business problem. Reassure them they don't need to know which technology they need.
 - When someone wants help or to work together, invite them to book a consultation: https://www.teevexa.com/book-consultation
 - For direct contact: b3njaminbaya@gmail.com or WhatsApp +254 794 126 508.
@@ -205,7 +209,7 @@ const FALLBACKS = {
 
   skills: `I work across the stack — React, Next.js and TypeScript on the frontend; Python (Flask, Django), Node.js and Laravel on the backend; Flutter and React Native for mobile; PostgreSQL, MySQL and MongoDB for data; plus LLM APIs for AI features and Meta/TikTok pixels for tracking.`,
 
-  projects: `Client work includes the Becof Organic Chemicals commerce platform (live, with M-Pesa payments), a website and CRM for Esteric Kitchens, a website and hire system for Melamart, and ongoing digital marketing for Precious Furniture. At Buzlin Holdings I work on Buzlin (marketplace) and BuzRyde (ride-hailing). Personal builds include Tafsiri AI, Ordo and a micro-donations platform. Each has a case study on this site.`,
+  projects: `Client work includes the Becof Organic Chemicals commerce platform (live, with M-Pesa payments), a website and CRM for Esteric Kitchens, a website and hire system for Melamart, and ongoing digital marketing for Precious Furniture Kenya. At Buzlin Holdings I work on Buzlin (marketplace) and BuzRyde (ride-hailing). Personal builds include Tafsiri AI, Ordo and a micro-donations platform. Each has a case study on this site.`,
 
   teevexa: `Teevexa Ltd is the technology company I founded. I lead the consultation, strategy and architecture; larger projects are delivered through Teevexa. You can book a consultation at teevexa.com/book-consultation.`,
 

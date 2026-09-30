@@ -46,7 +46,7 @@ const Growth = () => (
         <span className="font-semibold text-ink">In practice:</span> I currently run social media, Google and Meta
         Ads, pixel tracking and SEO for{' '}
         <Link to="/work/precious-furniture" className="link-underline font-semibold text-ink">
-          Precious Furniture
+          Precious Furniture Kenya
         </Link>
         , and built the SEO foundations for the Becof and BuzRyde websites. This site is built the same
         way — prerendered pages, structured data, responsive images and accessible markup.
