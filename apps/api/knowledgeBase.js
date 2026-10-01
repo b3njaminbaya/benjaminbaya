@@ -100,8 +100,13 @@ const PORTFOLIO = {
   education: [
     { degree: 'B.Eng Chemical Engineering', institution: 'Technical University of Kenya' },
     { degree: 'Full-Stack Software Engineering certificate (studied Sep 2024 – Mar 2025, graduated July 2025)', institution: 'Moringa School' },
-    { degree: 'Certificates in entrepreneurship, customer discovery, design thinking and high-performance teams', institution: "Queen's University" },
-    { degree: 'Explore Program', institution: 'Founders Factory Africa Academy' },
+    { degree: 'Jim Leech Mastercard Foundation Fellowship on Entrepreneurship (2025); later recognised as a Fellowship Mentor (2025) and Ambassador Team member (2025-26)', institution: "Dunin-Deshpande Innovation Centre, Queen's University" },
+    { degree: 'Launch Entrepreneurship (completed the Explore, Ignite and Launch track), Customer Discovery, Design Thinking and High-Performance Teams certificates (2025)', institution: "Dunin-Deshpande Innovation Centre, Queen's University" },
+    { degree: 'SME Growth Lab Digital Accelerator Program (2024)', institution: 'SME Growth Lab Africa' },
+    { degree: 'Founders Factory Africa Academy Explore Program (2023)', institution: '54 Collective' },
+    { degree: 'Artificial Intelligence certificate (2025)', institution: 'Moringa School' },
+    { degree: 'Generative AI Overview for Project Managers; Scrum, Disciplined Agile and Predictive Project Management (2024)', institution: 'Project Management Institute' },
+    { degree: 'Lean Six Sigma White Belt (2024)', institution: 'The Council for Six Sigma Certification' },
   ],
 
   availability: 'Available for client projects and consultations. The best first step is booking a consultation at https://www.teevexa.com/book-consultation, or using the contact form on the site.',

@@ -1,6 +1,7 @@
 import { SITE_URL, PERSON, TEEVEXA, SOCIALS, BOOKING_URL } from './data/site';
 import { CASE_STUDIES, getCaseStudy, workImage } from './data/caseStudies';
 import { PILLARS } from './data/services';
+import { CERTIFICATIONS } from './data/profile';
 
 const DEFAULT_OG = `${SITE_URL}/og-image.png`;
 
@@ -29,6 +30,15 @@ const personSchema = () => ({
     { '@type': 'CollegeOrUniversity', name: 'Technical University of Kenya' },
     { '@type': 'EducationalOrganization', name: 'Moringa School' },
   ],
+  award: ['Jim Leech Mastercard Foundation Fellowship on Entrepreneurship (Queen’s University, 2025)'],
+  hasCredential: CERTIFICATIONS.flatMap((g) => g.items)
+    .filter((c) => c.href)
+    .map((c) => ({
+      '@type': 'EducationalOccupationalCredential',
+      name: c.title,
+      url: c.href,
+      recognizedBy: { '@type': 'Organization', name: c.org },
+    })),
   knowsAbout: [
     'Software engineering',
     'Custom software development',
