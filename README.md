@@ -2,7 +2,7 @@
 
 Personal professional site and API backend, built as an npm workspaces monorepo.
 
-**Live:** [benjamin-baya.vercel.app](https://benjamin-baya.vercel.app)
+**Live:** [benjaminbaya.com](https://benjaminbaya.com)
 
 ---
 

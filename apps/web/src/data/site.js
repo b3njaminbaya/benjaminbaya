@@ -1,7 +1,7 @@
 // Single source of truth for identity, URLs and contact details.
-// Update SITE_URL (or set VITE_SITE_URL) when a custom domain goes live.
+// SITE_URL can be overridden with VITE_SITE_URL (e.g. for a staging domain).
 
-export const SITE_URL = (import.meta.env?.VITE_SITE_URL || 'https://benjamin-baya.vercel.app').replace(/\/$/, '');
+export const SITE_URL = (import.meta.env?.VITE_SITE_URL || 'https://benjaminbaya.com').replace(/\/$/, '');
 
 export const PERSON = {
   name: 'Benjamin Baya',

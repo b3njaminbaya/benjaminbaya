@@ -5,30 +5,42 @@ import Container from '../ui/Container';
 import BookingButton from '../ui/BookingButton';
 
 const MAX_WORDS = 800;
-const MAX_FILE_BYTES = 10 * 1024 * 1024;
+const MAX_FILE_MB = 4; // the /api/contact function accepts up to 4.5 MB per request
+const MAX_FILE_BYTES = MAX_FILE_MB * 1024 * 1024;
+const FORMSUBMIT_URL = `https://formsubmit.co/${PERSON.email}`;
 
 const inputClass =
   'w-full rounded-xl border border-line bg-paper px-4 py-3 text-[0.95rem] text-ink placeholder:text-muted/70 transition-colors focus:border-accent focus:outline-none focus:ring-2 focus:ring-accent/25';
 const labelClass = 'mb-1.5 block text-sm font-semibold';
 
-// Contact form posts to FormSubmit (unchanged endpoint); booking is the primary action.
+// Sends through /api/contact (Resend, with attachments). If that endpoint isn't
+// configured yet, falls back to FormSubmit, which delivers text only.
 const ContactForm = () => {
   const [wordCount, setWordCount] = useState(0);
   const [fileError, setFileError] = useState(null);
   const [status, setStatus] = useState('idle'); // idle | submitting | success | error
+  const [fileDropped, setFileDropped] = useState(false);
 
   const handleSubmit = async (e) => {
     e.preventDefault();
     if (fileError || wordCount > MAX_WORDS) return;
     setStatus('submitting');
     const form = e.currentTarget;
+    const hasFile = form.attachment?.files?.length > 0;
     try {
-      const res = await fetch(form.action, {
-        method: 'POST',
-        body: new FormData(form),
-        headers: { Accept: 'application/json' },
-      });
+      let res = await fetch('/api/contact', { method: 'POST', body: new FormData(form) });
+      let usedFallback = false;
+      // 503 = email not configured, 404/405 = function unavailable (e.g. local dev)
+      if ([404, 405, 503].includes(res.status)) {
+        usedFallback = true;
+        res = await fetch(FORMSUBMIT_URL, {
+          method: 'POST',
+          body: new FormData(form),
+          headers: { Accept: 'application/json' },
+        });
+      }
       if (!res.ok) throw new Error(String(res.status));
+      setFileDropped(usedFallback && hasFile);
       setStatus('success');
       form.reset();
       setWordCount(0);
@@ -43,6 +55,15 @@ const ContactForm = () => {
         <CheckCircle className="text-accent" size={44} aria-hidden="true" />
         <h3 className="mt-4 text-2xl font-bold tracking-tight">Message sent</h3>
         <p className="mt-2 max-w-sm text-muted">Thanks — I’ll read it properly and reply by email.</p>
+        {fileDropped && (
+          <p className="mt-3 max-w-sm text-sm text-muted">
+            Your attachment couldn’t be included this time — please email it to{' '}
+            <a href={`mailto:${PERSON.email}`} className="link-underline font-semibold text-ink">
+              {PERSON.email}
+            </a>
+            .
+          </p>
+        )}
         <button type="button" onClick={() => setStatus('idle')} className="mt-6 text-sm font-semibold text-accent">
           Send another message
         </button>
@@ -54,7 +75,7 @@ const ContactForm = () => {
 
   return (
     <form
-      action={`https://formsubmit.co/${PERSON.email}`}
+      action={FORMSUBMIT_URL}
       method="POST"
       encType="multipart/form-data"
       onSubmit={handleSubmit}
@@ -63,7 +84,7 @@ const ContactForm = () => {
     >
       <input type="hidden" name="_captcha" value="false" />
       <input type="hidden" name="_template" value="box" />
-      <input type="hidden" name="_subject" value="New enquiry from benjamin-baya portfolio" />
+      <input type="hidden" name="_subject" value="New enquiry from benjaminbaya.com" />
       <input type="text" name="_honey" className="hidden" tabIndex={-1} autoComplete="off" aria-hidden="true" />
 
       <div className="grid gap-5 sm:grid-cols-2">
@@ -103,7 +124,7 @@ const ContactForm = () => {
 
       <div>
         <label htmlFor="attachment" className={labelClass}>
-          Attachment <span className="font-normal text-muted">(optional, max 10 MB)</span>
+          Attachment <span className="font-normal text-muted">(optional, max {MAX_FILE_MB} MB)</span>
         </label>
         <input
           id="attachment"
@@ -111,7 +132,7 @@ const ContactForm = () => {
           name="attachment"
           onChange={(e) => {
             const tooBig = Array.from(e.target.files).find((f) => f.size > MAX_FILE_BYTES);
-            setFileError(tooBig ? `${tooBig.name} is larger than 10 MB.` : null);
+            setFileError(tooBig ? `${tooBig.name} is larger than ${MAX_FILE_MB} MB.` : null);
           }}
           className="w-full text-sm text-muted file:mr-3 file:rounded-full file:border-0 file:bg-accent-soft file:px-4 file:py-2 file:text-sm file:font-semibold file:text-accent"
         />

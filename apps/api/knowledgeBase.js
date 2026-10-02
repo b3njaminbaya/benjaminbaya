@@ -11,7 +11,7 @@ const PORTFOLIO = {
     phone: '+254 794 126 508',
     github: 'https://github.com/b3njaminbaya',
     linkedin: 'https://linkedin.com/in/b3njaminbaya',
-    portfolio: 'https://benjamin-baya.vercel.app',
+    portfolio: 'https://benjaminbaya.com',
     booking: 'https://www.teevexa.com/book-consultation',
   },
 

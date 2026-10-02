@@ -24,8 +24,12 @@ app.use(
   cors({
     origin: (origin, callback) => {
       if (!origin) return callback(null, true);
-      // Allow exact matches and all Vercel preview deployments
-      if (allowedOrigins.includes(origin) || /\.vercel\.app$/.test(origin)) {
+      // Allow exact matches, the production domain and all Vercel preview deployments
+      if (
+        allowedOrigins.includes(origin) ||
+        /^https:\/\/(www\.)?benjaminbaya\.com$/.test(origin) ||
+        /\.vercel\.app$/.test(origin)
+      ) {
         return callback(null, true);
       }
       callback(new Error('CORS: origin not allowed'));
