@@ -1,4 +1,3 @@
-import { Link } from 'react-router-dom';
 import { ArrowUpRight } from 'lucide-react';
 import { TIMELINE } from '../../data/profile';
 import { TEEVEXA } from '../../data/site';
@@ -35,12 +34,7 @@ const About = () => (
           </p>
           <p>
             What I care about is practical value: understanding the business first, being honest about what
-            technology will and won’t fix, and building things that keep working after launch. I’m particularly
-            interested in technology for sectors like sustainable agriculture — the kind of work behind the{' '}
-            <Link to="/work/becof-organic-chemicals" className="link-underline font-semibold">
-              Becof platform
-            </Link>
-            .
+            technology will and won’t fix, and building things that keep working after launch.
           </p>
         </div>
 

@@ -15,7 +15,7 @@ const PORTFOLIO = {
     booking: 'https://www.teevexa.com/book-consultation',
   },
 
-  bio: `Benjamin Baya is a software engineer and entrepreneur based in Nairobi, Kenya. He helps businesses build, automate and grow with technology: he first understands the business problem, recommends the right solution, then builds and implements it. He trained as a chemical engineer (B.Eng, Technical University of Kenya), which shapes his systems-thinking approach, and completed full-stack software engineering training at Moringa School. He currently works as a Software Engineer at Buzlin Holdings Inc (Canada, remote) and founded Teevexa Ltd, the technology company through which larger projects are delivered. He is interested in technology for sectors like sustainable agriculture.`,
+  bio: `Benjamin Baya is a software engineer and entrepreneur based in Nairobi, Kenya. He helps businesses build, automate and grow with technology: he first understands the business problem, recommends the right solution, then builds and implements it. He trained as a chemical engineer (B.Eng, Technical University of Kenya), which shapes his systems-thinking approach, and completed full-stack software engineering training at Moringa School. He currently works as a Software Engineer at Buzlin Holdings Inc (Canada, remote) and founded Teevexa Ltd, the technology company through which larger projects are delivered.`,
 
   services: {
     consult: 'Digital transformation, business process analysis, technology strategy and roadmaps, automation and AI adoption consulting, digital presence audits, business systems consulting.',
