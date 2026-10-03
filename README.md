@@ -194,10 +194,17 @@ Both apps deploy automatically when `main` is updated.
 
 **Benjamin Baya** — Software Engineer & Business Technology Consultant, Nairobi, Kenya
 
-[Website](https://benjaminbaya.com) &nbsp;·&nbsp; [Email](mailto:b3njaminbaya@gmail.com) &nbsp;·&nbsp; [LinkedIn](https://linkedin.com/in/b3njaminbaya) &nbsp;·&nbsp; [GitHub](https://github.com/b3njaminbaya) &nbsp;·&nbsp; [Book a consultation](https://www.teevexa.com/book-consultation)
+| | |
+|---|---|
+| **Email** | b3njaminbaya@gmail.com |
+| **Phone / WhatsApp** | +254 794 126 508 |
+| **Website** | [benjaminbaya.com](https://benjaminbaya.com) |
+| **LinkedIn** | [linkedin.com/in/b3njaminbaya](https://linkedin.com/in/b3njaminbaya) |
+| **GitHub** | [github.com/b3njaminbaya](https://github.com/b3njaminbaya) |
+| **Consultation** | [teevexa.com/book-consultation](https://www.teevexa.com/book-consultation) |
 
 ## License
 
 Copyright © 2025–2026 Benjamin Mweri Baya. All rights reserved.
 
-This repository is public so the code can be read and evaluated. It is not open source: the code, design, written content and images may not be copied, reused or redistributed without written permission. See [LICENSE](./LICENSE) for the full terms, and [get in touch](mailto:b3njaminbaya@gmail.com) if you would like to use any part of it.
+This repository is public so the code can be read and evaluated. It is not open source: the code, design, written content and images may not be copied, reused or redistributed without written permission. See [LICENSE](./LICENSE) for the full terms, and email b3njaminbaya@gmail.com if you would like to use any part of it.
