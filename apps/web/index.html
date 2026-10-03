@@ -3,17 +3,19 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover" />
-    <meta name="theme-color" content="#f6f5f1" media="(prefers-color-scheme: light)" />
-    <meta name="theme-color" content="#0b0d12" media="(prefers-color-scheme: dark)" />
+    <meta name="theme-color" content="#f6f5f1" />
 
-    <!-- Theme + reveal flag before first paint (prevents flash of wrong theme) -->
+    <!-- Light by default; dark only when the visitor has chosen it with the toggle.
+         Runs before first paint so there is no flash of the wrong theme. -->
     <script>
       (function () {
         var d = document.documentElement;
         d.classList.add('js');
         try {
-          var t = localStorage.getItem('theme');
-          if (t === 'dark' || (!t && window.matchMedia('(prefers-color-scheme: dark)').matches)) d.classList.add('dark');
+          if (localStorage.getItem('theme') === 'dark') {
+            d.classList.add('dark');
+            document.querySelector('meta[name="theme-color"]').setAttribute('content', '#0b0d12');
+          }
         } catch (e) {}
       })();
     </script>
