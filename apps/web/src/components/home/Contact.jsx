@@ -193,20 +193,6 @@ const Contact = () => (
               </div>
             ))}
           </dl>
-          <p className="mt-6 font-mono text-[0.65rem] uppercase tracking-[0.14em] text-white/45">What we cover</p>
-          <ul className="mt-2 space-y-1.5 text-sm text-white/75">
-            {[
-              'What’s happening in your business and what’s slowing it down',
-              'Where technology could genuinely help — and where it wouldn’t',
-              'Whether you need software, automation, digital marketing or something simpler',
-              'The next practical step',
-            ].map((t) => (
-              <li key={t} className="flex gap-2.5">
-                <span className="mt-2 h-1 w-1 shrink-0 rounded-full bg-white/50" aria-hidden="true" />
-                {t}
-              </li>
-            ))}
-          </ul>
         </div>
 
         <a
