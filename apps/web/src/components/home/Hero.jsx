@@ -42,7 +42,7 @@ const Hero = () => (
           </Link>
         </div>
         <p className="mt-5 text-sm text-muted">
-          The first conversation is about your business problem — you don’t need a technical brief.
+          The first conversation is a free 20-minute call about your business problem — no technical brief needed.
         </p>
       </div>
 

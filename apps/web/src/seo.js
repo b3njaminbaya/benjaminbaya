@@ -152,6 +152,18 @@ export function getRouteMeta(pathname) {
     }
   }
 
+  if (path.startsWith('/go/')) {
+    return {
+      title: `Redirecting… — ${PERSON.name}`,
+      description: 'Redirecting.',
+      canonical: null,
+      image: DEFAULT_OG,
+      type: 'website',
+      robots: 'noindex, nofollow',
+      jsonLd: [],
+    };
+  }
+
   if (path === '/activity') {
     return {
       title: `Engineering Activity — ${PERSON.name}`,

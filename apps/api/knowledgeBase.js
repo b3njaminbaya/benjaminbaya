@@ -32,13 +32,14 @@ const PORTFOLIO = {
   },
 
   skills: {
-    frontend: ['JavaScript', 'TypeScript', 'React', 'Next.js', 'Tailwind CSS'],
-    backend: ['Python', 'Flask', 'Django', 'Node.js', 'Express', 'Laravel', 'Spring Boot', 'REST & GraphQL APIs'],
-    mobile: ['Flutter', 'React Native', 'Kotlin', 'Firebase', 'Supabase'],
-    databases: ['PostgreSQL', 'MySQL', 'MongoDB', 'SQLite'],
-    cloud: ['AWS', 'Vercel', 'Render'],
-    ai: ['LLM APIs (Groq / Llama)', 'knowledge-grounded AI assistants'],
-    marketing: ['Meta Pixel', 'TikTok Pixel', 'Google Business Profile', 'Meta Ads', 'Google Ads', 'TikTok Ads'],
+    frontend: ['JavaScript / TypeScript', 'React', 'Next.js', 'Tailwind CSS'],
+    backend: ['Python (Flask, FastAPI, Django)', 'Node.js', 'PHP (Laravel)', 'Java (Spring Boot)'],
+    mobile: ['Flutter (Dart)', 'React Native', 'Kotlin'],
+    data: ['PostgreSQL', 'MySQL', 'MongoDB', 'Supabase', 'Firebase'],
+    cloud: ['Vercel', 'Render', 'AWS', 'Docker', 'GitHub Actions'],
+    ai: ['LLM APIs', 'Hugging Face Transformers', 'PyTorch'],
+    payments: ['M-Pesa (Daraja API)', 'PesaPal', 'Stripe'],
+    marketing: ['Google Analytics', 'Google Search Console', 'Google Business Profile', 'Meta, Google and TikTok Ads', 'conversion tracking'],
   },
 
   projects: [
@@ -109,7 +110,7 @@ const PORTFOLIO = {
     { degree: 'Lean Six Sigma White Belt (2024)', institution: 'The Council for Six Sigma Certification' },
   ],
 
-  availability: 'Available for client projects and consultations. The best first step is booking a consultation at https://www.teevexa.com/book-consultation, or using the contact form on the site.',
+  availability: 'Available for client projects and consultations. The best first step is booking a consultation at https://www.teevexa.com/book-consultation — a free 20-minute Zoom call, Monday to Saturday in Nairobi hours, with no commitment — or using the contact form on the site.',
 };
 
 // ─── CONTEXT BUILDER ─────────────────────────────────────────────────────────
@@ -193,11 +194,11 @@ function buildSystemPrompt(context) {
   return `You are the website assistant for Benjamin Baya. Respond in first person on his behalf — use "I", not "he". Be warm, direct and concise. Sound like a practical consultant who also builds the technology, speaking to business owners in plain language rather than jargon.
 
 Guidelines:
-- Only answer using the context provided below. Never invent clients, numbers, results, testimonials, prices, services or tactics that aren't in the context. Don't describe the consultation as free.
+- Only answer using the context provided below. Never invent clients, numbers, results, testimonials, prices, services or tactics that aren't in the context.
 - Write plain text only — no markdown, no bold, no headings, no bullet symbols. Keep it under 100 words.
 - When asked about projects, mention the two or three most relevant ones, not the full list, and be clear which are client work, which are Buzlin Holdings products (my employer) and which are personal builds.
 - Focus on the visitor's business problem. Reassure them they don't need to know which technology they need.
-- When someone wants help or to work together, invite them to book a consultation: https://www.teevexa.com/book-consultation
+- When someone wants help or to work together, invite them to book a consultation: https://www.teevexa.com/book-consultation (a free 20-minute Zoom call, Monday to Saturday in Nairobi hours, no commitment).
 - For direct contact: b3njaminbaya@gmail.com or WhatsApp +254 794 126 508.
 - Mention Teevexa (my technology company) only when delivery or larger projects come up.
 - If asked something not in the context, say so honestly and suggest booking a consultation or emailing.
@@ -212,13 +213,13 @@ ${context}`;
 const FALLBACKS = {
   services: `I help businesses build, automate and grow with technology — from consulting on what you actually need, to building websites, apps and business systems, automating repetitive work (including AI), and growing through SEO, ads and proper tracking. You don't need a technical brief: book a consultation at teevexa.com/book-consultation and tell me about the problem.`,
 
-  skills: `I work across the stack — React, Next.js and TypeScript on the frontend; Python (Flask, Django), Node.js and Laravel on the backend; Flutter and React Native for mobile; PostgreSQL, MySQL and MongoDB for data; plus LLM APIs for AI features and Meta/TikTok pixels for tracking.`,
+  skills: `I work across the stack — React, Next.js and TypeScript on the frontend; Python, Node.js, PHP (Laravel) and Java on the backend; Flutter, React Native and Kotlin for mobile; PostgreSQL, MySQL and MongoDB for data; LLM APIs for AI features; and M-Pesa, PesaPal and Stripe for payments.`,
 
   projects: `Client work includes the Becof Organic Chemicals commerce platform (live, with M-Pesa payments), a website and CRM for Esteric Kitchens, a website and hire system for Melamart, and ongoing digital marketing for Precious Furniture Kenya. At Buzlin Holdings I work on Buzlin (marketplace) and BuzRyde (ride-hailing). Personal builds include Tafsiri AI, Ordo and a micro-donations platform. Each has a case study on this site.`,
 
   teevexa: `Teevexa Ltd is the technology company I founded. I lead the consultation, strategy and architecture; larger projects are delivered through Teevexa. You can book a consultation at teevexa.com/book-consultation.`,
 
-  contact: `The best first step is a consultation: teevexa.com/book-consultation. You can also email b3njaminbaya@gmail.com, WhatsApp +254 794 126 508, or use the contact form on this site.`,
+  contact: `The best first step is a free 20-minute consultation on Zoom: teevexa.com/book-consultation. You can also email b3njaminbaya@gmail.com, WhatsApp +254 794 126 508, or use the contact form on this site.`,
 
   bio: `I'm Benjamin Baya — a software engineer and entrepreneur in Nairobi. I trained as a chemical engineer, moved into software, and now help businesses turn problems into working solutions: websites, systems, automation and digital growth. I'm currently a software engineer at Buzlin Holdings, working on Buzlin and BuzRyde, and founder of Teevexa.`,
 

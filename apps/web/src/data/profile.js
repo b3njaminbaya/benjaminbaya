@@ -44,14 +44,17 @@ export const TIMELINE = [
 
 // Grouped by what it's for; only tools actually used.
 export const STACK = [
-  { group: 'Frontend', items: ['JavaScript', 'TypeScript', 'React', 'Next.js', 'Tailwind CSS', 'shadcn/ui'] },
-  { group: 'Backend', items: ['Python', 'Flask', 'FastAPI', 'Django', 'Node.js', 'Laravel / PHP', 'REST & GraphQL APIs', 'WebSockets'] },
-  { group: 'Mobile', items: ['Flutter', 'Dart', 'React Native', 'Kotlin'] },
-  { group: 'Data', items: ['PostgreSQL', 'MySQL', 'Supabase', 'Firebase / Firestore', 'Prisma', 'Redis', 'MongoDB'] },
-  { group: 'Cloud & DevOps', items: ['Vercel', 'Render', 'AWS (S3)', 'Docker', 'GitHub Actions', 'Neon'] },
-  { group: 'AI & Integrations', items: ['LLM APIs (Groq / Llama)', 'Hugging Face Transformers', 'PyTorch', 'M-Pesa Daraja API', 'Stripe', 'Google Maps'] },
-  { group: 'Analytics & Marketing', items: ['Google Analytics', 'Google tag & Meta Pixel', 'TikTok Pixel', 'Google Search Console', 'Google Business Profile', 'Meta, Google & TikTok Ads'] },
-  { group: 'Product & Tools', items: ['Figma', 'Sanity CMS', 'Clerk', 'Git & GitHub', 'Scrum / Agile'] },
+  { group: 'Frontend', items: ['JavaScript / TypeScript', 'React', 'Next.js', 'Tailwind CSS'] },
+  { group: 'Backend', items: ['Python (Flask, FastAPI, Django)', 'Node.js', 'PHP (Laravel)', 'Java (Spring Boot)'] },
+  { group: 'Mobile', items: ['Flutter (Dart)', 'React Native', 'Kotlin'] },
+  { group: 'Data', items: ['PostgreSQL', 'MySQL', 'MongoDB', 'Supabase', 'Firebase'] },
+  { group: 'Cloud & DevOps', items: ['Vercel', 'Render', 'AWS', 'Docker', 'GitHub Actions'] },
+  { group: 'AI', items: ['LLM APIs', 'Hugging Face Transformers', 'PyTorch'] },
+  { group: 'Payments', items: ['M-Pesa (Daraja API)', 'PesaPal', 'Stripe'] },
+  {
+    group: 'Analytics & Marketing',
+    items: ['Google Analytics', 'Google Search Console', 'Google Business Profile', 'Meta, Google & TikTok Ads', 'Conversion tracking'],
+  },
 ];
 
 export const EDUCATION = [

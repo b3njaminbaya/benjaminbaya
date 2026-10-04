@@ -1,6 +1,6 @@
 import { useState } from 'react';
 import { CheckCircle, AlertCircle, Mail, MessageCircle } from 'lucide-react';
-import { PERSON } from '../../data/site';
+import { PERSON, CONSULTATION, WHATSAPP_LINK } from '../../data/site';
 import Container from '../ui/Container';
 import BookingButton from '../ui/BookingButton';
 
@@ -171,11 +171,43 @@ const Contact = () => (
 
         <div className="mt-9 flex flex-col gap-3 sm:flex-row lg:flex-col xl:flex-row">
           <BookingButton className="btn-on-dark" />
-          <a href={PERSON.whatsapp} target="_blank" rel="noopener" className="btn-ghost-dark">
+          <a href={WHATSAPP_LINK} target="_blank" rel="noopener" className="btn-ghost-dark">
             <MessageCircle size={17} aria-hidden="true" /> WhatsApp
           </a>
         </div>
         <p className="mt-4 text-sm text-white/50">Consultations are scheduled through Teevexa’s booking calendar.</p>
+
+        {/* The consultation offer — facts mirror teevexa.com/book-consultation */}
+        <div className="mt-10 rounded-2xl border border-white/10 bg-white/[0.03] p-6">
+          <h3 className="text-lg font-bold tracking-tight">The business technology consultation</h3>
+          <dl className="mt-4 grid grid-cols-2 gap-x-6 gap-y-3 text-sm">
+            {[
+              ['Cost', `${CONSULTATION.price}, no commitment`],
+              ['Length', CONSULTATION.length],
+              ['Where', CONSULTATION.format],
+              ['When', CONSULTATION.availability],
+            ].map(([k, v]) => (
+              <div key={k}>
+                <dt className="font-mono text-[0.65rem] uppercase tracking-[0.14em] text-white/45">{k}</dt>
+                <dd className="mt-0.5 font-medium text-white/90">{v}</dd>
+              </div>
+            ))}
+          </dl>
+          <p className="mt-6 font-mono text-[0.65rem] uppercase tracking-[0.14em] text-white/45">What we cover</p>
+          <ul className="mt-2 space-y-1.5 text-sm text-white/75">
+            {[
+              'What’s happening in your business and what’s slowing it down',
+              'Where technology could genuinely help — and where it wouldn’t',
+              'Whether you need software, automation, digital marketing or something simpler',
+              'The next practical step',
+            ].map((t) => (
+              <li key={t} className="flex gap-2.5">
+                <span className="mt-2 h-1 w-1 shrink-0 rounded-full bg-white/50" aria-hidden="true" />
+                {t}
+              </li>
+            ))}
+          </ul>
+        </div>
 
         <a
           href={`mailto:${PERSON.email}`}

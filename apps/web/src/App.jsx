@@ -4,6 +4,7 @@ import Layout from './components/layout/Layout';
 import Home from './pages/Home';
 import CaseStudy from './pages/CaseStudy';
 import NotFound from './pages/NotFound';
+import Go from './pages/Go';
 
 // Charts (recharts) only load if someone visits /activity
 const Activity = lazy(() => import('./pages/Activity'));
@@ -13,6 +14,7 @@ export const AppRoutes = () => (
     <Routes>
       <Route path="/" element={<Home />} />
       <Route path="/work/:slug" element={<CaseStudy />} />
+      <Route path="/go/:target" element={<Go />} />
       <Route
         path="/activity"
         element={

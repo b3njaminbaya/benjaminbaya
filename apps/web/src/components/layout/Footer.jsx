@@ -1,5 +1,5 @@
 import { Link } from 'react-router-dom';
-import { PERSON, SOCIALS, TEEVEXA, BOOKING_URL } from '../../data/site';
+import { PERSON, SOCIALS, TEEVEXA, BOOKING_LINK, WHATSAPP_LINK } from '../../data/site';
 import { PILLARS } from '../../data/services';
 import { CASE_STUDIES } from '../../data/caseStudies';
 import Container from '../ui/Container';
@@ -63,7 +63,7 @@ const Footer = () => (
         <p className={heading}>Connect</p>
         <ul className="space-y-2.5">
           <li>
-            <a href={BOOKING_URL} target="_blank" rel="noopener" className={link}>
+            <a href={BOOKING_LINK} target="_blank" rel="noopener" className={link}>
               Book a consultation
             </a>
           </li>
@@ -73,7 +73,7 @@ const Footer = () => (
             </a>
           </li>
           <li>
-            <a href={PERSON.whatsapp} target="_blank" rel="noopener" className={link}>
+            <a href={WHATSAPP_LINK} target="_blank" rel="noopener" className={link}>
               WhatsApp
             </a>
           </li>

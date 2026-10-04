@@ -19,6 +19,24 @@ export const PERSON = {
 
 export const BOOKING_URL = 'https://www.teevexa.com/book-consultation';
 
+// Facts from the booking page — keep in step with teevexa.com/book-consultation
+export const CONSULTATION = {
+  price: 'Free',
+  length: '20 minutes',
+  format: 'Zoom video call',
+  availability: 'Monday – Saturday, Nairobi hours',
+};
+
+// Calls to action go through /go/<key> so each click is counted as a page view
+// (see pages/Go.jsx). Use these in links; use BOOKING_URL where the real
+// destination is needed (structured data, the chatbot).
+export const OUTBOUND = {
+  consultation: { url: BOOKING_URL, title: 'Opening the booking page…' },
+  whatsapp: { url: PERSON.whatsapp, title: 'Opening WhatsApp…' },
+};
+export const BOOKING_LINK = '/go/consultation';
+export const WHATSAPP_LINK = '/go/whatsapp';
+
 export const TEEVEXA = {
   name: 'Teevexa Ltd',
   url: 'https://www.teevexa.com',

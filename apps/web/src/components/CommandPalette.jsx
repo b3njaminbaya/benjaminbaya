@@ -1,12 +1,12 @@
 import { useState, useEffect, useRef, useCallback } from 'react';
 import { useNavigate } from 'react-router-dom';
 import { Search, CornerDownLeft } from 'lucide-react';
-import { BOOKING_URL, SOCIALS } from '../data/site';
+import { BOOKING_LINK, SOCIALS } from '../data/site';
 import { CASE_STUDIES } from '../data/caseStudies';
 
 // Cmd/Ctrl+K quick navigation
 const COMMANDS = [
-  { id: 'book', label: 'Book a consultation', type: 'link', href: BOOKING_URL },
+  { id: 'book', label: 'Book a consultation', type: 'link', href: BOOKING_LINK },
   { id: 'services', label: 'Services', type: 'route', href: '/#services' },
   { id: 'work', label: 'Selected work', type: 'route', href: '/#work' },
   { id: 'consulting', label: 'Technology consulting', type: 'route', href: '/#consulting' },

@@ -40,6 +40,11 @@ for (const route of PRERENDER_ROUTES) {
 // Client-rendered, non-indexed route (charts are lazy-loaded)
 write('activity/index.html', page('/activity', { ssr: false }));
 
+// Outbound redirect pages — client-rendered, not indexed
+for (const key of ['consultation', 'whatsapp']) {
+  write(`go/${key}/index.html`, page(`/go/${key}`, { ssr: false }));
+}
+
 // Served by Vercel with a real 404 status for unknown URLs
 write('404.html', page('/__not-found__'));
 
@@ -58,7 +63,7 @@ fs.writeFileSync(
 // robots.txt (generated so the sitemap URL always matches SITE_URL)
 fs.writeFileSync(
   path.join(dist, 'robots.txt'),
-  `User-agent: *\nAllow: /\nDisallow: /activity\n\nSitemap: ${SITE_URL}/sitemap.xml\n`,
+  `User-agent: *\nAllow: /\nDisallow: /activity\nDisallow: /go/\n\nSitemap: ${SITE_URL}/sitemap.xml\n`,
 );
 console.log('  wrote        dist/sitemap.xml, dist/robots.txt');
 
