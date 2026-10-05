@@ -5,7 +5,7 @@ import { CERTIFICATIONS } from './data/profile';
 
 const DEFAULT_OG = `${SITE_URL}/og-image.png`;
 
-const HOME_TITLE = 'Benjamin Baya — Software Engineer & Business Technology Consultant';
+const HOME_TITLE = 'Benjamin Baya - Software Engineer & Business Technology Consultant';
 const HOME_DESCRIPTION =
   'Benjamin Baya helps businesses build, automate and grow with technology: websites, web and mobile apps, business systems, AI automation, SEO and digital growth. Based in Nairobi, Kenya.';
 
@@ -55,7 +55,7 @@ const personSchema = () => ({
 const serviceSchema = () => ({
   '@type': 'ProfessionalService',
   '@id': SERVICE_ID,
-  name: `${PERSON.name} — Business Technology Consulting & Software Development`,
+  name: `${PERSON.name} - Business Technology Consulting & Software Development`,
   url: SITE_URL,
   image: DEFAULT_OG,
   description: HOME_DESCRIPTION,
@@ -124,7 +124,7 @@ export function getRouteMeta(pathname) {
       const url = `${SITE_URL}/work/${study.slug}`;
       const image = study.image ? `${SITE_URL}${workImage(study.image, 1600)}` : DEFAULT_OG;
       return {
-        title: `${study.title} — Case Study | ${PERSON.name}`,
+        title: `${study.title} - Case Study | ${PERSON.name}`,
         description: study.summary,
         canonical: url,
         image,
@@ -154,7 +154,7 @@ export function getRouteMeta(pathname) {
 
   if (path.startsWith('/go/')) {
     return {
-      title: `Redirecting… — ${PERSON.name}`,
+      title: `Redirecting… - ${PERSON.name}`,
       description: 'Redirecting.',
       canonical: null,
       image: DEFAULT_OG,
@@ -166,7 +166,7 @@ export function getRouteMeta(pathname) {
 
   if (path === '/activity') {
     return {
-      title: `Engineering Activity — ${PERSON.name}`,
+      title: `Engineering Activity - ${PERSON.name}`,
       description: 'Live coding activity and GitHub contributions.',
       canonical: `${SITE_URL}/activity`,
       image: DEFAULT_OG,
@@ -177,7 +177,7 @@ export function getRouteMeta(pathname) {
   }
 
   return {
-    title: `Page not found — ${PERSON.name}`,
+    title: `Page not found - ${PERSON.name}`,
     description: 'This page doesn’t exist.',
     canonical: null,
     image: DEFAULT_OG,
@@ -209,7 +209,7 @@ export function renderHeadTags(meta) {
     `<meta property="og:title" content="${esc(meta.title)}" />`,
     `<meta property="og:description" content="${esc(meta.description)}" />`,
     `<meta property="og:image" content="${meta.image}" />`,
-    `<meta property="og:image:alt" content="${esc(`${PERSON.name} — ${PERSON.positioning}`)}" />`,
+    `<meta property="og:image:alt" content="${esc(`${PERSON.name} - ${PERSON.positioning}`)}" />`,
     `<meta name="twitter:card" content="summary_large_image" />`,
     `<meta name="twitter:title" content="${esc(meta.title)}" />`,
     `<meta name="twitter:description" content="${esc(meta.description)}" />`,

@@ -183,7 +183,7 @@ export const CASE_STUDIES = [
     kind: 'personal',
     label: 'Personal build · AI',
     client: 'Product build',
-    title: 'Tafsiri AI — machine translation for Kenya’s languages',
+    title: 'Tafsiri AI - machine translation for Kenya’s languages',
     summary:
       'Swahili, Somali and English translation on a fine-tunable neural model, with an active-learning loop that improves quality over time.',
     pillars: ['Build', 'Automate'],
@@ -213,7 +213,7 @@ export const CASE_STUDIES = [
     kind: 'personal',
     label: 'Personal build · Business tool',
     client: 'Product build',
-    title: 'Ordo — project management with real-time collaboration',
+    title: 'Ordo - project management with real-time collaboration',
     summary:
       'Tasks, Kanban, calendar, time tracking and team workspaces, with careful security and a 150+ test API suite.',
     pillars: ['Build'],
