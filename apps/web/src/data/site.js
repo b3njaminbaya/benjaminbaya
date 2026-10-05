@@ -24,7 +24,7 @@ export const CONSULTATION = {
   price: 'Free',
   length: '20 minutes',
   format: 'Zoom video call',
-  availability: 'Monday – Saturday, Nairobi hours',
+  availability: 'Monday – Saturday, East Africa Time (EAT)',
 };
 
 // Calls to action go through /go/<key> so each click is counted as a page view

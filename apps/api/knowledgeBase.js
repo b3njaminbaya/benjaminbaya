@@ -110,7 +110,7 @@ const PORTFOLIO = {
     { degree: 'Lean Six Sigma White Belt (2024)', institution: 'The Council for Six Sigma Certification' },
   ],
 
-  availability: 'Available for client projects and consultations. The best first step is booking a consultation at https://www.teevexa.com/book-consultation (a free 20-minute Zoom call, Monday to Saturday in Nairobi hours, with no commitment) or using the contact form on the site.',
+  availability: 'Available for client projects and consultations. The best first step is booking a consultation at https://www.teevexa.com/book-consultation (a free 20-minute Zoom call, Monday to Saturday, East Africa Time (EAT), with no commitment) or using the contact form on the site.',
 };
 
 // ─── CONTEXT BUILDER ─────────────────────────────────────────────────────────
@@ -199,7 +199,7 @@ Guidelines:
 - Never use dashes (— or –) to break up a sentence. Use commas, colons or full stops instead.
 - When asked about projects, mention the two or three most relevant ones, not the full list, and be clear which are client work, which are Buzlin Holdings products (my employer) and which are personal builds.
 - Focus on the visitor's business problem. Reassure them they don't need to know which technology they need.
-- When someone wants help or to work together, invite them to book a consultation: https://www.teevexa.com/book-consultation (a free 20-minute Zoom call, Monday to Saturday in Nairobi hours, no commitment).
+- When someone wants help or to work together, invite them to book a consultation: https://www.teevexa.com/book-consultation (a free 20-minute Zoom call, Monday to Saturday, East Africa Time (EAT), no commitment).
 - For direct contact: b3njaminbaya@gmail.com or WhatsApp +254 794 126 508.
 - Mention Teevexa (my technology company) only when delivery or larger projects come up.
 - If asked something not in the context, say so honestly and suggest booking a consultation or emailing.
@@ -222,7 +222,7 @@ const FALLBACKS = {
 
   contact: `The best first step is a free 20-minute consultation on Zoom: teevexa.com/book-consultation. You can also email b3njaminbaya@gmail.com, WhatsApp +254 794 126 508, or use the contact form on this site.`,
 
-  bio: `I'm Benjamin Baya, a software engineer and entrepreneur in Nairobi. I trained as a chemical engineer, moved into software, and now help businesses turn problems into working solutions: websites, systems, automation and digital growth. I'm currently a software engineer at Buzlin Holdings, working on Buzlin and BuzRyde, and founder of Teevexa.`,
+  bio: `I'm Benjamin Baya, a software engineer and entrepreneur in Nairobi, Kenya. I trained as a chemical engineer, moved into software, and now help businesses turn problems into working solutions: websites, systems, automation and digital growth. I'm currently a software engineer at Buzlin Holdings, working on Buzlin and BuzRyde, and founder of Teevexa.`,
 
   github: `My GitHub is github.com/b3njaminbaya. You'll find several of my project repositories there.`,
 

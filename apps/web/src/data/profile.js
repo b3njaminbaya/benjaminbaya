@@ -16,7 +16,7 @@ export const TIMELINE = [
   {
     period: 'Jul – Sep 2025',
     title: 'Software Engineer Intern',
-    org: 'Sensys Kenya Ltd · Nairobi',
+    org: 'Sensys Kenya Ltd · Nairobi, Kenya',
     body: 'First professional role: production systems, team workflows and client-facing engineering deliverables.',
   },
   {

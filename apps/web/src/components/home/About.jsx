@@ -23,7 +23,7 @@ const About = () => (
 
         <div className="reveal mt-8 space-y-5 text-lg leading-relaxed text-ink/85">
           <p>
-            I’m Benjamin Baya, a software engineer and entrepreneur based in Nairobi. I trained as a chemical
+            I’m Benjamin Baya, a software engineer and entrepreneur based in Nairobi, Kenya. I trained as a chemical
             engineer, which taught me to look at an operation the way you’d look at a process plant: inputs,
             outputs, bottlenecks, and the points where things quietly go wrong.
           </p>
