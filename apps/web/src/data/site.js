@@ -48,7 +48,7 @@ export const SOCIALS = [
   { label: 'Instagram', href: 'https://instagram.com/b3njaminbaya' },
   { label: 'Facebook', href: 'https://facebook.com/b3njaminbaya' },
   { label: 'TikTok', href: 'https://www.tiktok.com/@b3njaminbaya' },
-  { label: 'YouTube', href: 'https://www.youtube.com/@b3njaminbaya' },
+  { label: 'YouTube', href: 'https://www.youtube.com/@benjaminbaya' },
 ];
 
 // Primary in-page navigation (homepage anchors)
