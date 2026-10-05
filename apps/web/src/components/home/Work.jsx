@@ -86,7 +86,7 @@ const Work = () => (
         id="work-title"
         eyebrow="Selected work"
         title="Problems solved, not just things built."
-        intro="Client systems, products I engineer at Buzlin Holdings, and a few personal builds — each written up as the problem, what I built, my role, the technology and what changed. Where an outcome hasn’t been measured, I say so."
+        intro="Client systems, products I engineer at Buzlin Holdings, and a few personal builds, each written up as the problem, what I built, my role, the technology and what changed. Where an outcome hasn’t been measured, I say so."
       />
 
       <h3 className="eyebrow mb-6 mt-16 flex items-center gap-3">
@@ -123,7 +123,7 @@ const Work = () => (
                 {e.title}
                 <ArrowUpRight size={14} aria-hidden="true" />
               </a>
-              <span className="text-muted"> — {e.body}</span>
+              <span className="block text-muted">{e.body}</span>
             </li>
           ))}
         </ul>

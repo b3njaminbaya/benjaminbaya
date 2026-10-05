@@ -88,9 +88,9 @@ const Chatbot = () => {
     } catch (err) {
       const text =
         err.name === 'AbortError'
-          ? 'The assistant is waking up — please try again in a moment, or book a consultation directly.'
+          ? 'The assistant is waking up. Please try again in a moment, or book a consultation directly.'
           : err.message?.toLowerCase().includes('rate')
-            ? 'You’ve sent a lot of messages — please wait a few minutes before trying again.'
+            ? 'You’ve sent a lot of messages. Please wait a few minutes before trying again.'
             : 'Something went wrong on my end. Please try again or use the contact form.';
       setMessages((prev) => [...prev, { user: false, text, error: true }]);
     } finally {
@@ -151,7 +151,7 @@ const Chatbot = () => {
           <div className="flex-1 space-y-2.5 overflow-y-auto p-4 text-sm" role="log" aria-live="polite">
             {messages.length === 0 && (
               <div className="px-1 pt-2">
-                <p className="font-semibold">Hi — I’m Benjamin’s assistant.</p>
+                <p className="font-semibold">Hi, I’m Benjamin’s assistant.</p>
                 <p className="mt-1 text-muted">
                   Ask what he does, whether he can help with a problem in your business, or about past projects.
                 </p>

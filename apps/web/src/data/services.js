@@ -94,12 +94,12 @@ export const PROCESS = [
   {
     step: '01',
     title: 'Understand the problem',
-    body: 'A conversation about your business — how it works today, where it’s stuck, and what a good outcome looks like. No technical brief required.',
+    body: 'A conversation about your business: how it works today, where it’s stuck, and what a good outcome looks like. No technical brief required.',
   },
   {
     step: '02',
     title: 'Recommend the right solution',
-    body: 'A clear recommendation: what to build, what to automate, what to buy off the shelf — and what not to do at all. Scoped to your budget and stage.',
+    body: 'A clear recommendation: what to build, what to automate, what to buy off the shelf, and what not to do at all. Scoped to your budget and stage.',
   },
   {
     step: '03',
@@ -109,14 +109,14 @@ export const PROCESS = [
   {
     step: '04',
     title: 'Launch, measure, improve',
-    body: 'Tracking is set up from day one so you can see what the investment is doing — then we iterate on what the numbers show.',
+    body: 'Tracking is set up from day one so you can see what the investment is doing. Then we iterate on what the numbers show.',
   },
 ];
 
 export const CONSULTING_AREAS = [
   {
     title: 'Digital Transformation',
-    body: 'Identify where technology can genuinely improve how your business operates — and where it can’t.',
+    body: 'Identify where technology can genuinely improve how your business operates, and where it can’t.',
   },
   {
     title: 'Process & Automation Consulting',
@@ -124,7 +124,7 @@ export const CONSULTING_AREAS = [
   },
   {
     title: 'Technology Advisory',
-    body: 'Work out what you actually need — custom build, existing software or a simple fix — before you spend money on it.',
+    body: 'Work out what you actually need (a custom build, existing software or a simple fix) before you spend money on it.',
   },
   {
     title: 'Digital Growth Strategy',
@@ -132,7 +132,7 @@ export const CONSULTING_AREAS = [
   },
   {
     title: 'AI Adoption',
-    body: 'Find practical, low-risk uses of AI in your business — not AI for its own sake.',
+    body: 'Find practical, low-risk uses of AI in your business, not AI for its own sake.',
   },
 ];
 

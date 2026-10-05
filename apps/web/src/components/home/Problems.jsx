@@ -16,7 +16,7 @@ const Problems = () => (
             a plain description of what’s getting in the way.
           </p>
           <ol className="mt-8 space-y-3 text-sm">
-            {['I understand the problem first', 'I recommend the right solution — which might be small', 'Then I build and implement it'].map(
+            {['I understand the problem first', 'I recommend the right solution, which might be small', 'Then I build and implement it'].map(
               (t, i) => (
                 <li key={t} className="flex items-center gap-3">
                   <span className="grid h-6 w-6 shrink-0 place-items-center rounded-full bg-accent-soft font-mono text-[0.7rem] font-semibold text-accent">

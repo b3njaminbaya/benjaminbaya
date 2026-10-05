@@ -18,7 +18,7 @@ const Process = () => (
         </h3>
         <p className="leading-relaxed text-muted lg:col-span-7">
           Many businesses end up with one vendor for the website, another for advertising and a third for the
-          internal system — and nobody responsible for whether it all works together. I work across the whole
+          internal system, and nobody responsible for whether it all works together. I work across the whole
           journey: understanding the problem, recommending the right technology, building it, automating the
           workflow and measuring whether it produces results.
         </p>

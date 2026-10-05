@@ -13,7 +13,7 @@ const AssistantMock = () => (
           Can you help automate our customer enquiries?
         </p>
         <p className="w-fit max-w-[85%] rounded-lg rounded-bl-sm bg-sunken px-3 py-2 text-ink/80">
-          Yes — I build AI assistants grounded in your own business information…
+          Yes, I build AI assistants grounded in your own business information…
         </p>
         <div className="flex gap-1 px-1 pt-1">
           <span className="h-1.5 w-1.5 rounded-full bg-muted/50" />

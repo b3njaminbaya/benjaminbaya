@@ -12,10 +12,10 @@ const Growth = () => (
           className="lg:col-span-7"
           eyebrow="Digital growth"
           title="Marketing treated as a system you can measure."
-          intro="Using digital channels to attract, convert and retain customers — built on a website that’s fast, findable and properly tracked. Not an advertising agency: an engineer who makes sure every channel can be traced back to results."
+          intro="Using digital channels to attract, convert and retain customers, built on a website that’s fast, findable and properly tracked. Not an advertising agency: an engineer who makes sure every channel can be traced back to results."
         />
         <p className="reveal text-[0.95rem] leading-relaxed text-muted lg:col-span-5">
-          Creative production — photography, graphic design and short-form video — supports campaigns where it’s
+          Creative production (photography, graphic design and short-form video) supports campaigns where it’s
           needed. The strategic focus stays on the channels, the funnel and the numbers.
         </p>
       </div>
@@ -49,7 +49,7 @@ const Growth = () => (
           Precious Furniture Kenya
         </Link>
         , and built the SEO foundations for the Becof and BuzRyde websites. This site is built the same
-        way — prerendered pages, structured data, responsive images and accessible markup.
+        way: prerendered pages, structured data, responsive images and accessible markup.
       </p>
     </Container>
   </section>

@@ -254,7 +254,9 @@ app.post('/api/chat', chatLimiter, async (req, res) => {
     }
 
     const data = await groqRes.json();
-    const reply = data.choices?.[0]?.message?.content?.trim();
+    // The model occasionally ignores the no-dash rule, so enforce it here (long dashes,
+    // and short dashes used as a sentence break)
+    const reply = data.choices?.[0]?.message?.content?.trim().replace(/\s*—\s*|\s+–\s+/g, ', ');
 
     if (!reply) {
       return res.json({ reply: getFallbackResponse(userText) });

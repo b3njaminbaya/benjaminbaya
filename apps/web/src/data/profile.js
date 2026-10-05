@@ -31,7 +31,7 @@ export const TIMELINE = [
     title: 'Software Engineer',
     org: 'Buzlin Holdings Inc · Canada (remote)',
     current: true,
-    body: 'Engineering on the company’s two products: Buzlin, a marketplace and service-booking platform, and BuzRyde, a ride-hailing service — web, mobile, admin and API.',
+    body: 'Engineering on the company’s two products: Buzlin, a marketplace and service-booking platform, and BuzRyde, a ride-hailing service, across web, mobile, admin and API.',
   },
   {
     period: 'Sep 2026 – Present',
@@ -108,7 +108,7 @@ export const CERTIFICATIONS = [
       },
       {
         title: 'Fellowship Mentor & Ambassador Team',
-        org: `${QUEENS} — recognised for mentoring founders and outreach`,
+        org: `${QUEENS}. Recognised for mentoring founders and outreach`,
         date: '2025–26',
         extra: [
           { label: 'Mentor 2025', href: qc('a23e600c-7fc4-4017-8f11-4d45f8cf6e65#acc.ehOTdo3b') },
@@ -121,7 +121,7 @@ export const CERTIFICATIONS = [
     group: 'Business growth',
     items: [
       { title: 'SME Growth Lab Digital Accelerator Program', org: 'SME Growth Lab Africa', date: '2024' },
-      { title: 'Founders Factory Africa Academy — Explore Program', org: '54 Collective', date: '2023' },
+      { title: 'Founders Factory Africa Academy, Explore Program', org: '54 Collective', date: '2023' },
     ],
   },
   {
@@ -151,11 +151,11 @@ export const CERTIFICATIONS = [
 ];
 
 export const ORGANISATIONS = [
-  { name: 'Buzlin Holdings Inc', note: 'Software Engineer — Buzlin & BuzRyde · current' },
-  { name: 'Becof Organic Chemicals Limited', note: 'Client — commerce & operations platform' },
-  { name: 'Esteric Kitchens & Interior Designs Ltd', note: 'Client — website & CRM' },
-  { name: 'Melamart Enterprises Limited', note: 'Client — website & hire management' },
-  { name: 'Precious Furniture Kenya', note: 'Client — social media & SEO · current' },
+  { name: 'Buzlin Holdings Inc', note: 'Software Engineer on Buzlin & BuzRyde · current' },
+  { name: 'Becof Organic Chemicals Limited', note: 'Client: commerce & operations platform' },
+  { name: 'Esteric Kitchens & Interior Designs Ltd', note: 'Client: website & CRM' },
+  { name: 'Melamart Enterprises Limited', note: 'Client: website & hire management' },
+  { name: 'Precious Furniture Kenya', note: 'Client: social media & SEO · current' },
   { name: 'Sensys Kenya Ltd', note: 'Software Engineer Intern' },
   { name: 'Teevexa Ltd', note: 'Founder' },
 ];

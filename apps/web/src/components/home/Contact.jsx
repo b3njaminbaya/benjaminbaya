@@ -54,10 +54,10 @@ const ContactForm = () => {
       <div className="flex flex-col items-center py-16 text-center" role="status">
         <CheckCircle className="text-accent" size={44} aria-hidden="true" />
         <h3 className="mt-4 text-2xl font-bold tracking-tight">Message sent</h3>
-        <p className="mt-2 max-w-sm text-muted">Thanks — I’ll read it properly and reply by email.</p>
+        <p className="mt-2 max-w-sm text-muted">Thanks. I’ll read it properly and reply by email.</p>
         {fileDropped && (
           <p className="mt-3 max-w-sm text-sm text-muted">
-            Your attachment couldn’t be included this time — please email it to{' '}
+            Your attachment couldn’t be included this time. Please email it to{' '}
             <a href={`mailto:${PERSON.email}`} className="link-underline font-semibold text-ink">
               {PERSON.email}
             </a>
@@ -112,7 +112,7 @@ const ContactForm = () => {
           name="message"
           required
           rows={5}
-          placeholder="Describe the problem in plain language — no technical brief needed."
+          placeholder="Describe the problem in plain language. No technical brief needed."
           onChange={(e) => setWordCount(e.target.value.trim().split(/\s+/).filter(Boolean).length)}
           aria-describedby="message-count"
           className={inputClass}
@@ -165,7 +165,7 @@ const Contact = () => (
           Have a business challenge you’d like to solve with technology?
         </h2>
         <p className="mt-6 text-lg leading-relaxed text-white/70">
-          Let’s talk about it. The first conversation is about your business and the problem — not about selling you
+          Let’s talk about it. The first conversation is about your business and the problem, not about selling you
           a particular service. If technology isn’t the answer, I’ll tell you.
         </p>
 

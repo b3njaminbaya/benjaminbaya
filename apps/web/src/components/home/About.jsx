@@ -5,7 +5,7 @@ import Container from '../ui/Container';
 
 const PRINCIPLES = [
   { title: 'Problem before technology', body: 'Understand how the business works before proposing anything.' },
-  { title: 'Honest scope', body: 'Recommend the smallest thing that solves the problem — or nothing.' },
+  { title: 'Honest scope', body: 'Recommend the smallest thing that solves the problem, or nothing.' },
   { title: 'Measure the outcome', body: 'Decide up front what success looks like, and track it.' },
   { title: 'Built to be maintained', body: 'Software that’s still useful and fixable a year after launch.' },
 ];
@@ -55,7 +55,7 @@ const About = () => (
           </h3>
           <p className="mt-2 text-[0.95rem] leading-relaxed text-muted">
             I lead the consultation, strategy and architecture personally. When a project needs a delivery team,
-            it’s implemented through Teevexa — the technology company I founded, incorporated in Kenya in 2026.
+            it’s implemented through Teevexa, the technology company I founded, incorporated in Kenya in 2026.
           </p>
           <a
             href={TEEVEXA.url}

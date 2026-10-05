@@ -5,8 +5,8 @@ import { PILLARS } from '../../data/services';
 import Container from '../ui/Container';
 
 const PROOF = [
-  { k: 'Currently', v: 'Software Engineer, Buzlin Holdings — Buzlin & BuzRyde' },
-  { k: 'Founder', v: 'Teevexa Ltd — technology implementation' },
+  { k: 'Currently', v: 'Software Engineer, Buzlin Holdings (Buzlin & BuzRyde)' },
+  { k: 'Founder', v: 'Teevexa Ltd, technology implementation' },
   { k: 'Background', v: 'B.Eng Chemical Engineering + software engineering' },
   { k: 'Clients', v: 'Agriculture, interiors, construction and retail businesses in Kenya' },
 ];
@@ -28,7 +28,7 @@ const Hero = () => (
         </h1>
 
         <p className="mt-7 max-w-[38rem] text-lg leading-relaxed text-muted sm:text-xl">
-          Bring me the problem — a manual process, a website that doesn’t bring in customers, an idea for a
+          Bring me the problem: a manual process, a website that doesn’t bring in customers, an idea for a
           product. I’ll help you work out the right solution, then build it: websites, software, AI-powered
           automation and digital growth you can measure.
         </p>
@@ -42,7 +42,7 @@ const Hero = () => (
           </Link>
         </div>
         <p className="mt-5 text-sm text-muted">
-          The first conversation is a free 20-minute call about your business problem — no technical brief needed.
+          The first conversation is a free 20-minute call about your business problem. No technical brief needed.
         </p>
       </div>
 

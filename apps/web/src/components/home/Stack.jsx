@@ -9,7 +9,7 @@ const Stack = () => (
         id="stack-title"
         eyebrow="Technology"
         title="The tools behind the outcomes."
-        intro="Clients buy outcomes, not programming languages — so this comes last. For the technically curious, here’s what I build with."
+        intro="Clients buy outcomes, not programming languages, so this comes last. For the technically curious, here’s what I build with."
       />
       <dl className="reveal mt-12 grid gap-px overflow-hidden rounded-2xl border border-line bg-line sm:grid-cols-2 lg:grid-cols-4">
         {STACK.map(({ group, items }) => (

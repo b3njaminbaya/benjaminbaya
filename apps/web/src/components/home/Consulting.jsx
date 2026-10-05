@@ -11,7 +11,7 @@ const Consulting = () => (
           Advice from someone who also builds it.
         </h2>
         <p className="mt-5 max-w-prose text-lg leading-relaxed text-muted">
-          Consulting focused specifically on technology, digital transformation, automation and digital growth —
+          Consulting focused specifically on technology, digital transformation, automation and digital growth,
           grounded in what’s realistic to build, maintain and afford.
         </p>
 
@@ -20,7 +20,7 @@ const Consulting = () => (
             You don’t need to know what technology you need. You need to explain the business problem.
           </blockquote>
           <figcaption className="mt-4 text-sm text-muted">
-            Then I’ll help determine the appropriate solution — including when that’s not new software.
+            Then I’ll help determine the appropriate solution, including when that’s not new software.
           </figcaption>
         </figure>
 

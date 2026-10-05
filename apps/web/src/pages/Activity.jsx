@@ -22,7 +22,7 @@ const Skeleton = ({ h = 'h-[260px]' }) => <div className={`${h} animate-pulse ro
 const Stat = ({ title, value, loading }) => (
   <div className="card p-5">
     <p className="eyebrow mb-2">{title}</p>
-    {loading ? <div className="h-8 w-20 animate-pulse rounded bg-sunken" /> : <p className="text-3xl font-bold tracking-tight">{value ?? '—'}</p>}
+    {loading ? <div className="h-8 w-20 animate-pulse rounded bg-sunken" /> : <p className="text-3xl font-bold tracking-tight">{value ?? '-'}</p>}
   </div>
 );
 
@@ -45,7 +45,7 @@ const Activity = () => {
 
       {(ghError || wakaError) && (
         <p className="mt-6 text-sm text-muted" role="status">
-          {[ghError, wakaError].filter(Boolean).join(' · ')} — the stats server may be waking up; refresh in a moment.
+          {[ghError, wakaError].filter(Boolean).join(' · ')}. The stats server may be waking up; refresh in a moment.
         </p>
       )}
 

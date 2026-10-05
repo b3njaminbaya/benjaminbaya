@@ -15,7 +15,7 @@ export const CASE_STUDIES = [
     client: 'Becof Organic Chemicals Limited',
     title: 'A commerce and operations platform for an agricultural biotech company',
     summary:
-      'Online sales with M-Pesa, distributor and farmer portals, expert consultations and growth tools — the digital backbone of an agricultural business.',
+      'Online sales with M-Pesa, distributor and farmer portals, expert consultations and growth tools: the digital backbone of an agricultural business.',
     pillars: ['Build', 'Automate', 'Grow'],
     image: 'becof',
     imageAlt: 'Becof Organic Chemicals homepage: “Transforming Agriculture with Eco-Friendly Innovation”, with the SoilFix product spotlight',
@@ -31,7 +31,7 @@ export const CASE_STUDIES = [
       'SEO and measurement: dynamic sitemap, product-rating structured data, noindex on private pages, Google Analytics behind cookie consent.',
     ],
     role:
-      'Lead developer: architecture, frontend, Supabase backend and serverless functions, M-Pesa integration, SEO and analytics — plus a full bug and UX audit of the platform, closed out item by item.',
+      'Lead developer: architecture, frontend, Supabase backend and serverless functions, M-Pesa integration, SEO and analytics, plus a full bug and UX audit of the platform, closed out item by item.',
     tech: ['React', 'TypeScript', 'Tailwind CSS', 'Supabase (Postgres, Auth, RLS)', 'Edge Functions', 'M-Pesa Daraja API', 'Google Analytics'],
     outcome:
       'Live at becoforganicchemicals.com, taking real M-Pesa payments. Sales and traffic figures belong to the client and aren’t published here.',
@@ -45,7 +45,7 @@ export const CASE_STUDIES = [
     client: 'Buzlin Holdings Inc',
     title: 'Modernising a multi-vendor marketplace and service-booking platform',
     summary:
-      'Seven connected apps — customer web and mobile, seller, courier, POS, admin and API — taken from a licensed codebase to a hardened, rebranded production platform.',
+      'Seven connected apps (customer web and mobile, seller, courier, POS, admin and API) taken from a licensed codebase to a hardened, rebranded production platform.',
     pillars: ['Build', 'Automate', 'Consult'],
     image: 'buzlin',
     imageAlt: 'Buzlin homepage: “Discover services & shops near you” with service and location search',
@@ -60,7 +60,7 @@ export const CASE_STUDIES = [
       'CI/CD with GitHub Actions, file storage moved to Amazon S3, Android toolchains updated for 2026 Play Store requirements, and the move to the buzlin.ca domain.',
     ],
     role:
-      'Software engineer at Buzlin Holdings Inc — audits, architecture decisions and hands-on development across the Laravel API, Next.js storefront, React admin and four Flutter apps.',
+      'Software engineer at Buzlin Holdings Inc: audits, architecture decisions and hands-on development across the Laravel API, Next.js storefront, React admin and four Flutter apps.',
     tech: ['Laravel', 'PHP', 'Next.js', 'React', 'Flutter', 'Firebase', 'Amazon S3', 'GitHub Actions'],
     outcome:
       'Live at buzlin.ca with web and mobile apps. Usage figures are internal to Buzlin Holdings and aren’t published here.',
@@ -80,7 +80,7 @@ export const CASE_STUDIES = [
     imageAlt: 'BuzRyde website: “Ride Smarter. Earn Better. Move Canada.”',
     liveUrl: 'https://www.buzryde.com',
     problem:
-      'A ride-hailing service needs far more than a booking app: drivers must be verified and paid, riders supported, disputes resolved and growth campaigns run — and in Canada the public website has to work in English and French.',
+      'A ride-hailing service needs far more than a booking app: drivers must be verified and paid, riders supported, disputes resolved and growth campaigns run. In Canada, the public website also has to work in English and French.',
     solution: [
       'Overhauled the existing rider and driver apps: navigation rewrite, payments hardened across ride types, intercity rides with Stripe pre-authorisation, in-app support and inbox.',
       'Rebuilt the admin control panel: driver KYC and bans, payouts and wallet adjustments, disputes and support chat, audit logging, and intercity tooling.',
@@ -88,7 +88,7 @@ export const CASE_STUDIES = [
       'Redesigned the website with English/French localisation, a Sanity-powered blog and promotions CMS, dynamic sitemaps and indexing fixes, plus rider and driver web flows.',
     ],
     role:
-      'Software engineer at Buzlin Holdings Inc — took over and extended the existing mobile apps and control panel, and redesigned and built out the website.',
+      'Software engineer at Buzlin Holdings Inc: took over and extended the existing mobile apps and control panel, and redesigned and built out the website.',
     tech: ['Flutter', 'Firebase (Firestore, FCM)', 'Stripe', 'Google Maps', 'Laravel', 'React', 'Sanity CMS'],
     outcome:
       'The website is live at buzryde.com in English and French. Ride and user figures are internal to Buzlin Holdings and aren’t published here.',
@@ -172,7 +172,7 @@ export const CASE_STUDIES = [
       'Search engine optimisation for the website and product pages.',
       'Keeping the Google Business Profile current with the best photos and linked social accounts, and linking the social accounts in Google Search Console.',
     ],
-    role: 'Social media management and SEO — engagement started 19 September 2026.',
+    role: 'Social media management and SEO. Engagement started 19 September 2026.',
     tech: ['Meta Ads', 'Google Ads', 'Meta Pixel', 'Google tag', 'Google Business Profile', 'Google Search Console'],
     outcome: 'In progress. Results will be reported here once there is enough data to measure honestly.',
     links: [],
@@ -199,7 +199,7 @@ export const CASE_STUDIES = [
       'A LoRA fine-tuning pipeline for adding new languages from community-contributed parallel text.',
       'Accounts, history and analytics, a community forum, blog, GDPR data export and erasure, and optional billing.',
     ],
-    role: 'Designed and built end to end — frontend, API, translation microservice and training pipeline.',
+    role: 'Designed and built end to end: frontend, API, translation microservice and training pipeline.',
     tech: ['React', 'TypeScript', 'FastAPI', 'PostgreSQL', 'Redis', 'PyTorch', 'Hugging Face Transformers', 'Docker'],
     outcome: 'Live as a public demo. A personal product, so there are no commercial figures.',
     links: [
@@ -221,7 +221,7 @@ export const CASE_STUDIES = [
     imageAlt: 'Ordo homepage: “Project management, built end to end.”',
     liveUrl: 'https://ordo-inky.vercel.app',
     problem:
-      'Small teams need one place for tasks, deadlines and time spent — and a multi-user tool has to keep each team’s data strictly separate and in sync.',
+      'Small teams need one place for tasks, deadlines and time spent, and a multi-user tool has to keep each team’s data strictly separate and in sync.',
     solution: [
       'Task lists, subtasks, recurring tasks, Kanban boards, a calendar and live time tracking with CSV export.',
       'Workspaces with expiring invites, role-based access and real-time sync between teammates over WebSockets.',
@@ -252,7 +252,7 @@ export const CASE_STUDIES = [
     imageAlt: 'Micro-Donations Platform homepage: “Small donations, sent in seconds, felt for years.”',
     liveUrl: 'https://micro-donations-platform.vercel.app',
     problem:
-      'Giving small amounts to a local cause should be as easy as sending money to a friend — which in East Africa means M-Pesa — and donors want to see where their money goes.',
+      'Giving small amounts to a local cause should be as easy as sending money to a friend, which in East Africa means M-Pesa, and donors want to see where their money goes.',
     solution: [
       'Cause creation, search and filtering by category and country, with real-time progress toward funding goals.',
       'One-off and recurring (weekly or monthly) M-Pesa donations via STK push.',

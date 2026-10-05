@@ -22,7 +22,7 @@ const PORTFOLIO = {
     build: 'Business websites, landing pages, e-commerce, web and mobile apps, SaaS platforms, business management and CRM systems, dashboards, APIs and integrations.',
     automate: 'Business process and workflow automation, CRM automation, AI agents and AI customer support, WhatsApp automation, integrations, internal tools, reporting automation.',
     grow: 'SEO and local SEO, Google Business Profile, social media strategy and management, content strategy, Meta/Google/TikTok Ads, conversion tracking (Meta Pixel, TikTok Pixel), analytics, landing-page optimisation, lead generation. Creative production (photography, design, video) can support campaigns, but the focus is strategy and measurable results. He is not a full-service ad agency.',
-    approach: 'Clients do not need to know what technology they need — they only need to explain the business problem. The first conversation is about the problem, not selling a service.',
+    approach: 'Clients do not need to know what technology they need. They only need to explain the business problem. The first conversation is about the problem, not selling a service.',
   },
 
   teevexa: {
@@ -44,48 +44,48 @@ const PORTFOLIO = {
 
   projects: [
     {
-      name: 'Becof Organic Chemicals (client) — commerce & operations platform',
+      name: 'Becof Organic Chemicals (client): commerce & operations platform',
       description: 'Online store with production M-Pesa payments and guest checkout, portals for farmers, distributors and experts, consultation booking, affiliate/loyalty/referral programmes, WhatsApp CTAs, SEO and Google Analytics.',
       tech: ['React', 'TypeScript', 'Supabase', 'M-Pesa Daraja API'],
       url: 'https://www.becoforganicchemicals.com',
     },
     {
-      name: 'Buzlin (Buzlin Holdings Inc, my employer) — marketplace & service booking',
+      name: 'Buzlin (Buzlin Holdings Inc, my employer): marketplace & service booking',
       description: 'Audited, secured and modernised a licensed multi-vendor platform across seven apps: email-OTP login, live booking tracking, multi-admin support chat, seller/courier onboarding, CI/CD, S3 storage.',
       tech: ['Laravel', 'Next.js', 'React', 'Flutter'],
       url: 'https://buzlin.ca',
     },
     {
-      name: 'BuzRyde (Buzlin Holdings Inc, my employer) — ride-hailing in Canada',
+      name: 'BuzRyde (Buzlin Holdings Inc, my employer): ride-hailing in Canada',
       description: 'Overhauled rider and driver apps (Stripe, intercity rides), rebuilt the admin control panel (KYC, payouts, disputes, campaigns, referrals) and redesigned the EN/FR website with a CMS and SEO.',
       tech: ['Flutter', 'Firebase', 'Stripe', 'Laravel', 'React', 'Sanity'],
       url: 'https://www.buzryde.com',
     },
     {
-      name: 'Esteric Kitchens & Interior Designs (client) — website & CRM',
+      name: 'Esteric Kitchens & Interior Designs (client): website & CRM',
       description: 'Marketing site with quote requests and portfolio, plus a CRM with a leads → customers → quotations → projects pipeline and data-driven roles.',
       tech: ['Next.js', 'Prisma', 'Neon Postgres', 'Clerk'],
       url: 'https://esteric-web.vercel.app',
     },
     {
-      name: 'Melamart Enterprises (client) — website & hire management',
+      name: 'Melamart Enterprises (client): website & hire management',
       description: 'Website for a scaffolding hire company with two branches; audited, secured and redesigned its equipment-hire admin system. Both are live.',
       tech: ['React', 'PHP', 'MySQL'],
       url: 'https://melamart-enterprises.vercel.app',
     },
     {
-      name: 'Precious Furniture Kenya (client, current since Sep 2026) — digital marketing',
+      name: 'Precious Furniture Kenya (client, current since Sep 2026): digital marketing',
       description: 'Social media content for FB/IG/TikTok, Google and Meta Ads, Google tag and Meta Pixel, SEO, Google Business Profile and Search Console. Results not yet measured.',
       tech: ['Meta Ads', 'Google Ads', 'Meta Pixel'],
     },
     {
-      name: 'Tafsiri AI (personal) — translation for Kenyan languages',
+      name: 'Tafsiri AI (personal): translation for Kenyan languages',
       description: 'Swahili/Somali/English neural translation with confidence scoring, an active-learning review queue and a LoRA fine-tuning pipeline.',
       tech: ['React', 'FastAPI', 'PyTorch', 'Transformers'],
       url: 'https://tafsiri-ai-tan.vercel.app',
     },
     {
-      name: 'Ordo (personal) — project management',
+      name: 'Ordo (personal): project management',
       description: 'Tasks, Kanban, calendar, time tracking and real-time team collaboration; built with AI assistance under my direction.',
       tech: ['React', 'Flask', 'Socket.IO', 'PostgreSQL'],
       url: 'https://ordo-inky.vercel.app',
@@ -110,7 +110,7 @@ const PORTFOLIO = {
     { degree: 'Lean Six Sigma White Belt (2024)', institution: 'The Council for Six Sigma Certification' },
   ],
 
-  availability: 'Available for client projects and consultations. The best first step is booking a consultation at https://www.teevexa.com/book-consultation — a free 20-minute Zoom call, Monday to Saturday in Nairobi hours, with no commitment — or using the contact form on the site.',
+  availability: 'Available for client projects and consultations. The best first step is booking a consultation at https://www.teevexa.com/book-consultation (a free 20-minute Zoom call, Monday to Saturday in Nairobi hours, with no commitment) or using the contact form on the site.',
 };
 
 // ─── CONTEXT BUILDER ─────────────────────────────────────────────────────────
@@ -122,7 +122,7 @@ function buildContext(message) {
   const sections = [];
 
   // Identity is always included as a base
-  sections.push(`IDENTITY: ${PORTFOLIO.identity.name} — ${PORTFOLIO.identity.title}, based in ${PORTFOLIO.identity.location}. ${PORTFOLIO.identity.positioning} Personal website: ${PORTFOLIO.identity.portfolio} (Teevexa at teevexa.com is his company, not his personal site).`);
+  sections.push(`IDENTITY: ${PORTFOLIO.identity.name}, ${PORTFOLIO.identity.title}, based in ${PORTFOLIO.identity.location}. ${PORTFOLIO.identity.positioning} Personal website: ${PORTFOLIO.identity.portfolio} (Teevexa at teevexa.com is his company, not his personal site).`);
 
   const want = (pattern) => pattern.test(lower);
 
@@ -145,7 +145,7 @@ function buildContext(message) {
 
   if (want(/project|work|built|made|portfolio|app|website|demo|show me|example|client|donation|becof|buzlin|buzryde|esteric|melamart|precious|tafsiri|ordo/)) {
     const lines = PORTFOLIO.projects.map(p => {
-      const link = p.url ? ` — ${p.url}` : '';
+      const link = p.url ? ` (${p.url})` : '';
       return `  • ${p.name}: ${p.description} Tech: ${p.tech.join(', ')}${link}`;
     });
     sections.push(`PROJECTS:\n${lines.join('\n')}`);
@@ -171,7 +171,7 @@ function buildContext(message) {
   }
 
   if (want(/education|degree|study|university|moringa|background|qualif|certif/)) {
-    const lines = PORTFOLIO.education.map(e => `  • ${e.degree} — ${e.institution}`);
+    const lines = PORTFOLIO.education.map(e => `  • ${e.degree}, ${e.institution}`);
     sections.push(`EDUCATION:\n${lines.join('\n')}`);
   }
 
@@ -191,11 +191,12 @@ function buildContext(message) {
 // ─── SYSTEM PROMPT ───────────────────────────────────────────────────────────
 
 function buildSystemPrompt(context) {
-  return `You are the website assistant for Benjamin Baya. Respond in first person on his behalf — use "I", not "he". Be warm, direct and concise. Sound like a practical consultant who also builds the technology, speaking to business owners in plain language rather than jargon.
+  return `You are the website assistant for Benjamin Baya. Respond in first person on his behalf: use "I", not "he". Be warm, direct and concise. Sound like a practical consultant who also builds the technology, speaking to business owners in plain language rather than jargon.
 
 Guidelines:
 - Only answer using the context provided below. Never invent clients, numbers, results, testimonials, prices, services or tactics that aren't in the context.
-- Write plain text only — no markdown, no bold, no headings, no bullet symbols. Keep it under 100 words.
+- Write plain text only: no markdown, no bold, no headings, no bullet symbols. Keep it under 100 words.
+- Never use dashes (— or –) to break up a sentence. Use commas, colons or full stops instead.
 - When asked about projects, mention the two or three most relevant ones, not the full list, and be clear which are client work, which are Buzlin Holdings products (my employer) and which are personal builds.
 - Focus on the visitor's business problem. Reassure them they don't need to know which technology they need.
 - When someone wants help or to work together, invite them to book a consultation: https://www.teevexa.com/book-consultation (a free 20-minute Zoom call, Monday to Saturday in Nairobi hours, no commitment).
@@ -211,9 +212,9 @@ ${context}`;
 // Used when the LLM API is unavailable. Covers the most common queries.
 
 const FALLBACKS = {
-  services: `I help businesses build, automate and grow with technology — from consulting on what you actually need, to building websites, apps and business systems, automating repetitive work (including AI), and growing through SEO, ads and proper tracking. You don't need a technical brief: book a consultation at teevexa.com/book-consultation and tell me about the problem.`,
+  services: `I help businesses build, automate and grow with technology. That covers consulting on what you actually need, building websites, apps and business systems, automating repetitive work (including AI), and growing through SEO, ads and proper tracking. You don't need a technical brief: book a consultation at teevexa.com/book-consultation and tell me about the problem.`,
 
-  skills: `I work across the stack — React, Next.js and TypeScript on the frontend; Python, Node.js, PHP (Laravel) and Java on the backend; Flutter, React Native and Kotlin for mobile; PostgreSQL, MySQL and MongoDB for data; LLM APIs for AI features; and M-Pesa, PesaPal and Stripe for payments.`,
+  skills: `I work across the stack: React, Next.js and TypeScript on the frontend; Python, Node.js, PHP (Laravel) and Java on the backend; Flutter, React Native and Kotlin for mobile; PostgreSQL, MySQL and MongoDB for data; LLM APIs for AI features; and M-Pesa, PesaPal and Stripe for payments.`,
 
   projects: `Client work includes the Becof Organic Chemicals commerce platform (live, with M-Pesa payments), a website and CRM for Esteric Kitchens, a website and hire system for Melamart, and ongoing digital marketing for Precious Furniture Kenya. At Buzlin Holdings I work on Buzlin (marketplace) and BuzRyde (ride-hailing). Personal builds include Tafsiri AI, Ordo and a micro-donations platform. Each has a case study on this site.`,
 
@@ -221,9 +222,9 @@ const FALLBACKS = {
 
   contact: `The best first step is a free 20-minute consultation on Zoom: teevexa.com/book-consultation. You can also email b3njaminbaya@gmail.com, WhatsApp +254 794 126 508, or use the contact form on this site.`,
 
-  bio: `I'm Benjamin Baya — a software engineer and entrepreneur in Nairobi. I trained as a chemical engineer, moved into software, and now help businesses turn problems into working solutions: websites, systems, automation and digital growth. I'm currently a software engineer at Buzlin Holdings, working on Buzlin and BuzRyde, and founder of Teevexa.`,
+  bio: `I'm Benjamin Baya, a software engineer and entrepreneur in Nairobi. I trained as a chemical engineer, moved into software, and now help businesses turn problems into working solutions: websites, systems, automation and digital growth. I'm currently a software engineer at Buzlin Holdings, working on Buzlin and BuzRyde, and founder of Teevexa.`,
 
-  github: `My GitHub is github.com/b3njaminbaya — you'll find several of my project repositories there.`,
+  github: `My GitHub is github.com/b3njaminbaya. You'll find several of my project repositories there.`,
 
   default: `I'm Benjamin's assistant. Ask what he does, whether he can help with a problem in your business, or about past projects. To talk it through directly, book a consultation at teevexa.com/book-consultation.`,
 };

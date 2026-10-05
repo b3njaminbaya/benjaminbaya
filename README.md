@@ -1,12 +1,12 @@
 <div align="center">
 
 <a href="https://benjaminbaya.com">
-  <img src="apps/web/public/og-image.png" alt="Benjamin Baya — I help businesses build, automate and grow with technology" width="820" />
+  <img src="apps/web/public/og-image.png" alt="Benjamin Baya: I help businesses build, automate and grow with technology" width="820" />
 </a>
 
 # benjaminbaya.com
 
-**The personal site of Benjamin Baya — Software Engineer & Business Technology Consultant.**
+**The personal site of Benjamin Baya, Software Engineer & Business Technology Consultant.**
 <br />
 I help businesses build, automate and grow with technology.
 
@@ -28,7 +28,7 @@ I help businesses build, automate and grow with technology.
 
 This repository contains the website at [benjaminbaya.com](https://benjaminbaya.com) and the small API behind its AI assistant.
 
-The site is written for business owners rather than other developers. It explains what I do in terms of outcomes, follows the journey a client actually takes — **Consult → Build → Automate → Grow** — and backs it up with case studies of real client and product work.
+The site is written for business owners rather than other developers. It explains what I do in terms of outcomes, follows the journey a client actually takes (**Consult → Build → Automate → Grow**) and backs it up with case studies of real client and product work.
 
 It is also built to the standard I would deliver for a client: fast, accessible, search-optimised and easy to maintain.
 
@@ -39,7 +39,7 @@ It is also built to the standard I would deliver for a client: fast, accessible,
 | **Prerendered pages** | Every public route is rendered to static HTML at build time, so search engines and social previews get real content, not an empty app shell. |
 | **Search-ready** | Per-page titles, descriptions, canonical URLs, Open Graph and Twitter tags, JSON-LD structured data, a generated sitemap and robots.txt, and real 404 responses. |
 | **Lightweight** | About 100 KB of JavaScript (gzipped) on first load. Responsive WebP images, one self-hosted variable font, and no animation library. |
-| **Case studies** | Each project has its own page: the problem, the solution, my role, the technology and the outcome — with no invented metrics. |
+| **Case studies** | Each project has its own page: the problem, the solution, my role, the technology and the outcome, with no invented metrics. |
 | **AI assistant** | A chat assistant grounded in a curated knowledge base, with a built-in fallback so it keeps answering if the AI provider is unavailable. |
 | **Contact form** | Sends enquiries, including attachments, through a serverless function. Spam-protected and validated on the server. |
 | **Accessible** | Semantic HTML, keyboard navigation, a skip link, visible focus states, reduced-motion support, and light and dark themes. |
@@ -68,7 +68,7 @@ flowchart LR
     A --> S[("GitHub and WakaTime")]
 ```
 
-The site itself is fully static. The two dynamic features — the contact form and the AI assistant — are isolated behind their own endpoints, so the pages stay fast and keep working even if either service is down.
+The site itself is fully static. The two dynamic features (the contact form and the AI assistant) are isolated behind their own endpoints, so the pages stay fast and keep working even if either service is down.
 
 ## Tech stack
 
@@ -147,16 +147,16 @@ All content lives in data files. Change the data and the pages, navigation, site
 |---|---|
 | [`apps/web/src/data/site.js`](apps/web/src/data/site.js) | Name, title, contact details, booking link, social links, site URL |
 | [`apps/web/src/data/services.js`](apps/web/src/data/services.js) | The four service pillars, client problems, process, consulting and growth areas |
-| [`apps/web/src/data/caseStudies.js`](apps/web/src/data/caseStudies.js) | Case studies — adding an entry creates its page and sitemap entry automatically |
+| [`apps/web/src/data/caseStudies.js`](apps/web/src/data/caseStudies.js) | Case studies. Adding an entry creates its page and sitemap entry automatically |
 | [`apps/web/src/data/profile.js`](apps/web/src/data/profile.js) | Experience timeline, tech stack, education, certifications |
 | [`apps/web/src/seo.js`](apps/web/src/seo.js) | Page titles, descriptions and structured data |
-| [`apps/api/knowledgeBase.js`](apps/api/knowledgeBase.js) | What the AI assistant knows — keep it in step with the site |
+| [`apps/api/knowledgeBase.js`](apps/api/knowledgeBase.js) | What the AI assistant knows. Keep it in step with the site. |
 
 ## Environment variables
 
 None are required for local development.
 
-### Website — `apps/web/.env`
+### Website: `apps/web/.env`
 
 | Variable | Purpose |
 |---|---|
@@ -166,7 +166,7 @@ None are required for local development.
 | `CONTACT_FROM` | Verified sender address for enquiry emails. |
 | `CONTACT_TO` | Inbox that receives enquiries. |
 
-### API — `apps/api/.env`
+### API: `apps/api/.env`
 
 | Variable | Purpose |
 |---|---|
@@ -192,7 +192,7 @@ Both apps deploy automatically when `main` is updated.
 
 ## Contact
 
-**Benjamin Baya** — Software Engineer & Business Technology Consultant, Nairobi, Kenya
+**Benjamin Baya**, Software Engineer & Business Technology Consultant, Nairobi, Kenya
 
 | | |
 |---|---|

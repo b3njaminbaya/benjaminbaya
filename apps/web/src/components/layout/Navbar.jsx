@@ -72,7 +72,7 @@ const Navbar = () => {
         Skip to content
       </a>
       <Container className="flex h-16 items-center justify-between gap-4">
-        <Link to="/" className="group flex items-center gap-2.5" aria-label={`${PERSON.name} — home`}>
+        <Link to="/" className="group flex items-center gap-2.5" aria-label={`${PERSON.name}, home`}>
           <span
             aria-hidden="true"
             className="grid h-8 w-8 place-items-center rounded-lg bg-ink text-[0.72rem] font-bold tracking-tight text-paper"
