@@ -5,7 +5,8 @@ import Container from '../ui/Container';
 import SectionHeading from '../ui/SectionHeading';
 import WorkVisual from '../work/WorkVisual';
 
-const realWorld = CASE_STUDIES.filter((c) => c.kind !== 'personal');
+const realWorld = CASE_STUDIES.filter((c) => c.kind === 'client' || c.kind === 'employer');
+const teevexa = CASE_STUDIES.filter((c) => c.kind === 'teevexa');
 const featured = realWorld.slice(0, 3);
 const moreRealWorld = realWorld.slice(3);
 const personal = CASE_STUDIES.filter((c) => c.kind === 'personal');
@@ -86,7 +87,7 @@ const Work = () => (
         id="work-title"
         eyebrow="Selected work"
         title="Problems solved, not just things built."
-        intro="Client systems, products I engineer at Buzlin Holdings, and a few personal builds, each written up as the problem, what I built, my role, the technology and what changed. Where an outcome hasn’t been measured, I say so."
+        intro="Client systems, products I engineer at Buzlin Holdings, products shipped by my own company Teevexa, and a few personal builds, each written up as the problem, what I built, my role, the technology and what changed. Where an outcome hasn’t been measured, I say so."
       />
 
       <h3 className="eyebrow mb-6 mt-16 flex items-center gap-3">
@@ -100,6 +101,19 @@ const Work = () => (
       </div>
       <div className="mt-6 grid gap-6 sm:grid-cols-2 lg:grid-cols-3">
         {moreRealWorld.map((s, i) => (
+          <CompactCard key={s.slug} study={s} index={i} />
+        ))}
+      </div>
+
+      <h3 className="eyebrow mb-6 mt-20 flex items-center gap-3">
+        <span className="h-px w-8 bg-line" aria-hidden="true" />
+        Teevexa products
+      </h3>
+      <div className="grid gap-6">
+        <FeaturedCard study={teevexa[0]} />
+      </div>
+      <div className="mt-6 grid gap-6 sm:grid-cols-2 lg:grid-cols-3">
+        {teevexa.slice(1).map((s, i) => (
           <CompactCard key={s.slug} study={s} index={i} />
         ))}
       </div>

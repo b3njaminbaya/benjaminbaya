@@ -1,3 +1,4 @@
+import { Link } from 'react-router-dom';
 import { ArrowUpRight } from 'lucide-react';
 import { TIMELINE } from '../../data/profile';
 import { TEEVEXA } from '../../data/site';
@@ -55,7 +56,15 @@ const About = () => (
           </h3>
           <p className="mt-2 text-[0.95rem] leading-relaxed text-muted">
             I lead the consultation, strategy and architecture personally. When a project needs a delivery team,
-            it’s implemented through Teevexa, the technology company I founded, incorporated in Kenya in 2026.
+            it’s implemented through Teevexa, the technology company I founded, incorporated in Kenya in 2026. Teevexa also ships its own products, including{' '}
+            <Link to="/work/teevexa-trace" className="link-underline font-semibold text-ink">
+              Teevexa Trace
+            </Link>{' '}
+            and{' '}
+            <Link to="/work/teedesk" className="link-underline font-semibold text-ink">
+              TeeDesk
+            </Link>
+            .
           </p>
           <a
             href={TEEVEXA.url}

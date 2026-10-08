@@ -49,13 +49,18 @@ const Footer = () => (
       <nav aria-label="Case studies" className="md:col-span-3">
         <p className={heading}>Work</p>
         <ul className="space-y-2.5">
-          {CASE_STUDIES.map((c) => (
+          {CASE_STUDIES.slice(0, 6).map((c) => (
             <li key={c.slug}>
               <Link to={`/work/${c.slug}`} className={link}>
                 {c.shortName}
               </Link>
             </li>
           ))}
+          <li>
+            <Link to={{ pathname: '/', hash: '#work' }} className={link}>
+              All work →
+            </Link>
+          </li>
         </ul>
       </nav>
 

@@ -79,6 +79,30 @@ const PORTFOLIO = {
       tech: ['Meta Ads', 'Google Ads', 'Meta Pixel'],
     },
     {
+      name: 'Teevexa Trace (Teevexa product): supply chain traceability',
+      description: 'Two mobile apps published on Google Play (Teevexa Field for workers logging batch events with photos, voice notes and GPS, working offline; Teevexa Trace for producers and buyers with a live dashboard, map, trust score and PDF certificates), plus public batch verification on the web. In pilot with early customers, with more being onboarded.',
+      tech: ['React Native (Expo)', 'TypeScript', 'Supabase'],
+      url: 'https://benjaminbaya.com/work/teevexa-trace',
+    },
+    {
+      name: 'TeeDesk (Teevexa product): AI customer support',
+      description: 'Open-source, self-hosted AI customer support: website chat widget, WhatsApp and Telegram, answers from a business knowledge base, handover to a human agent, analytics and separate accounts per business. Runs on a local AI model, so there are no per-message AI fees. No hosted demo.',
+      tech: ['React', 'FastAPI', 'PostgreSQL (pgvector)', 'Ollama'],
+      url: 'https://github.com/teevexa/teedesk',
+    },
+    {
+      name: 'Teevexa platform (Teevexa product): website, client portal and CRM',
+      description: 'The system Teevexa runs on: quote funnel, consultation booking, client portal and an internal CRM and project system. Live at teevexa.com.',
+      tech: ['React', 'TypeScript', 'Supabase'],
+      url: 'https://www.teevexa.com',
+    },
+    {
+      name: 'CyberGuard AI (Teevexa product): threat detection',
+      description: 'Open-source threat-detection dashboard for small teams: flags unusual network activity with a trained model, sends alerts, tracks incidents and explains threats in plain language.',
+      tech: ['React', 'FastAPI', 'scikit-learn', 'Ollama'],
+      url: 'https://github.com/teevexa/cyberguard-ai',
+    },
+    {
       name: 'Nyuzi (personal): circular-fashion marketplace',
       description: 'A live product, not yet trading. People donate clothing, upcycling partners turn it into new products, and buyers see which donations a product came from. Guest checkout with M-Pesa (built, not yet switched on in production), inventory that cannot be oversold, order tracking, reviews, an admin panel and a full security audit.',
       tech: ['React', 'TypeScript', 'Supabase', 'M-Pesa Daraja API'],
@@ -149,7 +173,7 @@ function buildContext(message) {
     );
   }
 
-  if (want(/project|work|built|made|portfolio|app|website|demo|show me|example|client|donation|becof|buzlin|buzryde|esteric|melamart|precious|tafsiri|ordo|nyuzi/)) {
+  if (want(/project|work|built|made|portfolio|app|website|demo|show me|example|client|donation|becof|buzlin|buzryde|esteric|melamart|precious|tafsiri|ordo|nyuzi|trace|teedesk|cyberguard|product/)) {
     const lines = PORTFOLIO.projects.map(p => {
       const link = p.url ? ` (${p.url})` : '';
       return `  • ${p.name}: ${p.description} Tech: ${p.tech.join(', ')}${link}`;
@@ -203,7 +227,7 @@ Guidelines:
 - Only answer using the context provided below. Never invent clients, numbers, results, testimonials, prices, services or tactics that aren't in the context.
 - Write plain text only: no markdown, no bold, no headings, no bullet symbols. Keep it under 100 words.
 - Never use dashes (— or –) to break up a sentence. Use commas, colons or full stops instead.
-- When asked about projects, mention the two or three most relevant ones, not the full list, and be clear which are client work, which are Buzlin Holdings products (my employer) and which are personal builds.
+- When asked about projects, mention the two or three most relevant ones, not the full list, and be clear which are client work, which are Buzlin Holdings products (my employer) which are products of my own company Teevexa, and which are personal builds.
 - Focus on the visitor's business problem. Reassure them they don't need to know which technology they need.
 - When someone wants help or to work together, invite them to book a consultation: https://www.teevexa.com/book-consultation (a free 20-minute Zoom call, Monday to Saturday, East Africa Time (EAT), no commitment).
 - For direct contact: b3njaminbaya@gmail.com or WhatsApp +254 794 126 508.
@@ -222,7 +246,7 @@ const FALLBACKS = {
 
   skills: `I work across the stack: React, Next.js and TypeScript on the frontend; Python, Node.js, PHP (Laravel) and Java on the backend; Flutter, React Native and Kotlin for mobile; PostgreSQL, MySQL and MongoDB for data; LLM APIs for AI features; and M-Pesa, PesaPal and Stripe for payments.`,
 
-  projects: `Client work includes the Becof Organic Chemicals commerce platform (live, with M-Pesa payments), a website and CRM for Esteric Kitchens, a website and hire system for Melamart, and ongoing digital marketing for Precious Furniture Kenya. At Buzlin Holdings I work on Buzlin (marketplace) and BuzRyde (ride-hailing). Personal builds include Nyuzi (a circular-fashion marketplace), Tafsiri AI, Ordo and a micro-donations platform. Each has a case study on this site.`,
+  projects: `Client work includes the Becof Organic Chemicals commerce platform (live, with M-Pesa payments), a website and CRM for Esteric Kitchens, a website and hire system for Melamart, and ongoing digital marketing for Precious Furniture Kenya. At Buzlin Holdings I work on Buzlin (marketplace) and BuzRyde (ride-hailing). Through my own company Teevexa I have shipped Teevexa Trace (supply chain traceability, two apps on Google Play), TeeDesk (open-source AI customer support) and CyberGuard AI. Personal builds include Nyuzi (a circular-fashion marketplace), Tafsiri AI, Ordo and a micro-donations platform. Each has a case study on this site.`,
 
   teevexa: `Teevexa Ltd is the technology company I founded. I lead the consultation, strategy and architecture; larger projects are delivered through Teevexa. You can book a consultation at teevexa.com/book-consultation.`,
 

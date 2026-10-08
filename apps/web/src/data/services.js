@@ -42,6 +42,7 @@ export const PILLARS = [
     id: 'automate',
     number: '03',
     name: 'Automate',
+    proof: { text: 'TeeDesk, an AI customer support platform', to: '/work/teedesk' },
     tagline: 'Hand repetitive work to software, and use AI where it genuinely helps.',
     what: 'AI agents, workflow and CRM automation, integrations and business process automation.',
     who: 'Teams losing hours to data entry, copy-pasting between tools, chasing follow-ups or answering the same questions.',

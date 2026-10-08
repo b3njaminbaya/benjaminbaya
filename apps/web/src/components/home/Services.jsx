@@ -1,3 +1,4 @@
+import { Link } from 'react-router-dom';
 import { ArrowRight } from 'lucide-react';
 import { PILLARS } from '../../data/services';
 import Container from '../ui/Container';
@@ -61,6 +62,15 @@ const Services = () => (
               <Row label="Who it’s for">{p.who}</Row>
               <Row label="Solves">{p.problem}</Row>
             </dl>
+
+            {p.proof && (
+              <p className="border-t border-white/10 py-3.5 text-[0.95rem] text-white/80">
+                <span className="font-mono text-[0.68rem] uppercase tracking-[0.14em] text-white/45">In practice </span>
+                <Link to={p.proof.to} className="font-semibold text-white underline decoration-white/30 underline-offset-4 hover:decoration-white">
+                  {p.proof.text}
+                </Link>
+              </p>
+            )}
 
             <ul className="mt-auto flex flex-wrap gap-2 border-t border-white/10 pt-5" aria-label={`${p.name} services`}>
               {p.offerings.map((o) => (

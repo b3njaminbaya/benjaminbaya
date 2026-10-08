@@ -4,6 +4,7 @@
 //
 // kind: 'client'   → built for a client business
 //       'employer' → product of Buzlin Holdings Inc, where I work as a software engineer
+//       'teevexa'  → product of Teevexa Ltd, the company I founded
 //       'personal' → self-initiated product build
 
 export const CASE_STUDIES = [
@@ -178,6 +179,129 @@ export const CASE_STUDIES = [
     links: [],
   },
   {
+    slug: 'teevexa-trace',
+    shortName: 'Teevexa Trace',
+    kind: 'teevexa',
+    label: 'Teevexa product · Supply chain',
+    client: 'Teevexa Ltd',
+    title: 'Teevexa Trace - supply chain traceability from the field to the buyer',
+    summary:
+      'Two mobile apps and a public verification page that record what happens to a product batch at every step, even with no signal, and let anyone check its journey.',
+    pillars: ['Build', 'Automate'],
+    image: null,
+    visual: 'phones',
+    phones: [
+      { src: 'teevexa-trace-phone-1', alt: 'Teevexa Field home screen with quick actions: Scan QR, Log Event, Route Tracker and Generate QR' },
+      { src: 'teevexa-trace-phone-2', alt: 'Teevexa Field log event screen with event types, location and photo evidence' },
+      { src: 'teevexa-trace-phone-3', alt: 'Teevexa Trace dashboard showing batches, events and recent activity' },
+    ],
+    liveUrl: 'https://play.google.com/store/apps/details?id=com.teevexa.trace',
+    problem:
+      'Producers and exporters are increasingly asked to prove where a product came from and what happened to it along the way. The evidence is usually created in the field, on farms, in warehouses and on the road, where there is often no connection, and it ends up on paper or in chat messages that nobody can verify.',
+    solution: [
+      'Teevexa Field, for workers on the ground: scan or generate a batch QR code, then log each event (harvest, processing, quality check, transport, delivery) with photos, a voice note and GPS location.',
+      'Offline first: everything is saved on the phone and synced automatically when a connection returns, so work never stops for lack of signal.',
+      'Teevexa Trace, for producers, exporters and buyers: a live dashboard of batches and events, supplier performance, a shipment map, a trust score per batch, and downloadable PDF certificates.',
+      'Public verification with no app or account: anyone can look up a batch on the web by scanning its QR code, and third parties can check batches through an API.',
+      'Compliance reports generated from the recorded events, and optional anchoring of events to a public blockchain so records can’t be quietly changed (built, switched off by default).',
+      'Biometric login, push notifications and self-service account deletion in both apps.',
+    ],
+    role: 'Founder and lead developer: product design, both mobile apps, the backend and the releases to Google Play.',
+    tech: ['React Native (Expo)', 'TypeScript', 'Supabase (Postgres, Auth, Realtime)', 'Edge Functions', 'Google Maps', 'Polygon (optional)'],
+    outcome:
+      'Both apps are published on Google Play. The product is in pilot with early customers, with more being onboarded. Usage figures aren’t published here.',
+    links: [
+      { label: 'Teevexa Trace on Google Play', href: 'https://play.google.com/store/apps/details?id=com.teevexa.trace' },
+      { label: 'Teevexa Field on Google Play', href: 'https://play.google.com/store/apps/details?id=com.teevexa.field' },
+      { label: 'Public batch verification', href: 'https://www.teevexa.com/verify' },
+    ],
+  },
+  {
+    slug: 'teedesk',
+    shortName: 'TeeDesk',
+    kind: 'teevexa',
+    label: 'Teevexa product · AI support',
+    client: 'Teevexa Ltd',
+    title: 'TeeDesk - AI customer support a business can run on its own servers',
+    summary:
+      'An open-source support platform that answers customers on a website, WhatsApp and Telegram from the business’s own documents, and hands over to a person when it isn’t sure.',
+    pillars: ['Automate', 'Build'],
+    image: null,
+    visual: 'support',
+    problem:
+      'Small support teams answer the same questions all day, and most AI chat tools mean sending customer conversations to a third-party AI service and paying for every message.',
+    solution: [
+      'A chat widget that can be embedded on any website, plus WhatsApp Business and Telegram channels, all feeding one conversation system.',
+      'Answers grounded in the business’s own knowledge base: upload PDF or Word documents and the assistant uses them to reply.',
+      'Automatic handover to a human agent when the AI’s confidence is low or the customer is unhappy, with an agent queue to claim and resolve conversations.',
+      'The AI model runs locally, so customer data stays on the business’s own servers and there are no per-message AI fees.',
+      'Separate, isolated accounts for multiple businesses, each with its own branding, channels and settings.',
+      'Analytics on conversation volume, sentiment and common questions, and a nightly job that improves intent recognition from agent feedback.',
+    ],
+    role: 'Founder and lead developer: architecture, the AI pipeline, backend, dashboard and chat widget.',
+    tech: ['React', 'TypeScript', 'FastAPI', 'PostgreSQL (pgvector)', 'Redis', 'Ollama (local LLM)', 'Docker', 'WhatsApp Cloud API'],
+    outcome:
+      'Released as open source under the MIT licence, built to be self-hosted. There is no hosted demo and no usage figures are claimed.',
+    links: [{ label: 'Source on GitHub', href: 'https://github.com/teevexa/teedesk' }],
+  },
+  {
+    slug: 'teevexa-platform',
+    shortName: 'Teevexa platform',
+    kind: 'teevexa',
+    label: 'Teevexa product · Business system',
+    client: 'Teevexa Ltd',
+    title: 'The Teevexa platform - one system to win and deliver client work',
+    summary:
+      'The website, quote funnel, consultation booking, client portal and internal CRM that Teevexa runs on.',
+    pillars: ['Build', 'Automate', 'Grow'],
+    image: 'teevexa-platform',
+    imageAlt: 'Teevexa homepage: “Building Digital Infrastructure for Ambitious Businesses”',
+    liveUrl: 'https://www.teevexa.com',
+    problem:
+      'A services company needs to turn website visitors into well-described projects, then run those projects with clients without losing track across email, chat and spreadsheets.',
+    solution: [
+      'A quote funnel where a visitor describes a project in plain words, answers five quick questions and gets a tailored quote by email, with no account needed.',
+      'Consultation booking in 20-minute slots that converts to the visitor’s time zone, prevents double booking and creates the meeting invite.',
+      'A client portal for projects, milestones, proposals, deliverables, invoices, files and messages.',
+      'An internal CRM and project system for the team: lead pipeline, tasks and Kanban, time tracking, invoicing, reports and an audit log.',
+      'A content system for the blog, portfolio and job listings, with pages prerendered for search engines.',
+      'Seven user roles enforced in the database, so each person sees only what they should.',
+    ],
+    role: 'Founder and lead developer: product design, architecture, security model and ongoing development, with AI-assisted development.',
+    tech: ['React', 'TypeScript', 'Tailwind CSS', 'Supabase (Postgres, Auth, RLS)', 'Edge Functions', 'Zoom API'],
+    outcome:
+      'Live at teevexa.com and used to run Teevexa’s own client work, including the consultation booking linked from this site. Business figures aren’t published here.',
+    links: [{ label: 'Visit teevexa.com', href: 'https://www.teevexa.com' }],
+  },
+  {
+    slug: 'cyberguard-ai',
+    shortName: 'CyberGuard AI',
+    kind: 'teevexa',
+    label: 'Teevexa product · Security',
+    client: 'Teevexa Ltd',
+    title: 'CyberGuard AI - threat detection for teams without a security department',
+    summary:
+      'An open-source dashboard that watches network activity, flags unusual behaviour, sends alerts and explains each threat in plain language.',
+    pillars: ['Build', 'Automate'],
+    image: null,
+    visual: 'security',
+    problem:
+      'Enterprise security monitoring tools are priced and built for large companies. Smaller teams still get attacked, but have nobody watching.',
+    solution: [
+      'Collects network and system log data and scores it with a trained machine-learning model to flag unusual activity.',
+      'Shows why something was flagged, not only that it was, so a non-specialist can judge it.',
+      'Sends alerts automatically by Slack, email or webhook, and tracks each incident from detection to resolution.',
+      'A built-in AI assistant explains a threat and suggests next steps, running locally with no paid AI service.',
+      'Separate accounts per organisation, role-based access, API keys and an audit log, with exportable evidence for compliance reviews.',
+      'Covered by 127 backend and 15 frontend automated tests that run on every change.',
+    ],
+    role: 'Founder and lead developer. Started as a solo project and is now maintained by Teevexa.',
+    tech: ['React', 'TypeScript', 'FastAPI', 'PostgreSQL (Neon)', 'scikit-learn', 'Ollama (local LLM)', 'GitHub Actions'],
+    outcome:
+      'Released as open source under the Apache 2.0 licence. No usage figures are claimed.',
+    links: [{ label: 'Source on GitHub', href: 'https://github.com/teevexa/cyberguard-ai' }],
+  },
+  {
     slug: 'nyuzi',
     shortName: 'Nyuzi',
     kind: 'personal',
@@ -298,5 +422,6 @@ export const workImage = (name, width) => `/images/work/${name}-${width}.webp`;
 export const KIND_LABEL = {
   client: 'Client project',
   employer: 'Buzlin Holdings product',
+  teevexa: 'Teevexa product',
   personal: 'Personal product build',
 };
