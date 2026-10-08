@@ -17,14 +17,7 @@ export const TIMELINE = [
     period: 'Jul – Sep 2025',
     title: 'Software Engineer Intern',
     org: 'Sensys Kenya Ltd · Nairobi, Kenya',
-    body: 'First professional role: production systems, team workflows and client-facing engineering deliverables.',
-  },
-  {
-    period: '2025 – Present',
-    title: 'Founder',
-    org: 'Teevexa Ltd',
-    href: 'https://www.teevexa.com',
-    body: 'Founded Teevexa to deliver software, AI and digital products for businesses. Incorporated as a private limited company in Kenya in March 2026.',
+    body: 'Supported core banking integrations with Java, Spring Boot and Temenos T24/Transact, built and maintained secure backend APIs for enterprise financial systems, and automated data pipelines and workflows with Apache NiFi, working in Agile fintech delivery teams.',
   },
   {
     period: 'Aug 2025 – Present',
@@ -32,6 +25,14 @@ export const TIMELINE = [
     org: 'Buzlin Holdings Inc · Canada (remote)',
     current: true,
     body: 'Engineering on the company’s two products: Buzlin, a marketplace and service-booking platform, and BuzRyde, a ride-hailing service, across web, mobile, admin and API.',
+  },
+  {
+    period: 'Mar 2026 – Present',
+    title: 'Founder',
+    org: 'Teevexa Ltd',
+    href: 'https://www.teevexa.com',
+    current: true,
+    body: 'Founded Teevexa to deliver software, AI and digital products for businesses. Incorporated as a private limited company in Kenya in March 2026.',
   },
   {
     period: 'Sep 2026 – Present',
@@ -155,6 +156,7 @@ export const ORGANISATIONS = [
   { name: 'Becof Organic Chemicals Limited', note: 'Client: commerce & operations platform' },
   { name: 'Esteric Kitchens & Interior Designs Ltd', note: 'Client: website & CRM' },
   { name: 'Melamart Enterprises Limited', note: 'Client: website & hire management' },
+  { name: 'Morara Home Furniture', note: 'Client: online furniture store' },
   { name: 'Precious Furniture Kenya', note: 'Client: social media & SEO · current' },
   { name: 'Sensys Kenya Ltd', note: 'Software Engineer Intern' },
   { name: 'Teevexa Ltd', note: 'Founder' },

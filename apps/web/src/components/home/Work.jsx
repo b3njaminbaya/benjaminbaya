@@ -99,7 +99,7 @@ const Work = () => (
           <FeaturedCard key={s.slug} study={s} />
         ))}
       </div>
-      <div className="mt-6 grid gap-6 sm:grid-cols-2 lg:grid-cols-3">
+      <div className={`mt-6 grid gap-6 sm:grid-cols-2 ${moreRealWorld.length % 3 === 0 ? 'lg:grid-cols-3' : ''}`}>
         {moreRealWorld.map((s, i) => (
           <CompactCard key={s.slug} study={s} index={i} />
         ))}

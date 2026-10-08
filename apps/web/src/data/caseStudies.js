@@ -179,6 +179,36 @@ export const CASE_STUDIES = [
     links: [],
   },
   {
+    slug: 'morara-home-furniture',
+    shortName: 'Morara Home Furniture',
+    kind: 'client',
+    label: 'Client · Furniture retail · Kenya',
+    client: 'Morara Home Furniture',
+    title: 'An online store for a Nairobi furniture business',
+    summary:
+      'A storefront where customers browse by category, order online and track delivery, redesigned around a premium look and built to be found on Google.',
+    pillars: ['Build', 'Grow'],
+    image: 'morara',
+    imageAlt: 'Morara Home Furniture homepage: “Furniture That Defines Your Space.”',
+    liveUrl: 'https://www.morarahomefurniture.com',
+    problem:
+      'Morara Home Furniture sells sofas, beds and other furniture in Nairobi. It needed customers to be able to browse the full range, order and pay online, and follow their delivery, with a look that matches the quality of the furniture.',
+    solution: [
+      'A product catalogue organised by category, with price filtering, daily offers and detailed product pages.',
+      'Cart and checkout for guests and account holders, with online payment and order tracking.',
+      'A premium dark redesign of the whole storefront, responsive from phone to desktop.',
+      'A floating WhatsApp button, plus FAQ, returns, privacy and terms pages.',
+      'Search engine optimisation so the store and its products can be found on Google.',
+      'An admin area for managing products and orders.',
+    ],
+    role:
+      'One of two developers. I led the storefront redesign, the product, order and category experience, the WhatsApp and support pages, and SEO. The payments and backend automation were built by my co-developer.',
+    tech: ['React', 'TypeScript', 'Tailwind CSS', 'Supabase', 'PesaPal'],
+    outcome:
+      'Live at morarahomefurniture.com. Sales and traffic figures belong to the client and aren’t published here.',
+    links: [{ label: 'Visit the live site', href: 'https://www.morarahomefurniture.com' }],
+  },
+  {
     slug: 'teevexa-trace',
     shortName: 'Teevexa Trace',
     kind: 'teevexa',

@@ -15,7 +15,7 @@ const PORTFOLIO = {
     booking: 'https://www.teevexa.com/book-consultation',
   },
 
-  bio: `Benjamin Baya is a software engineer and entrepreneur based in Nairobi, Kenya. He helps businesses build, automate and grow with technology: he first understands the business problem, recommends the right solution, then builds and implements it. He trained as a chemical engineer (B.Eng, Technical University of Kenya), which shapes his systems-thinking approach, and completed full-stack software engineering training at Moringa School. He currently works as a Software Engineer at Buzlin Holdings Inc (Canada, remote) and founded Teevexa Ltd, the technology company through which larger projects are delivered.`,
+  bio: `Benjamin Baya is a software engineer and entrepreneur based in Nairobi, Kenya. He helps businesses build, automate and grow with technology: he first understands the business problem, recommends the right solution, then builds and implements it. He trained as a chemical engineer (B.Eng, Technical University of Kenya), which shapes his systems-thinking approach, and completed full-stack software engineering training at Moringa School. He interned as a Software Engineer at Sensys Kenya Ltd (July to September 2025), supporting core banking integrations with Java, Spring Boot and Temenos T24/Transact, building backend APIs for financial systems and automating data pipelines with Apache NiFi. He currently works as a Software Engineer at Buzlin Holdings Inc (Canada, remote) and founded Teevexa Ltd, the technology company through which larger projects are delivered.`,
 
   services: {
     consult: 'Digital transformation, business process analysis, technology strategy and roadmaps, automation and AI adoption consulting, digital presence audits, business systems consulting.',
@@ -72,6 +72,12 @@ const PORTFOLIO = {
       description: 'Website for a scaffolding hire company with two branches; audited, secured and redesigned its equipment-hire admin system. Both are live.',
       tech: ['React', 'PHP', 'MySQL'],
       url: 'https://melamart-enterprises.vercel.app',
+    },
+    {
+      name: 'Morara Home Furniture (client): online furniture store',
+      description: 'Online store for a Nairobi furniture business: catalogue by category, cart and checkout, order tracking and an admin area. I was one of two developers and led the storefront redesign, product and order experience, WhatsApp button and SEO.',
+      tech: ['React', 'TypeScript', 'Supabase', 'PesaPal'],
+      url: 'https://www.morarahomefurniture.com',
     },
     {
       name: 'Precious Furniture Kenya (client, current since Sep 2026): digital marketing',
@@ -173,7 +179,7 @@ function buildContext(message) {
     );
   }
 
-  if (want(/project|work|built|made|portfolio|app|website|demo|show me|example|client|donation|becof|buzlin|buzryde|esteric|melamart|precious|tafsiri|ordo|nyuzi|trace|teedesk|cyberguard|product/)) {
+  if (want(/project|work|built|made|portfolio|app|website|demo|show me|example|client|donation|becof|buzlin|buzryde|esteric|melamart|morara|sensys|precious|tafsiri|ordo|nyuzi|trace|teedesk|cyberguard|product/)) {
     const lines = PORTFOLIO.projects.map(p => {
       const link = p.url ? ` (${p.url})` : '';
       return `  • ${p.name}: ${p.description} Tech: ${p.tech.join(', ')}${link}`;
@@ -246,7 +252,7 @@ const FALLBACKS = {
 
   skills: `I work across the stack: React, Next.js and TypeScript on the frontend; Python, Node.js, PHP (Laravel) and Java on the backend; Flutter, React Native and Kotlin for mobile; PostgreSQL, MySQL and MongoDB for data; LLM APIs for AI features; and M-Pesa, PesaPal and Stripe for payments.`,
 
-  projects: `Client work includes the Becof Organic Chemicals commerce platform (live, with M-Pesa payments), a website and CRM for Esteric Kitchens, a website and hire system for Melamart, and ongoing digital marketing for Precious Furniture Kenya. At Buzlin Holdings I work on Buzlin (marketplace) and BuzRyde (ride-hailing). Through my own company Teevexa I have shipped Teevexa Trace (supply chain traceability, two apps on Google Play), TeeDesk (open-source AI customer support) and CyberGuard AI. Personal builds include Nyuzi (a circular-fashion marketplace), Tafsiri AI, Ordo and a micro-donations platform. Each has a case study on this site.`,
+  projects: `Client work includes the Becof Organic Chemicals commerce platform (live, with M-Pesa payments), a website and CRM for Esteric Kitchens, a website and hire system for Melamart, an online store for Morara Home Furniture, and ongoing digital marketing for Precious Furniture Kenya. At Buzlin Holdings I work on Buzlin (marketplace) and BuzRyde (ride-hailing). Through my own company Teevexa I have shipped Teevexa Trace (supply chain traceability, two apps on Google Play), TeeDesk (open-source AI customer support) and CyberGuard AI. Personal builds include Nyuzi (a circular-fashion marketplace), Tafsiri AI, Ordo and a micro-donations platform. Each has a case study on this site.`,
 
   teevexa: `Teevexa Ltd is the technology company I founded. I lead the consultation, strategy and architecture; larger projects are delivered through Teevexa. You can book a consultation at teevexa.com/book-consultation.`,
 
