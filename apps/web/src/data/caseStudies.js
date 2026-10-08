@@ -178,6 +178,38 @@ export const CASE_STUDIES = [
     links: [],
   },
   {
+    slug: 'nyuzi',
+    shortName: 'Nyuzi',
+    kind: 'personal',
+    label: 'Personal build · Marketplace',
+    client: 'Product build',
+    title: 'Nyuzi - a circular-fashion marketplace with donation-to-product traceability',
+    summary:
+      'A three-sided marketplace where people donate clothing they no longer need, partners upcycle it, and buyers can see exactly which donations a product was made from.',
+    pillars: ['Build', 'Automate'],
+    image: 'nyuzi',
+    imageAlt: 'Nyuzi homepage: “Circular fashion, rewoven for the everyday”',
+    liveUrl: 'https://nyuzi.vercel.app',
+    problem:
+      'Kenya imports large volumes of second-hand clothing, and much of what doesn’t sell ends up burned or dumped because there’s no simple, trusted channel to give it a second life.',
+    solution: [
+      'Donations from signed-in or guest donors, with photos and optional pickup requests.',
+      'A marketplace with server-side search and filtering, and checkout for guests or account holders with M-Pesa (STK Push) payments.',
+      'Donation-to-product traceability: a product page shows which donations an item was made from, without exposing who donated.',
+      'Inventory that can’t be oversold: stock is reserved inside a single database transaction and returned automatically if a payment fails.',
+      'Order fulfilment with shipping and tracking, reviews and ratings, transactional email and an admin panel.',
+      'A security audit of the whole system, which found and fixed a client-side pricing loophole, a payment-callback gap and a way for users to make themselves admins.',
+    ],
+    role: 'Designed and built end to end: product, database, security and deployment.',
+    tech: ['React', 'TypeScript', 'Tailwind CSS', 'Supabase (Postgres, Auth, RLS, Storage)', 'Edge Functions', 'M-Pesa Daraja API', 'Capacitor'],
+    outcome:
+      'Live and feature-complete against its roadmap, but not yet trading: M-Pesa payments are built and not yet switched on in production. A personal product, so there are no commercial figures.',
+    links: [
+      { label: 'Visit the live product', href: 'https://nyuzi.vercel.app' },
+      { label: 'Source on GitHub', href: 'https://github.com/b3njaminbaya/nyuzi' },
+    ],
+  },
+  {
     slug: 'tafsiri-ai',
     shortName: 'Tafsiri AI',
     kind: 'personal',
@@ -238,39 +270,15 @@ export const CASE_STUDIES = [
       { label: 'Source on GitHub', href: 'https://github.com/b3njaminbaya/ordo' },
     ],
   },
-  {
-    slug: 'micro-donations-platform',
-    shortName: 'Micro-Donations Platform',
-    kind: 'personal',
-    label: 'Personal build · Payments',
-    client: 'Product build',
-    title: 'Micro-donations with M-Pesa, recurring giving and payouts',
-    summary:
-      'Small donations to community causes paid by M-Pesa STK push, with recurring giving, receipts, rewards and payouts to cause creators.',
-    pillars: ['Build', 'Automate'],
-    image: 'micro-donations',
-    imageAlt: 'Micro-Donations Platform homepage: “Small donations, sent in seconds, felt for years.”',
-    liveUrl: 'https://micro-donations-platform.vercel.app',
-    problem:
-      'Giving small amounts to a local cause should be as easy as sending money to a friend, which in East Africa means M-Pesa, and donors want to see where their money goes.',
-    solution: [
-      'Cause creation, search and filtering by category and country, with real-time progress toward funding goals.',
-      'One-off and recurring (weekly or monthly) M-Pesa donations via STK push.',
-      'Payouts from cause creators’ balances to M-Pesa via the B2C API.',
-      'Downloadable PDF receipts, reward points and admin moderation.',
-    ],
-    role: 'Designed and built end to end.',
-    tech: ['React', 'Tailwind CSS', 'Flask', 'SQLAlchemy', 'M-Pesa Daraja API (STK Push, B2C)'],
-    outcome: 'Live as a public demo. A personal product that hasn’t been launched commercially, so there are no usage figures.',
-    links: [
-      { label: 'Try the live demo', href: 'https://micro-donations-platform.vercel.app' },
-      { label: 'Source on GitHub', href: 'https://github.com/b3njaminbaya/micro-donations-platform' },
-    ],
-  },
 ];
 
 // Smaller builds — listed briefly, not presented as case studies.
 export const EXPERIMENTS = [
+  {
+    title: 'Micro-Donations Platform',
+    body: 'Small donations to community causes with M-Pesa, recurring giving and payouts.',
+    href: 'https://micro-donations-platform.vercel.app',
+  },
   {
     title: 'Aptigraph',
     body: 'Coding-practice tracker with spaced repetition, analytics and database-enforced security.',

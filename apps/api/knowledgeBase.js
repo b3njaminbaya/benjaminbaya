@@ -79,6 +79,12 @@ const PORTFOLIO = {
       tech: ['Meta Ads', 'Google Ads', 'Meta Pixel'],
     },
     {
+      name: 'Nyuzi (personal): circular-fashion marketplace',
+      description: 'A live product, not yet trading. People donate clothing, upcycling partners turn it into new products, and buyers see which donations a product came from. Guest checkout with M-Pesa (built, not yet switched on in production), inventory that cannot be oversold, order tracking, reviews, an admin panel and a full security audit.',
+      tech: ['React', 'TypeScript', 'Supabase', 'M-Pesa Daraja API'],
+      url: 'https://nyuzi.vercel.app',
+    },
+    {
       name: 'Tafsiri AI (personal): translation for Kenyan languages',
       description: 'Swahili/Somali/English neural translation with confidence scoring, an active-learning review queue and a LoRA fine-tuning pipeline.',
       tech: ['React', 'FastAPI', 'PyTorch', 'Transformers'],
@@ -143,7 +149,7 @@ function buildContext(message) {
     );
   }
 
-  if (want(/project|work|built|made|portfolio|app|website|demo|show me|example|client|donation|becof|buzlin|buzryde|esteric|melamart|precious|tafsiri|ordo/)) {
+  if (want(/project|work|built|made|portfolio|app|website|demo|show me|example|client|donation|becof|buzlin|buzryde|esteric|melamart|precious|tafsiri|ordo|nyuzi/)) {
     const lines = PORTFOLIO.projects.map(p => {
       const link = p.url ? ` (${p.url})` : '';
       return `  • ${p.name}: ${p.description} Tech: ${p.tech.join(', ')}${link}`;
@@ -216,7 +222,7 @@ const FALLBACKS = {
 
   skills: `I work across the stack: React, Next.js and TypeScript on the frontend; Python, Node.js, PHP (Laravel) and Java on the backend; Flutter, React Native and Kotlin for mobile; PostgreSQL, MySQL and MongoDB for data; LLM APIs for AI features; and M-Pesa, PesaPal and Stripe for payments.`,
 
-  projects: `Client work includes the Becof Organic Chemicals commerce platform (live, with M-Pesa payments), a website and CRM for Esteric Kitchens, a website and hire system for Melamart, and ongoing digital marketing for Precious Furniture Kenya. At Buzlin Holdings I work on Buzlin (marketplace) and BuzRyde (ride-hailing). Personal builds include Tafsiri AI, Ordo and a micro-donations platform. Each has a case study on this site.`,
+  projects: `Client work includes the Becof Organic Chemicals commerce platform (live, with M-Pesa payments), a website and CRM for Esteric Kitchens, a website and hire system for Melamart, and ongoing digital marketing for Precious Furniture Kenya. At Buzlin Holdings I work on Buzlin (marketplace) and BuzRyde (ride-hailing). Personal builds include Nyuzi (a circular-fashion marketplace), Tafsiri AI, Ordo and a micro-donations platform. Each has a case study on this site.`,
 
   teevexa: `Teevexa Ltd is the technology company I founded. I lead the consultation, strategy and architecture; larger projects are delivered through Teevexa. You can book a consultation at teevexa.com/book-consultation.`,
 

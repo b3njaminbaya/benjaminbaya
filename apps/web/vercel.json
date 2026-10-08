@@ -22,6 +22,11 @@
       ],
       "destination": "https://benjaminbaya.com/:path*",
       "permanent": true
+    },
+    {
+      "source": "/work/micro-donations-platform",
+      "destination": "/#work",
+      "permanent": true
     }
   ],
   "headers": [
