@@ -87,6 +87,11 @@ const Footer = () => (
               {PERSON.phoneDisplay}
             </a>
           </li>
+          <li>
+            <Link to="/resume" className={link}>
+              Resume
+            </Link>
+          </li>
         </ul>
       </div>
     </Container>

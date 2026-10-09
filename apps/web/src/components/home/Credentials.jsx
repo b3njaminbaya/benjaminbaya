@@ -1,3 +1,4 @@
+import { Link } from 'react-router-dom';
 import { ArrowUpRight } from 'lucide-react';
 import { EDUCATION, CERTIFICATIONS, ORGANISATIONS } from '../../data/profile';
 import Container from '../ui/Container';
@@ -87,6 +88,13 @@ const Credentials = () => (
               ))}
             </div>
           </div>
+          <p className="mt-8 text-sm text-muted">
+            The full picture is in my{' '}
+            <Link to="/resume" className="link-underline font-semibold text-ink">
+              resume
+            </Link>
+            .
+          </p>
         </div>
       </div>
     </Container>

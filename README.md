@@ -93,7 +93,7 @@ The site itself is fully static. The two dynamic features (the contact form and 
 │   │   └── src/
 │   │       ├── components/       # home/ · layout/ · ui/ · work/ · Chatbot · CommandPalette
 │   │       ├── data/             # All site content (see below)
-│   │       ├── pages/            # Home · CaseStudy · Activity · NotFound
+│   │       ├── pages/            # Home · CaseStudy · Resume · Activity · NotFound
 │   │       ├── seo.js            # Per-route metadata and structured data
 │   │       └── entry-server.jsx  # Build-time renderer
 │   └── api/                      # AI assistant + activity stats API

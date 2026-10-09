@@ -164,6 +164,17 @@ export function getRouteMeta(pathname) {
     };
   }
 
+  if (path === '/resume') {
+    return {
+      title: `Resume - ${PERSON.name}`,
+      description: `Resume of ${PERSON.name}, ${PERSON.shortTitle} based in Nairobi, Kenya. View or download the PDF.`,
+      canonical: `${SITE_URL}/resume`,
+      image: DEFAULT_OG,
+      type: 'profile',
+      jsonLd: [personSchema()],
+    };
+  }
+
   if (path === '/activity') {
     return {
       title: `Engineering Activity - ${PERSON.name}`,
@@ -188,7 +199,7 @@ export function getRouteMeta(pathname) {
 }
 
 // Indexable routes — drives prerendering and sitemap.xml
-export const PRERENDER_ROUTES = ['/', ...CASE_STUDIES.map((c) => `/work/${c.slug}`)];
+export const PRERENDER_ROUTES = ['/', ...CASE_STUDIES.map((c) => `/work/${c.slug}`), '/resume'];
 
 const esc = (s) =>
   String(s).replace(/&/g, '&amp;').replace(/</g, '&lt;').replace(/>/g, '&gt;').replace(/"/g, '&quot;');

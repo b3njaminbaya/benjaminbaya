@@ -158,7 +158,7 @@ function buildContext(message) {
   const sections = [];
 
   // Identity is always included as a base
-  sections.push(`IDENTITY: ${PORTFOLIO.identity.name}, ${PORTFOLIO.identity.title}, based in ${PORTFOLIO.identity.location}. ${PORTFOLIO.identity.positioning} Personal website: ${PORTFOLIO.identity.portfolio} (Teevexa at teevexa.com is his company, not his personal site).`);
+  sections.push(`IDENTITY: ${PORTFOLIO.identity.name}, ${PORTFOLIO.identity.title}, based in ${PORTFOLIO.identity.location}. ${PORTFOLIO.identity.positioning} Personal website: ${PORTFOLIO.identity.portfolio} (Teevexa at teevexa.com is his company, not his personal site). Resume: ${PORTFOLIO.identity.portfolio}/resume`);
 
   const want = (pattern) => pattern.test(lower);
 

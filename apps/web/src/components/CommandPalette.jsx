@@ -14,6 +14,7 @@ const COMMANDS = [
   { id: 'about', label: 'About & experience', type: 'route', href: '/#about' },
   { id: 'contact', label: 'Contact', type: 'route', href: '/#contact' },
   ...CASE_STUDIES.map((c) => ({ id: c.slug, label: `Case study: ${c.shortName}`, type: 'route', href: `/work/${c.slug}` })),
+  { id: 'resume', label: 'Resume', type: 'route', href: '/resume' },
   { id: 'activity', label: 'Engineering activity', type: 'route', href: '/activity' },
   ...SOCIALS.filter((s) => ['LinkedIn', 'GitHub'].includes(s.label)).map((s) => ({
     id: s.label,

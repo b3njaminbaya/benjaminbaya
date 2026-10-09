@@ -145,8 +145,8 @@ const Navbar = () => {
           ))}
           <div className="mt-8 flex flex-col gap-3">
             <BookingButton className="btn-primary w-full" />
-            <Link to={{ pathname: '/', hash: '#contact' }} onClick={() => setMenuOpen(false)} className="btn-secondary w-full">
-              Contact
+            <Link to="/resume" onClick={() => setMenuOpen(false)} className="btn-secondary w-full">
+              Resume
             </Link>
           </div>
         </Container>
