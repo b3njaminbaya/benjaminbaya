@@ -8,9 +8,9 @@ export const TIMELINE = [
     body: 'Process design, mass and energy balances, systems that must run reliably. The habit it left: understand the whole system before changing any part of it.',
   },
   {
-    period: 'Sep 2024 – Mar 2025',
+    period: 'Sep 2024 – Jul 2025',
     title: 'Full-Stack Software Engineering',
-    org: 'Moringa School · graduated July 2025',
+    org: 'Moringa School',
     body: 'Professional training in React, Python, Flask, PostgreSQL and REST APIs, shipping several complete applications.',
   },
   {

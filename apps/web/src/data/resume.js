@@ -74,7 +74,7 @@ export const RESUME = {
 
   education: [
     { title: 'B.Eng, Chemical Engineering', dates: '2017 - 2023', org: 'Technical University of Kenya' },
-    { title: 'Certificate, Full-Stack Software Engineering', dates: 'Sep 2024 - Mar 2025', org: 'Moringa School (graduated July 2025)' },
+    { title: 'Certificate, Full-Stack Software Engineering', dates: 'Sep 2024 - Jul 2025', org: 'Moringa School' },
   ],
 
   recognition: [
