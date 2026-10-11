@@ -137,7 +137,7 @@ const PORTFOLIO = {
   education: [
     { degree: 'B.Eng Chemical Engineering', institution: 'Technical University of Kenya' },
     { degree: 'Full-Stack Software Engineering certificate (September 2024 to July 2025)', institution: 'Moringa School' },
-    { degree: 'Jim Leech Mastercard Foundation Fellowship on Entrepreneurship (2025); later recognised as a Fellowship Mentor (2025) and Ambassador Team member (2025-26)', institution: "Dunin-Deshpande Innovation Centre, Queen's University" },
+    { degree: 'Jim Leech Mastercard Foundation Fellowship on Entrepreneurship (2025), one of 60 Fellows selected from more than 5,500 applicants across Africa; later recognised as a Fellowship Mentor (2025) and Ambassador Team member (2025-26)', institution: "Dunin-Deshpande Innovation Centre, Queen's University" },
     { degree: 'Launch Entrepreneurship (completed the Explore, Ignite and Launch track), Customer Discovery, Design Thinking and High-Performance Teams certificates (2025)', institution: "Dunin-Deshpande Innovation Centre, Queen's University" },
     { degree: 'SME Growth Lab Digital Accelerator Program (2024)', institution: 'SME Growth Lab Africa' },
     { degree: 'Founders Factory Africa Academy Explore Program (2023)', institution: '54 Collective' },

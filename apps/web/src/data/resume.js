@@ -78,7 +78,7 @@ export const RESUME = {
   ],
 
   recognition: [
-    'Jim Leech Mastercard Foundation Fellowship on Entrepreneurship, Queen’s University (2025)',
+    'Jim Leech Mastercard Foundation Fellowship on Entrepreneurship, Queen’s University (2025): one of 60 Fellows selected from more than 5,500 applicants',
     'Fellowship Mentor (2025) and Ambassador Team (2025-26), Queen’s University',
   ],
 

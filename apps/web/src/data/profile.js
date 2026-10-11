@@ -70,6 +70,9 @@ export const CERTIFICATIONS = [
       {
         title: 'Jim Leech Mastercard Foundation Fellowship on Entrepreneurship',
         featured: true,
+        // Figures from the programme's published 2025 Impact Report
+        fact: 'One of 60 Fellows selected from more than 5,500 applicants across Africa in the 2025 cohort.',
+        factSource: 'https://www.queensu.ca/innovationcentre/sites/ddqicwww/files/uploaded_files/2025%20Impact%20Report%20-%20Jim%20Leech%20Mastercard%20Foundation%20Fellowship.pdf',
         org: QUEENS,
         date: '2025',
         href: qc('4de6607d-39bb-460d-b597-a5347c149af6#acc.wrPA8zVZ'),

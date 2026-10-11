@@ -70,8 +70,10 @@ const Credentials = () => (
           <p className="eyebrow !text-accent">Fellowship · {fellowship.date}</p>
           <h3 className="mt-3 text-2xl font-bold leading-snug tracking-tight sm:text-[1.7rem]">{fellowship.title}</h3>
           <p className="mt-2 text-muted">{fellowship.org}</p>
-          <p className="mt-4">
+          <p className="mt-4 max-w-prose font-medium leading-relaxed">{fellowship.fact}</p>
+          <p className="mt-4 flex flex-wrap gap-x-4 gap-y-1">
             <VerifyLink href={fellowship.href}>Verify this credential</VerifyLink>
+            <VerifyLink href={fellowship.factSource}>2025 Impact Report</VerifyLink>
           </p>
         </div>
         <div className="border-t border-line pt-5 lg:col-span-5 lg:border-l lg:border-t-0 lg:pl-10 lg:pt-0">
