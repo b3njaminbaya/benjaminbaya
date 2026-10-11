@@ -87,8 +87,5 @@ export const RESUME = {
     'Customer Discovery, Design Thinking and High-Performance Teams, Queen’s University (2025)',
     'Artificial Intelligence, Moringa School (2025)',
     'SME Growth Lab Digital Accelerator Program (2024)',
-    'Generative AI for Project Managers, Scrum and Agile, Project Management Institute (2024)',
-    'Lean Six Sigma White Belt (2024)',
-    'Founders Factory Africa Academy, Explore Program (2023)',
   ],
 };

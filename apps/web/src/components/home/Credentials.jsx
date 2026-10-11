@@ -17,42 +17,31 @@ const VerifyLink = ({ href, children }) => (
   </a>
 );
 
-const CertGroup = ({ group }) => (
-  <div>
-    <p className="eyebrow mb-3">{group.group}</p>
-    <ul className="space-y-3">
-      {group.items.map((c) => (
-        <li key={c.title} className="flex items-baseline justify-between gap-4 border-b border-line pb-3">
-          <span>
-            <span className="font-medium">{c.title}</span>
-            {c.org && <span className="block text-sm text-muted">{c.org}</span>}
-            {c.note && <span className="block text-sm text-muted">{c.note}</span>}
-            {(c.href || c.extra) && (
-              <span className="mt-1.5 flex flex-wrap gap-x-3 gap-y-1">
-                {c.href && <VerifyLink href={c.href}>Verify</VerifyLink>}
-                {c.extra?.map((x) => (
-                  <VerifyLink key={x.href} href={x.href}>
-                    {x.label}
-                  </VerifyLink>
-                ))}
-              </span>
-            )}
-          </span>
-          <span className="shrink-0 font-mono text-xs text-muted">{c.date}</span>
-        </li>
-      ))}
-    </ul>
-  </div>
+const CertCard = ({ c }) => (
+  <li className="flex flex-col rounded-2xl border border-line bg-surface p-5">
+    <p className="font-mono text-xs text-muted">{c.date}</p>
+    <h3 className="mt-2 font-bold leading-snug tracking-tight">{c.title}</h3>
+    <p className="mt-1 text-sm text-muted">{c.org}</p>
+    {c.note && <p className="mt-1 text-sm text-muted">{c.note}</p>}
+    {(c.href || c.extra) && (
+      <p className="mt-auto flex flex-wrap gap-x-3 gap-y-1 pt-4">
+        {c.href && <VerifyLink href={c.href}>Verify</VerifyLink>}
+        {c.extra?.map((x) => (
+          <VerifyLink key={x.href} href={x.href}>
+            {x.label}
+          </VerifyLink>
+        ))}
+      </p>
+    )}
+  </li>
 );
 
 const allItems = CERTIFICATIONS.flatMap((g) => g.items);
 const fellowship = allItems.find((c) => c.featured && c.href);
 const recognition = allItems.find((c) => c.featured && !c.href);
 
-// The featured items are shown in the highlight card, so leave them out of the lists
-const groups = CERTIFICATIONS.map((g) => ({ ...g, items: g.items.filter((c) => !c.featured) })).filter(
-  (g) => g.items.length,
-);
+// The featured items are shown in the highlight card, so leave them out of the grid
+const certificates = allItems.filter((c) => !c.featured);
 
 const Credentials = () => (
   <section id="credentials" aria-labelledby="credentials-title" className="border-t border-line py-24 lg:py-32">
@@ -91,14 +80,11 @@ const Credentials = () => (
       </div>
 
       {/* Certifications */}
-      <div className="reveal mt-12 grid gap-x-10 gap-y-10 sm:grid-cols-2" style={{ '--reveal-delay': '80ms' }}>
-        <CertGroup group={groups[0]} />
-        <div className="space-y-10">
-          {groups.slice(1).map((g) => (
-            <CertGroup key={g.group} group={g} />
-          ))}
-        </div>
-      </div>
+      <ul className="reveal mt-6 grid gap-4 sm:grid-cols-2 lg:grid-cols-3" style={{ '--reveal-delay': '80ms' }}>
+        {certificates.map((c) => (
+          <CertCard key={c.title} c={c} />
+        ))}
+      </ul>
 
       <p className="reveal mt-10 text-sm text-muted">
         The full picture is in my{' '}

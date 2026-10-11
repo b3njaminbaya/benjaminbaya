@@ -119,34 +119,10 @@ export const CERTIFICATIONS = [
     ],
   },
   {
-    group: 'Business growth',
-    items: [
-      { title: 'SME Growth Lab Digital Accelerator Program', org: 'SME Growth Lab Africa', date: '2024' },
-      { title: 'Founders Factory Africa Academy, Explore Program', org: '54 Collective', date: '2023' },
-    ],
-  },
-  {
-    group: 'Artificial intelligence',
+    group: 'Technology & growth',
     items: [
       { title: 'Artificial Intelligence', org: 'Moringa School', date: '2025' },
-      {
-        title: 'Generative AI Overview for Project Managers',
-        org: 'Project Management Institute',
-        date: '2024',
-        href: 'https://www.credly.com/badges/08ba081b-8a05-472b-a705-52fd5fcc2efe',
-      },
-    ],
-  },
-  {
-    group: 'Delivery & process improvement',
-    items: [
-      {
-        title: 'Scrum, Disciplined Agile & Predictive Project Management',
-        org: 'Project Management Institute',
-        date: '2024',
-        extra: [{ label: 'Predictive PM', href: 'https://www.credly.com/badges/70fb3374-fad7-40b8-ab4f-79eaf152a9cc' }],
-      },
-      { title: 'Lean Six Sigma White Belt', org: 'The Council for Six Sigma Certification', date: '2024' },
+      { title: 'SME Growth Lab Digital Accelerator Program', org: 'SME Growth Lab Africa', date: '2024' },
     ],
   },
 ];
