@@ -23,8 +23,8 @@ const Home = () => (
     <Consulting />
     <Growth />
     <About />
-    <Stack />
     <Credentials />
+    <Stack />
     <Contact />
   </>
 );

@@ -58,11 +58,6 @@ export const STACK = [
   },
 ];
 
-export const EDUCATION = [
-  { title: 'Bachelor of Engineering, Chemical Engineering', org: 'Technical University of Kenya' },
-  { title: 'Certificate, Full-Stack Software Engineering', org: 'Moringa School' },
-];
-
 const QUEENS = 'Dunin-Deshpande Innovation Centre, Queen’s University';
 const qc = (id) => `https://credentials.innovationcentre.queensu.ca/${id}`;
 
@@ -74,6 +69,7 @@ export const CERTIFICATIONS = [
     items: [
       {
         title: 'Jim Leech Mastercard Foundation Fellowship on Entrepreneurship',
+        featured: true,
         org: QUEENS,
         date: '2025',
         href: qc('4de6607d-39bb-460d-b597-a5347c149af6#acc.wrPA8zVZ'),
@@ -109,6 +105,7 @@ export const CERTIFICATIONS = [
       },
       {
         title: 'Fellowship Mentor & Ambassador Team',
+        featured: true,
         org: `${QUEENS}. Recognised for mentoring founders and outreach`,
         date: '2025–26',
         extra: [
@@ -149,15 +146,4 @@ export const CERTIFICATIONS = [
       { title: 'Lean Six Sigma White Belt', org: 'The Council for Six Sigma Certification', date: '2024' },
     ],
   },
-];
-
-export const ORGANISATIONS = [
-  { name: 'Buzlin Holdings Inc', note: 'Software Engineer on Buzlin & BuzRyde · current' },
-  { name: 'Becof Organic Chemicals Limited', note: 'Client: commerce & operations platform' },
-  { name: 'Esteric Kitchens & Interior Designs Ltd', note: 'Client: website & CRM' },
-  { name: 'Melamart Enterprises Limited', note: 'Client: website & hire management' },
-  { name: 'Morara Home Furniture', note: 'Client: online furniture store' },
-  { name: 'Precious Furniture Kenya', note: 'Client: social media & SEO · current' },
-  { name: 'Sensys Kenya Ltd', note: 'Software Engineer Intern' },
-  { name: 'Teevexa Ltd', note: 'Founder' },
 ];
