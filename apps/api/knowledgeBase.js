@@ -98,7 +98,7 @@ const PORTFOLIO = {
     },
     {
       name: 'Teevexa platform (Teevexa product): website, client portal and CRM',
-      description: 'The system Teevexa runs on: quote funnel, consultation booking, client portal and an internal CRM and project system. Live at teevexa.com.',
+      description: 'The system Teevexa runs on: quote funnel, consultation booking, client portal and an internal CRM and project system. Live at teevexa.com. I also manage the company’s social media and advertising.',
       tech: ['React', 'TypeScript', 'Supabase'],
       url: 'https://www.teevexa.com',
     },

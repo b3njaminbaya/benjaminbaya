@@ -9,8 +9,6 @@ const COMMANDS = [
   { id: 'book', label: 'Book a consultation', type: 'link', href: BOOKING_LINK },
   { id: 'services', label: 'Services', type: 'route', href: '/#services' },
   { id: 'work', label: 'Selected work', type: 'route', href: '/#work' },
-  { id: 'consulting', label: 'Technology consulting', type: 'route', href: '/#consulting' },
-  { id: 'growth', label: 'Digital growth', type: 'route', href: '/#growth' },
   { id: 'about', label: 'About & experience', type: 'route', href: '/#about' },
   { id: 'contact', label: 'Contact', type: 'route', href: '/#contact' },
   ...CASE_STUDIES.map((c) => ({ id: c.slug, label: `Case study: ${c.shortName}`, type: 'route', href: `/work/${c.slug}` })),

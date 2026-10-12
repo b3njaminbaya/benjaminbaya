@@ -298,8 +298,9 @@ export const CASE_STUDIES = [
       'An internal CRM and project system for the team: lead pipeline, tasks and Kanban, time tracking, invoicing, reports and an audit log.',
       'A content system for the blog, portfolio and job listings, with pages prerendered for search engines.',
       'Seven user roles enforced in the database, so each person sees only what they should.',
+      'Ongoing social media management and paid campaigns for the company.',
     ],
-    role: 'Founder and lead developer: product design, architecture, security model and ongoing development, with AI-assisted development.',
+    role: 'Founder and lead developer: product design, architecture, security model and ongoing development, with AI-assisted development. I also manage the company’s social media and advertising.',
     tech: ['React', 'TypeScript', 'Tailwind CSS', 'Supabase (Postgres, Auth, RLS)', 'Edge Functions', 'Zoom API'],
     outcome:
       'Live at teevexa.com and used to run Teevexa’s own client work, including the consultation booking linked from this site. Business figures aren’t published here.',

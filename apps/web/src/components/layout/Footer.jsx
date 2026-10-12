@@ -33,16 +33,6 @@ const Footer = () => (
               </Link>
             </li>
           ))}
-          <li>
-            <Link to={{ pathname: '/', hash: '#consulting' }} className={link}>
-              Technology consulting
-            </Link>
-          </li>
-          <li>
-            <Link to={{ pathname: '/', hash: '#growth' }} className={link}>
-              Digital growth
-            </Link>
-          </li>
         </ul>
       </nav>
 

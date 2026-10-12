@@ -42,7 +42,6 @@ export const PILLARS = [
     id: 'automate',
     number: '03',
     name: 'Automate',
-    proof: { text: 'TeeDesk, an AI customer support platform', to: '/work/teedesk' },
     tagline: 'Hand repetitive work to software, and use AI where it genuinely helps.',
     what: 'AI agents, workflow and CRM automation, integrations and business process automation.',
     who: 'Teams losing hours to data entry, copy-pasting between tools, chasing follow-ups or answering the same questions.',
@@ -63,12 +62,27 @@ export const PILLARS = [
     number: '04',
     name: 'Grow',
     tagline: 'Get found, turn visitors into leads, and measure what’s working.',
-    what: 'SEO, digital marketing, social media, advertising, analytics and conversion optimisation.',
+    what: 'SEO, social media, advertising and conversion tracking, run by an engineer rather than an advertising agency, so every channel can be traced back to results.',
     who: 'Businesses whose customers can’t find them online, or whose website and ads aren’t producing enquiries.',
     problem: 'Marketing spend with no clear return, and a website that looks fine but doesn’t generate business.',
-    proof: { label: 'In detail', text: 'How I approach digital growth', to: '/#growth' },
-    // The full breakdown lives in the Digital growth section
-    offerings: ['Search visibility', 'Social media', 'Paid advertising', 'Conversion & measurement'],
+    // Shown as labelled rows in place of the tag list
+    stages: [
+      { name: 'Attract', items: 'SEO, Google Business Profile, social media' },
+      { name: 'Advertise', items: 'Meta, Google and TikTok ads' },
+      { name: 'Convert', items: 'Landing pages, lead generation' },
+      { name: 'Measure', items: 'Conversion tracking, analytics' },
+    ],
+    // Used for the structured data only
+    offerings: [
+      'SEO & local SEO',
+      'Google Business Profile',
+      'Social media strategy & management',
+      'Content strategy',
+      'Meta, Google & TikTok Ads',
+      'Conversion tracking & analytics',
+      'Landing-page optimisation',
+      'Lead-generation systems',
+    ],
   },
 ];
 
@@ -104,28 +118,5 @@ export const PROCESS = [
     step: '04',
     title: 'Launch, measure, improve',
     body: 'Tracking is set up from day one so you can see what the investment is doing. Then we iterate on what the numbers show.',
-  },
-];
-
-export const GROWTH_AREAS = [
-  {
-    title: 'Attract',
-    body: 'Be visible where customers are already looking.',
-    items: ['SEO', 'Local SEO', 'Google Business Profile', 'Content strategy', 'Social media'],
-  },
-  {
-    title: 'Advertise',
-    body: 'Paid campaigns aimed at enquiries and sales, not just impressions.',
-    items: ['Meta Ads', 'Google Ads', 'TikTok Ads'],
-  },
-  {
-    title: 'Convert',
-    body: 'Turn visits into leads with pages built to do one job well.',
-    items: ['Landing pages', 'Conversion optimisation', 'Lead-generation systems'],
-  },
-  {
-    title: 'Measure',
-    body: 'Know which channel produced which customer.',
-    items: ['Conversion tracking', 'Meta Pixel', 'TikTok Pixel', 'Analytics'],
   },
 ];
