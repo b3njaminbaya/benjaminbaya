@@ -12,6 +12,22 @@ const QUICK_REPLIES = [
 
 const STORAGE_KEY = 'chatMessages';
 
+// Phone-sized screens get a full-screen sheet instead of a floating panel
+const isPhone = () => window.matchMedia('(max-width: 639px)').matches;
+
+// Make web addresses in a reply tappable
+const URL_RE = /(https?:\/\/[^\s]+[^\s.,;:!?)])/g;
+const linkify = (text) =>
+  text.split(URL_RE).map((part, i) =>
+    i % 2 ? (
+      <a key={i} href={part} target="_blank" rel="noopener" className="font-semibold underline underline-offset-2">
+        {part.replace(/^https?:\/\/(www\.)?/, '')}
+      </a>
+    ) : (
+      part
+    )
+  );
+
 const loadMessages = () => {
   try {
     const saved = localStorage.getItem(STORAGE_KEY);
@@ -30,6 +46,7 @@ const Chatbot = () => {
   const endRef = useRef(null);
   const inputRef = useRef(null);
   const launcherRef = useRef(null);
+  const panelRef = useRef(null);
   const controllerRef = useRef(null);
 
   useEffect(() => {
@@ -46,7 +63,8 @@ const Chatbot = () => {
 
   useEffect(() => {
     if (!open) return undefined;
-    inputRef.current?.focus();
+    // On a phone, focusing would open the keyboard over the suggested questions
+    if (!isPhone()) inputRef.current?.focus();
     const onKey = (e) => {
       if (e.key === 'Escape') {
         setOpen(false);
@@ -55,6 +73,31 @@ const Chatbot = () => {
     };
     document.addEventListener('keydown', onKey);
     return () => document.removeEventListener('keydown', onKey);
+  }, [open]);
+
+  // On a phone: lock the page behind the sheet and keep the sheet sized to the
+  // visible area, so the input stays above the on-screen keyboard.
+  useEffect(() => {
+    if (!open || !isPhone()) return undefined;
+    const panel = panelRef.current;
+    const vv = window.visualViewport;
+    const prevOverflow = document.body.style.overflow;
+    document.body.style.overflow = 'hidden';
+
+    const fit = () => {
+      if (!panel || !vv) return;
+      panel.style.setProperty('--chat-h', `${vv.height}px`);
+      panel.style.setProperty('--chat-top', `${vv.offsetTop}px`);
+      endRef.current?.scrollIntoView({ block: 'end' });
+    };
+    fit();
+    vv?.addEventListener('resize', fit);
+    vv?.addEventListener('scroll', fit);
+    return () => {
+      document.body.style.overflow = prevOverflow;
+      vv?.removeEventListener('resize', fit);
+      vv?.removeEventListener('scroll', fit);
+    };
   }, [open]);
 
   const sendMessage = async (text) => {
@@ -109,7 +152,7 @@ const Chatbot = () => {
           ref={launcherRef}
           type="button"
           onClick={() => setOpen(true)}
-          className="fixed bottom-5 right-5 z-40 inline-flex items-center gap-2 rounded-full bg-ink py-3 pl-4 pr-5 text-sm font-semibold text-paper shadow-lg transition-transform hover:-translate-y-0.5 sm:bottom-6 sm:right-6"
+          className="fixed bottom-[max(1.25rem,env(safe-area-inset-bottom))] right-5 z-40 inline-flex items-center gap-2 rounded-full bg-ink p-3.5 text-sm font-semibold text-paper shadow-lg transition-transform hover:-translate-y-0.5 sm:bottom-6 sm:right-6 sm:py-3 sm:pl-4 sm:pr-5"
           aria-label="Open the AI assistant"
         >
           <MessageSquareText size={18} aria-hidden="true" />
@@ -119,18 +162,20 @@ const Chatbot = () => {
 
       {open && (
         <div
+          ref={panelRef}
           role="dialog"
+          aria-modal="true"
           aria-label="AI assistant"
-          className="fixed inset-x-3 bottom-3 z-50 flex h-[min(34rem,calc(100dvh-1.5rem))] flex-col overflow-hidden rounded-2xl border border-line bg-surface text-ink shadow-2xl sm:inset-x-auto sm:bottom-6 sm:right-6 sm:w-[23rem]"
+          className="fixed inset-x-0 top-[var(--chat-top,0px)] z-50 flex h-[var(--chat-h,100dvh)] flex-col overflow-hidden bg-surface text-ink shadow-2xl sm:inset-x-auto sm:bottom-6 sm:right-6 sm:top-auto sm:h-[min(34rem,calc(100dvh-3rem))] sm:w-[23rem] sm:rounded-2xl sm:border sm:border-line"
         >
-          <div className="flex items-center justify-between border-b border-line px-4 py-3">
+          <div className="flex items-center justify-between border-b border-line px-4 pb-3 pt-[max(0.75rem,env(safe-area-inset-top))] sm:pt-3">
             <div>
               <p className="text-sm font-bold">Ask about my work</p>
               <p className="text-xs text-muted">AI assistant · answers from verified info</p>
             </div>
             <div className="flex items-center gap-1">
               {messages.length > 0 && (
-                <button type="button" onClick={clearHistory} className="rounded-md px-2 py-1 text-xs text-muted hover:text-ink">
+                <button type="button" onClick={clearHistory} className="rounded-md px-3 py-2 text-sm text-muted hover:text-ink sm:px-2 sm:py-1 sm:text-xs">
                   Clear
                 </button>
               )}
@@ -141,14 +186,14 @@ const Chatbot = () => {
                   setTimeout(() => launcherRef.current?.focus(), 0);
                 }}
                 aria-label="Close assistant"
-                className="grid h-8 w-8 place-items-center rounded-full text-muted hover:bg-ink/5 hover:text-ink"
+                className="grid h-11 w-11 place-items-center rounded-full text-muted hover:bg-ink/5 hover:text-ink sm:h-8 sm:w-8"
               >
-                <X size={17} aria-hidden="true" />
+                <X size={19} aria-hidden="true" />
               </button>
             </div>
           </div>
 
-          <div className="flex-1 space-y-2.5 overflow-y-auto p-4 text-sm" role="log" aria-live="polite">
+          <div className="flex-1 space-y-2.5 overflow-y-auto overscroll-contain p-4 text-[0.95rem] sm:text-sm" role="log" aria-live="polite">
             {messages.length === 0 && (
               <div className="px-1 pt-2">
                 <p className="font-semibold">Hi, I’m Benjamin’s assistant.</p>
@@ -161,7 +206,7 @@ const Chatbot = () => {
             {messages.map((msg, i) => (
               <div key={i} className={`flex ${msg.user ? 'justify-end' : 'justify-start'}`}>
                 <p
-                  className={`max-w-[85%] whitespace-pre-wrap rounded-2xl px-3.5 py-2.5 leading-relaxed ${
+                  className={`max-w-[85%] whitespace-pre-wrap break-words rounded-2xl px-3.5 py-2.5 leading-relaxed ${
                     msg.user
                       ? 'rounded-br-md bg-accent text-on-accent'
                       : msg.error
@@ -169,7 +214,7 @@ const Chatbot = () => {
                         : 'rounded-bl-md bg-sunken'
                   }`}
                 >
-                  {msg.text}
+                  {msg.user ? msg.text : linkify(msg.text)}
                 </p>
               </div>
             ))}
@@ -185,13 +230,13 @@ const Chatbot = () => {
           </div>
 
           {messages.length === 0 && !isTyping && (
-            <div className="flex flex-wrap gap-1.5 px-4 pb-3">
+            <div className="flex flex-wrap gap-2 px-4 pb-3 sm:gap-1.5">
               {QUICK_REPLIES.map(({ label, prompt }) => (
                 <button
                   key={label}
                   type="button"
                   onClick={() => sendMessage(prompt)}
-                  className="rounded-full border border-line px-3 py-1.5 text-xs font-medium hover:border-accent hover:text-accent"
+                  className="rounded-full border border-line px-3.5 py-2 text-sm font-medium hover:border-accent hover:text-accent sm:px-3 sm:py-1.5 sm:text-xs"
                 >
                   {label}
                 </button>
@@ -200,7 +245,7 @@ const Chatbot = () => {
           )}
 
           <form
-            className="flex items-center gap-2 border-t border-line p-3"
+            className="flex items-center gap-2 border-t border-line px-3 pb-[max(0.75rem,env(safe-area-inset-bottom))] pt-3 sm:pb-3"
             onSubmit={(e) => {
               e.preventDefault();
               sendMessage(input);
@@ -214,8 +259,9 @@ const Chatbot = () => {
               ref={inputRef}
               value={input}
               onChange={(e) => setInput(e.target.value)}
-              className="flex-1 rounded-full border border-line bg-paper px-4 py-2.5 text-sm focus:border-accent focus:outline-none"
+              className="min-w-0 flex-1 rounded-full border border-line bg-paper px-4 py-2.5 text-base focus:border-accent focus:outline-none sm:text-sm"
               placeholder="Ask a question…"
+              enterKeyHint="send"
               disabled={isTyping}
               maxLength={500}
               autoComplete="off"
@@ -223,7 +269,7 @@ const Chatbot = () => {
             <button
               type="submit"
               disabled={isTyping || !input.trim()}
-              className="grid h-10 w-10 place-items-center rounded-full bg-accent text-on-accent disabled:opacity-40"
+              className="grid h-11 w-11 shrink-0 place-items-center rounded-full bg-accent text-on-accent disabled:opacity-40 sm:h-10 sm:w-10"
               aria-label="Send message"
             >
               <Send size={16} aria-hidden="true" />
