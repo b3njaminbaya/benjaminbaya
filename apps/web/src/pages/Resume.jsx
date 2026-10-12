@@ -30,9 +30,15 @@ const ProjectList = ({ items }) => (
   <ul className="list-disc space-y-1.5 pl-5 marker:text-muted">
     {items.map((p) => (
       <li key={p.name}>
-        <Link to={p.to} className="font-bold link-underline">
-          {p.name}
-        </Link>
+        {p.to ? (
+          <Link to={p.to} className="font-bold link-underline">
+            {p.name}
+          </Link>
+        ) : (
+          <a href={p.href} target="_blank" rel="noopener" className="font-bold link-underline">
+            {p.name}
+          </a>
+        )}
         : {p.text}
       </li>
     ))}

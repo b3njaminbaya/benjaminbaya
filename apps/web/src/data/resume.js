@@ -53,13 +53,13 @@ export const RESUME = {
     { name: 'Becof Organic Chemicals', to: '/work/becof-organic-chemicals', text: 'commerce platform with M-Pesa payments and distributor portals.' },
     { name: 'Esteric Kitchens & Interior Designs', to: '/work/esteric-kitchens', text: 'marketing website and internal CRM.' },
     { name: 'Melamart Enterprises', to: '/work/melamart-enterprises', text: 'website and equipment-hire management system.' },
-    { name: 'Morara Home Furniture', to: '/work/morara-home-furniture', text: 'online furniture store (co-developed).' },
+    { name: 'Morara Home Furniture', href: 'https://www.morarahomefurniture.com', text: 'online furniture store (co-developed).' },
   ],
 
   personalProjects: [
-    { name: 'Nyuzi', to: '/work/nyuzi', text: 'circular-fashion marketplace with M-Pesa checkout and donation traceability.' },
+    { name: 'Nyuzi', href: 'https://nyuzi.vercel.app', text: 'circular-fashion marketplace with M-Pesa checkout and donation traceability.' },
     { name: 'Tafsiri AI', to: '/work/tafsiri-ai', text: 'machine translation for Kenyan languages.' },
-    { name: 'Ordo', to: '/work/ordo', text: 'project management with real-time collaboration.' },
+    { name: 'Ordo', href: 'https://ordo-inky.vercel.app', text: 'project management with real-time collaboration.' },
   ],
 
   skills: [

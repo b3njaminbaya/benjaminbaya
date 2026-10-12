@@ -27,6 +27,31 @@
       "source": "/work/micro-donations-platform",
       "destination": "/#work",
       "permanent": true
+    },
+    {
+      "source": "/work/precious-furniture",
+      "destination": "/#work",
+      "permanent": false
+    },
+    {
+      "source": "/work/morara-home-furniture",
+      "destination": "/#work",
+      "permanent": false
+    },
+    {
+      "source": "/work/cyberguard-ai",
+      "destination": "/#work",
+      "permanent": false
+    },
+    {
+      "source": "/work/nyuzi",
+      "destination": "/#work",
+      "permanent": false
+    },
+    {
+      "source": "/work/ordo",
+      "destination": "/#work",
+      "permanent": false
     }
   ],
   "headers": [

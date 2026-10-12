@@ -155,62 +155,6 @@ export const CASE_STUDIES = [
     ],
   },
   {
-    slug: 'precious-furniture',
-    shortName: 'Precious Furniture Kenya',
-    kind: 'client',
-    label: 'Client · Digital marketing · Current',
-    client: 'Precious Furniture Kenya',
-    title: 'Social media, advertising and SEO for a furniture business',
-    summary:
-      'An ongoing digital-growth engagement: content, paid ads, tracking and search visibility, working together as one system.',
-    pillars: ['Grow'],
-    image: null,
-    visual: 'growth',
-    problem:
-      'A furniture business that sells visually needs to be discovered on social media and search, and to know which channels actually bring in customers.',
-    solution: [
-      'Social media management and content creation for Facebook, Instagram and TikTok.',
-      'Running Google Ads and Meta Ads campaigns.',
-      'Connecting the Google tag and Meta Pixel to the website so campaigns can be measured.',
-      'Search engine optimisation for the website and product pages.',
-      'Keeping the Google Business Profile current with the best photos and linked social accounts, and linking the social accounts in Google Search Console.',
-    ],
-    role: 'Social media management and SEO. Engagement started 19 September 2026.',
-    tech: ['Meta Ads', 'Google Ads', 'Meta Pixel', 'Google tag', 'Google Business Profile', 'Google Search Console'],
-    outcome: 'In progress. Results will be reported here once there is enough data to measure honestly.',
-    links: [],
-  },
-  {
-    slug: 'morara-home-furniture',
-    shortName: 'Morara Home Furniture',
-    kind: 'client',
-    label: 'Client · Furniture retail · Kenya',
-    client: 'Morara Home Furniture',
-    title: 'An online store for a furniture business in Nairobi, Kenya',
-    summary:
-      'A storefront where customers browse by category, order online and track delivery, redesigned around a premium look and built to be found on Google.',
-    pillars: ['Build', 'Grow'],
-    image: 'morara',
-    imageAlt: 'Morara Home Furniture homepage: “Furniture That Defines Your Space.”',
-    liveUrl: 'https://www.morarahomefurniture.com',
-    problem:
-      'Morara Home Furniture sells sofas, beds and other furniture in Nairobi, Kenya. It needed customers to be able to browse the full range, order and pay online, and follow their delivery, with a look that matches the quality of the furniture.',
-    solution: [
-      'A product catalogue organised by category, with price filtering, daily offers and detailed product pages.',
-      'Cart and checkout for guests and account holders, with online payment and order tracking.',
-      'A premium dark redesign of the whole storefront, responsive from phone to desktop.',
-      'A floating WhatsApp button, plus FAQ, returns, privacy and terms pages.',
-      'Search engine optimisation so the store and its products can be found on Google.',
-      'An admin area for managing products and orders.',
-    ],
-    role:
-      'One of two developers. I led the storefront redesign, the product, order and category experience, the WhatsApp and support pages, and SEO. The payments and backend automation were built by my co-developer.',
-    tech: ['React', 'TypeScript', 'Tailwind CSS', 'Supabase', 'PesaPal'],
-    outcome:
-      'Live at morarahomefurniture.com. Sales and traffic figures belong to the client and aren’t published here.',
-    links: [{ label: 'Visit the live site', href: 'https://www.morarahomefurniture.com' }],
-  },
-  {
     slug: 'teevexa-trace',
     shortName: 'Teevexa Trace',
     kind: 'teevexa',
@@ -307,66 +251,6 @@ export const CASE_STUDIES = [
     links: [{ label: 'Visit teevexa.com', href: 'https://www.teevexa.com' }],
   },
   {
-    slug: 'cyberguard-ai',
-    shortName: 'CyberGuard AI',
-    kind: 'teevexa',
-    label: 'Teevexa product · Security',
-    client: 'Teevexa Ltd',
-    title: 'CyberGuard AI - threat detection for teams without a security department',
-    summary:
-      'An open-source dashboard that watches network activity, flags unusual behaviour, sends alerts and explains each threat in plain language.',
-    pillars: ['Build', 'Automate'],
-    image: null,
-    visual: 'security',
-    problem:
-      'Enterprise security monitoring tools are priced and built for large companies. Smaller teams still get attacked, but have nobody watching.',
-    solution: [
-      'Collects network and system log data and scores it with a trained machine-learning model to flag unusual activity.',
-      'Shows why something was flagged, not only that it was, so a non-specialist can judge it.',
-      'Sends alerts automatically by Slack, email or webhook, and tracks each incident from detection to resolution.',
-      'A built-in AI assistant explains a threat and suggests next steps, running locally with no paid AI service.',
-      'Separate accounts per organisation, role-based access, API keys and an audit log, with exportable evidence for compliance reviews.',
-      'Covered by 127 backend and 15 frontend automated tests that run on every change.',
-    ],
-    role: 'Founder and lead developer. Started as a solo project and is now maintained by Teevexa.',
-    tech: ['React', 'TypeScript', 'FastAPI', 'PostgreSQL (Neon)', 'scikit-learn', 'Ollama (local LLM)', 'GitHub Actions'],
-    outcome:
-      'Released as open source under the Apache 2.0 licence. No usage figures are claimed.',
-    links: [{ label: 'Source on GitHub', href: 'https://github.com/teevexa/cyberguard-ai' }],
-  },
-  {
-    slug: 'nyuzi',
-    shortName: 'Nyuzi',
-    kind: 'personal',
-    label: 'Personal build · Marketplace',
-    client: 'Product build',
-    title: 'Nyuzi - a circular-fashion marketplace with donation-to-product traceability',
-    summary:
-      'A three-sided marketplace where people donate clothing they no longer need, partners upcycle it, and buyers can see exactly which donations a product was made from.',
-    pillars: ['Build', 'Automate'],
-    image: 'nyuzi',
-    imageAlt: 'Nyuzi homepage: “Circular fashion, rewoven for the everyday”',
-    liveUrl: 'https://nyuzi.vercel.app',
-    problem:
-      'Kenya imports large volumes of second-hand clothing, and much of what doesn’t sell ends up burned or dumped because there’s no simple, trusted channel to give it a second life.',
-    solution: [
-      'Donations from signed-in or guest donors, with photos and optional pickup requests.',
-      'A marketplace with server-side search and filtering, and checkout for guests or account holders with M-Pesa (STK Push) payments.',
-      'Donation-to-product traceability: a product page shows which donations an item was made from, without exposing who donated.',
-      'Inventory that can’t be oversold: stock is reserved inside a single database transaction and returned automatically if a payment fails.',
-      'Order fulfilment with shipping and tracking, reviews and ratings, transactional email and an admin panel.',
-      'A security audit of the whole system, which found and fixed a client-side pricing loophole, a payment-callback gap and a way for users to make themselves admins.',
-    ],
-    role: 'Designed and built end to end: product, database, security and deployment.',
-    tech: ['React', 'TypeScript', 'Tailwind CSS', 'Supabase (Postgres, Auth, RLS, Storage)', 'Edge Functions', 'M-Pesa Daraja API', 'Capacitor'],
-    outcome:
-      'Live and feature-complete against its roadmap, but not yet trading: M-Pesa payments are built and not yet switched on in production. A personal product, so there are no commercial figures.',
-    links: [
-      { label: 'Visit the live product', href: 'https://nyuzi.vercel.app' },
-      { label: 'Source on GitHub', href: 'https://github.com/b3njaminbaya/nyuzi' },
-    ],
-  },
-  {
     slug: 'tafsiri-ai',
     shortName: 'Tafsiri AI',
     kind: 'personal',
@@ -396,56 +280,7 @@ export const CASE_STUDIES = [
       { label: 'Source on GitHub', href: 'https://github.com/b3njaminbaya/tafsiri-ai' },
     ],
   },
-  {
-    slug: 'ordo',
-    shortName: 'Ordo',
-    kind: 'personal',
-    label: 'Personal build · Business tool',
-    client: 'Product build',
-    title: 'Ordo - project management with real-time collaboration',
-    summary:
-      'Tasks, Kanban, calendar, time tracking and team workspaces, with careful security and a 150+ test API suite.',
-    pillars: ['Build'],
-    image: 'ordo',
-    imageAlt: 'Ordo homepage: “Project management, built end to end.”',
-    liveUrl: 'https://ordo-inky.vercel.app',
-    problem:
-      'Small teams need one place for tasks, deadlines and time spent, and a multi-user tool has to keep each team’s data strictly separate and in sync.',
-    solution: [
-      'Task lists, subtasks, recurring tasks, Kanban boards, a calendar and live time tracking with CSV export.',
-      'Workspaces with expiring invites, role-based access and real-time sync between teammates over WebSockets.',
-      'Deadline reminders and assignment and comment notifications.',
-      'Careful authentication: hashed passwords, token revocation, hashed single-use reset links and rate limiting.',
-      'CI/CD with GitHub Actions deploying to Vercel and Render.',
-    ],
-    role:
-      'Specified, directed, reviewed, tested and deployed the product; much of the code was written with an AI coding assistant under my direction.',
-    tech: ['React', 'Flask', 'Socket.IO', 'PostgreSQL', 'GitHub Actions'],
-    outcome: 'Live as a public demo and open source. A personal product, so there are no commercial figures.',
-    links: [
-      { label: 'Try the live demo', href: 'https://ordo-inky.vercel.app' },
-      { label: 'Source on GitHub', href: 'https://github.com/b3njaminbaya/ordo' },
-    ],
-  },
-];
 
-// Smaller builds — listed briefly, not presented as case studies.
-export const EXPERIMENTS = [
-  {
-    title: 'Micro-Donations Platform',
-    body: 'Small donations to community causes with M-Pesa, recurring giving and payouts.',
-    href: 'https://micro-donations-platform.vercel.app',
-  },
-  {
-    title: 'Aptigraph',
-    body: 'Coding-practice tracker with spaced repetition, analytics and database-enforced security.',
-    href: 'https://aptigraph.vercel.app',
-  },
-  {
-    title: 'This site’s AI assistant',
-    body: 'LLM assistant grounded in a curated knowledge base, with a fallback when the AI provider is down.',
-    href: 'https://github.com/b3njaminbaya/benjaminbaya',
-  },
 ];
 
 export const getCaseStudy = (slug) => CASE_STUDIES.find((c) => c.slug === slug);

@@ -74,14 +74,8 @@ const PORTFOLIO = {
       url: 'https://melamart-enterprises.vercel.app',
     },
     {
-      name: 'Morara Home Furniture (client): online furniture store',
-      description: 'Online store for a furniture business in Nairobi, Kenya: catalogue by category, cart and checkout, order tracking and an admin area. I was one of two developers and led the storefront redesign, product and order experience, WhatsApp button and SEO.',
-      tech: ['React', 'TypeScript', 'Supabase', 'PesaPal'],
-      url: 'https://www.morarahomefurniture.com',
-    },
-    {
-      name: 'Precious Furniture Kenya (client, current since Sep 2026): digital marketing',
-      description: 'Social media content for FB/IG/TikTok, Google and Meta Ads, Google tag and Meta Pixel, SEO, Google Business Profile and Search Console. Results not yet measured.',
+      name: 'Precious Furniture Kenya (current role since Sep 2026, listed under experience, not a case study): social media and SEO',
+      description: 'Social media content for FB/IG/TikTok, Google, Meta and TikTok Ads, Google tag and Meta Pixel, SEO, Google Business Profile and Search Console. Results not yet measured.',
       tech: ['Meta Ads', 'Google Ads', 'Meta Pixel'],
     },
     {
@@ -103,34 +97,10 @@ const PORTFOLIO = {
       url: 'https://www.teevexa.com',
     },
     {
-      name: 'CyberGuard AI (Teevexa product): threat detection',
-      description: 'Open-source threat-detection dashboard for small teams: flags unusual network activity with a trained model, sends alerts, tracks incidents and explains threats in plain language.',
-      tech: ['React', 'FastAPI', 'scikit-learn', 'Ollama'],
-      url: 'https://github.com/teevexa/cyberguard-ai',
-    },
-    {
-      name: 'Nyuzi (personal): circular-fashion marketplace',
-      description: 'A live product, not yet trading. People donate clothing, upcycling partners turn it into new products, and buyers see which donations a product came from. Guest checkout with M-Pesa (built, not yet switched on in production), inventory that cannot be oversold, order tracking, reviews, an admin panel and a full security audit.',
-      tech: ['React', 'TypeScript', 'Supabase', 'M-Pesa Daraja API'],
-      url: 'https://nyuzi.vercel.app',
-    },
-    {
       name: 'Tafsiri AI (personal): translation for Kenyan languages',
       description: 'Swahili/Somali/English neural translation with confidence scoring, an active-learning review queue and a LoRA fine-tuning pipeline.',
       tech: ['React', 'FastAPI', 'PyTorch', 'Transformers'],
       url: 'https://tafsiri-ai-tan.vercel.app',
-    },
-    {
-      name: 'Ordo (personal): project management',
-      description: 'Tasks, Kanban, calendar, time tracking and real-time team collaboration; built with AI assistance under my direction.',
-      tech: ['React', 'Flask', 'Socket.IO', 'PostgreSQL'],
-      url: 'https://ordo-inky.vercel.app',
-    },
-    {
-      name: 'Micro-Donations Platform (personal)',
-      description: 'M-Pesa STK push donations (one-off and recurring), B2C payouts, receipts and rewards.',
-      tech: ['React', 'Flask', 'M-Pesa Daraja API'],
-      url: 'https://micro-donations-platform.vercel.app',
     },
   ],
 
@@ -176,7 +146,7 @@ function buildContext(message) {
     );
   }
 
-  if (want(/project|work|built|made|portfolio|app|website|demo|show me|example|client|donation|becof|buzlin|buzryde|esteric|melamart|morara|sensys|precious|tafsiri|ordo|nyuzi|trace|teedesk|cyberguard|product/)) {
+  if (want(/project|work|built|made|portfolio|app|website|demo|show me|example|client|donation|becof|buzlin|buzryde|esteric|melamart|sensys|precious|tafsiri|trace|teedesk|product/)) {
     const lines = PORTFOLIO.projects.map(p => {
       const link = p.url ? ` (${p.url})` : '';
       return `  • ${p.name}: ${p.description} Tech: ${p.tech.join(', ')}${link}`;
@@ -250,7 +220,7 @@ const FALLBACKS = {
 
   skills: `I work across the stack: React, Next.js and TypeScript on the frontend; Python, Node.js, PHP (Laravel) and Java on the backend; Flutter, React Native and Kotlin for mobile; PostgreSQL, MySQL and MongoDB for data; LLM APIs for AI features; and M-Pesa, PesaPal and Stripe for payments.`,
 
-  projects: `Client work includes the Becof Organic Chemicals commerce platform (live, with M-Pesa payments), a website and CRM for Esteric Kitchens, a website and hire system for Melamart, an online store for Morara Home Furniture, and ongoing digital marketing for Precious Furniture Kenya. At Buzlin Holdings I work on Buzlin (marketplace) and BuzRyde (ride-hailing). Through my own company Teevexa I have shipped Teevexa Trace (supply chain traceability, two apps on Google Play), TeeDesk (open-source AI customer support) and CyberGuard AI. Personal builds include Nyuzi (a circular-fashion marketplace), Tafsiri AI, Ordo and a micro-donations platform. Each has a case study on this site.`,
+  projects: `Client work includes the Becof Organic Chemicals commerce platform (live, with M-Pesa payments), a website and CRM for Esteric Kitchens, and a website and hire system for Melamart. At Buzlin Holdings I work on Buzlin (marketplace) and BuzRyde (ride-hailing). Through my own company Teevexa I have shipped Teevexa Trace (supply chain traceability, two apps on Google Play), TeeDesk (open-source AI customer support) and the Teevexa platform. Tafsiri AI, a translation tool for Kenyan languages, is a personal build. Each has a case study on this site.`,
 
   teevexa: `Teevexa Ltd is the technology company I founded. I lead the consultation, strategy and architecture; larger projects are delivered through Teevexa. You can book a consultation at teevexa.com/book-consultation.`,
 

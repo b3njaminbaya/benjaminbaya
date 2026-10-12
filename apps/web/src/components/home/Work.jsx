@@ -1,6 +1,6 @@
 import { Link } from 'react-router-dom';
-import { ArrowRight, ArrowUpRight } from 'lucide-react';
-import { CASE_STUDIES, EXPERIMENTS } from '../../data/caseStudies';
+import { ArrowRight } from 'lucide-react';
+import { CASE_STUDIES } from '../../data/caseStudies';
 import Container from '../ui/Container';
 import SectionHeading from '../ui/SectionHeading';
 import WorkVisual from '../work/WorkVisual';
@@ -87,7 +87,7 @@ const Work = () => (
         id="work-title"
         eyebrow="Selected work"
         title="Problems solved, not just things built."
-        intro="Client systems, products I engineer at Buzlin Holdings, products shipped by my own company Teevexa, and a few personal builds, each written up as the problem, what I built, my role, the technology and what changed. Where an outcome hasn’t been measured, I say so."
+        intro="Client systems, products I engineer at Buzlin Holdings, products shipped by my own company Teevexa, and one personal build, each written up as the problem, what I built, my role, the technology and what changed. Where an outcome hasn’t been measured, I say so."
       />
 
       <h3 className="eyebrow mb-6 mt-16 flex items-center gap-3">
@@ -112,7 +112,7 @@ const Work = () => (
       <div className="grid gap-6">
         <FeaturedCard study={teevexa[0]} />
       </div>
-      <div className="mt-6 grid gap-6 sm:grid-cols-2 lg:grid-cols-3">
+      <div className={`mt-6 grid gap-6 sm:grid-cols-2 ${(teevexa.length - 1) % 3 === 0 ? 'lg:grid-cols-3' : ''}`}>
         {teevexa.slice(1).map((s, i) => (
           <CompactCard key={s.slug} study={s} index={i} />
         ))}
@@ -120,27 +120,12 @@ const Work = () => (
 
       <h3 className="eyebrow mb-6 mt-20 flex items-center gap-3">
         <span className="h-px w-8 bg-line" aria-hidden="true" />
-        Personal product builds
+        Personal build
       </h3>
-      <div className="grid gap-6 sm:grid-cols-2 lg:grid-cols-3">
-        {personal.map((s, i) => (
-          <CompactCard key={s.slug} study={s} index={i} />
+      <div className="grid gap-6">
+        {personal.map((s) => (
+          <FeaturedCard key={s.slug} study={s} />
         ))}
-      </div>
-
-      <div className="reveal mt-10 flex flex-col gap-4 rounded-2xl border border-dashed border-line p-6 sm:flex-row sm:items-center sm:gap-8">
-        <p className="eyebrow shrink-0">Smaller builds</p>
-        <ul className="flex flex-col gap-3 sm:flex-row sm:gap-8">
-          {EXPERIMENTS.map((e) => (
-            <li key={e.title} className="text-sm">
-              <a href={e.href} target="_blank" rel="noopener" className="inline-flex items-center gap-1 font-semibold link-underline">
-                {e.title}
-                <ArrowUpRight size={14} aria-hidden="true" />
-              </a>
-              <span className="block text-muted">{e.body}</span>
-            </li>
-          ))}
-        </ul>
       </div>
     </Container>
   </section>

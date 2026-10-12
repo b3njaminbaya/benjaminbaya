@@ -1,6 +1,6 @@
 import { workImage } from '../../data/caseStudies';
 
-// Stylised preview for projects without a screenshot (the AI assistant).
+// Stylised fallback preview for projects without a screenshot.
 const AssistantMock = () => (
   <div className="bg-grid absolute inset-0 flex items-center justify-center bg-sunken p-6" aria-hidden="true">
     <div className="w-full max-w-xs rounded-xl border border-line bg-surface shadow-sm">
@@ -21,25 +21,6 @@ const AssistantMock = () => (
           <span className="h-1.5 w-1.5 rounded-full bg-muted/50" />
         </div>
       </div>
-    </div>
-  </div>
-);
-
-// Stylised preview for the digital-growth engagement (no screenshot to show).
-const GrowthMock = () => (
-  <div className="bg-grid absolute inset-0 flex items-center justify-center bg-sunken p-6" aria-hidden="true">
-    <div className="grid w-full max-w-sm grid-cols-2 gap-2.5">
-      {[
-        ['Social', 'FB · IG · TikTok'],
-        ['Ads', 'Google · Meta'],
-        ['Tracking', 'Google tag · Meta Pixel'],
-        ['Search', 'SEO · Business Profile'],
-      ].map(([k, v]) => (
-        <div key={k} className="rounded-xl border border-line bg-surface p-3.5 shadow-sm">
-          <p className="font-mono text-[0.6rem] uppercase tracking-wider text-muted">{k}</p>
-          <p className="mt-1 text-xs font-semibold">{v}</p>
-        </div>
-      ))}
     </div>
   </div>
 );
@@ -97,36 +78,6 @@ const SupportMock = () => (
   </div>
 );
 
-// Illustrative preview for CyberGuard AI.
-const SecurityMock = () => (
-  <div className="bg-grid absolute inset-0 flex items-center justify-center bg-sunken p-5" aria-hidden="true">
-    <div className="w-full max-w-xs rounded-xl border border-line bg-surface p-3 text-[0.62rem] shadow-sm">
-      <div className="mb-2 flex items-end gap-1" style={{ height: '2.2rem' }}>
-        {[30, 45, 28, 60, 38, 90, 42, 35, 55, 32].map((h, i) => (
-          <span key={i} className={`flex-1 rounded-sm ${h > 80 ? 'bg-accent' : 'bg-ink/15'}`} style={{ height: `${h}%` }} />
-        ))}
-      </div>
-      {[
-        ['Unusual outbound traffic', 'High'],
-        ['Repeated failed logins', 'Medium'],
-        ['New device on network', 'Low'],
-      ].map(([t, sev]) => (
-        <div key={t} className="flex items-center justify-between gap-2 border-t border-line py-1.5">
-          <span className="truncate font-medium">{t}</span>
-          <span
-            className={`shrink-0 rounded-full px-1.5 py-0.5 font-mono text-[0.5rem] uppercase tracking-wider ${
-              sev === 'High' ? 'bg-accent text-on-accent' : 'border border-line text-muted'
-            }`}
-          >
-            {sev}
-          </span>
-        </div>
-      ))}
-    </div>
-  </div>
-);
-
-/** Screenshot (responsive WebP), phone screenshots or a mock, inside a fixed-ratio frame. */
 const WorkVisual = ({ study, sizes, priority = false, className = '' }) => (
   <div className={`relative aspect-[16/9] overflow-hidden border-line bg-sunken ${className}`}>
     {study.image ? (
@@ -145,10 +96,6 @@ const WorkVisual = ({ study, sizes, priority = false, className = '' }) => (
       <PhonesVisual phones={study.phones} />
     ) : study.visual === 'support' ? (
       <SupportMock />
-    ) : study.visual === 'security' ? (
-      <SecurityMock />
-    ) : study.visual === 'growth' ? (
-      <GrowthMock />
     ) : (
       <AssistantMock />
     )}
