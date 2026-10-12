@@ -39,7 +39,7 @@ export const TIMELINE = [
     title: 'Social Media & SEO',
     org: 'Precious Furniture Kenya · client engagement',
     current: true,
-    body: 'Social content for Facebook, Instagram and TikTok, Google and Meta Ads, pixel tracking, SEO and Google Business Profile.',
+    body: 'Social content for Facebook, Instagram and TikTok, Google, Meta and TikTok Ads, pixel tracking, SEO and Google Business Profile.',
   },
 ];
 

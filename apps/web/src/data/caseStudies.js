@@ -186,7 +186,7 @@ export const CASE_STUDIES = [
     kind: 'client',
     label: 'Client · Furniture retail · Kenya',
     client: 'Morara Home Furniture',
-    title: 'An online store for a Nairobi furniture business',
+    title: 'An online store for a furniture business in Nairobi, Kenya',
     summary:
       'A storefront where customers browse by category, order online and track delivery, redesigned around a premium look and built to be found on Google.',
     pillars: ['Build', 'Grow'],
@@ -194,7 +194,7 @@ export const CASE_STUDIES = [
     imageAlt: 'Morara Home Furniture homepage: “Furniture That Defines Your Space.”',
     liveUrl: 'https://www.morarahomefurniture.com',
     problem:
-      'Morara Home Furniture sells sofas, beds and other furniture in Nairobi. It needed customers to be able to browse the full range, order and pay online, and follow their delivery, with a look that matches the quality of the furniture.',
+      'Morara Home Furniture sells sofas, beds and other furniture in Nairobi, Kenya. It needed customers to be able to browse the full range, order and pay online, and follow their delivery, with a look that matches the quality of the furniture.',
     solution: [
       'A product catalogue organised by category, with price filtering, daily offers and detailed product pages.',
       'Cart and checkout for guests and account holders, with online payment and order tracking.',
@@ -443,7 +443,7 @@ export const EXPERIMENTS = [
   {
     title: 'This site’s AI assistant',
     body: 'LLM assistant grounded in a curated knowledge base, with a fallback when the AI provider is down.',
-    href: 'https://github.com/b3njaminbaya/Benjamin-Baya',
+    href: 'https://github.com/b3njaminbaya/benjaminbaya',
   },
 ];
 

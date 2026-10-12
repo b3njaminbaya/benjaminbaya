@@ -55,7 +55,6 @@ export const SOCIALS = [
 export const NAV = [
   { hash: 'services', label: 'Services' },
   { hash: 'work', label: 'Work' },
-  { hash: 'consulting', label: 'Consulting' },
   { hash: 'about', label: 'About' },
   { hash: 'contact', label: 'Contact' },
 ];

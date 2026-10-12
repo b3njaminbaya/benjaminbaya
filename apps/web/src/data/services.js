@@ -66,16 +66,9 @@ export const PILLARS = [
     what: 'SEO, digital marketing, social media, advertising, analytics and conversion optimisation.',
     who: 'Businesses whose customers can’t find them online, or whose website and ads aren’t producing enquiries.',
     problem: 'Marketing spend with no clear return, and a website that looks fine but doesn’t generate business.',
-    offerings: [
-      'SEO & local SEO',
-      'Google Business Profile',
-      'Social media strategy & management',
-      'Content strategy',
-      'Meta, Google & TikTok Ads',
-      'Conversion tracking & analytics',
-      'Landing-page optimisation',
-      'Lead-generation systems',
-    ],
+    proof: { label: 'In detail', text: 'How I approach digital growth', to: '/#growth' },
+    // The full breakdown lives in the Digital growth section
+    offerings: ['Search visibility', 'Social media', 'Paid advertising', 'Conversion & measurement'],
   },
 ];
 
@@ -111,29 +104,6 @@ export const PROCESS = [
     step: '04',
     title: 'Launch, measure, improve',
     body: 'Tracking is set up from day one so you can see what the investment is doing. Then we iterate on what the numbers show.',
-  },
-];
-
-export const CONSULTING_AREAS = [
-  {
-    title: 'Digital Transformation',
-    body: 'Identify where technology can genuinely improve how your business operates, and where it can’t.',
-  },
-  {
-    title: 'Process & Automation Consulting',
-    body: 'Map your workflows, find the repetitive and manual steps, and decide which are worth automating first.',
-  },
-  {
-    title: 'Technology Advisory',
-    body: 'Work out what you actually need (a custom build, existing software or a simple fix) before you spend money on it.',
-  },
-  {
-    title: 'Digital Growth Strategy',
-    body: 'Review your online presence, acquisition channels, conversion and measurement, and prioritise what to fix.',
-  },
-  {
-    title: 'AI Adoption',
-    body: 'Find practical, low-risk uses of AI in your business, not AI for its own sake.',
   },
 ];
 

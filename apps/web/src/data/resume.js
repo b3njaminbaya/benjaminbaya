@@ -34,7 +34,7 @@ export const RESUME = {
       org: 'Precious Furniture Kenya',
       points: [
         'Manage social media content for Facebook, Instagram and TikTok.',
-        'Run Google and Meta Ads, conversion tracking and search engine optimisation.',
+        'Run Google, Meta and TikTok Ads, conversion tracking and search engine optimisation.',
       ],
     },
     {
@@ -68,7 +68,7 @@ export const RESUME = {
     ['Mobile', 'Flutter, React Native, Kotlin'],
     ['Data & cloud', 'PostgreSQL, MySQL, MongoDB, Supabase, Firebase, AWS, Docker'],
     ['AI & payments', 'LLM APIs, PyTorch, M-Pesa, PesaPal, Stripe'],
-    ['Growth', 'SEO, Google Analytics, Google and Meta Ads, conversion tracking'],
+    ['Growth', 'SEO, Google Analytics, Google, Meta and TikTok Ads, conversion tracking'],
     ['Consulting', 'Process analysis, technology strategy, automation and AI adoption'],
   ],
 

@@ -6,7 +6,7 @@ const BookingButton = ({ className = 'btn-primary', children = 'Book a Consultat
   <a href={BOOKING_LINK} target="_blank" rel="noopener" className={className}>
     {children}
     <ArrowUpRight size={17} aria-hidden="true" />
-    <span className="sr-only">(opens teevexa.com in a new tab)</span>
+    <span className="sr-only">(opens the booking page in a new tab)</span>
   </a>
 );
 

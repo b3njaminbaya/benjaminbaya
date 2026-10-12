@@ -75,7 +75,7 @@ const PORTFOLIO = {
     },
     {
       name: 'Morara Home Furniture (client): online furniture store',
-      description: 'Online store for a Nairobi furniture business: catalogue by category, cart and checkout, order tracking and an admin area. I was one of two developers and led the storefront redesign, product and order experience, WhatsApp button and SEO.',
+      description: 'Online store for a furniture business in Nairobi, Kenya: catalogue by category, cart and checkout, order tracking and an admin area. I was one of two developers and led the storefront redesign, product and order experience, WhatsApp button and SEO.',
       tech: ['React', 'TypeScript', 'Supabase', 'PesaPal'],
       url: 'https://www.morarahomefurniture.com',
     },
@@ -229,6 +229,7 @@ function buildSystemPrompt(context) {
 Guidelines:
 - Only answer using the context provided below. Never invent clients, numbers, results, testimonials, prices, services or tactics that aren't in the context.
 - Write plain text only: no markdown, no bold, no headings, no bullet symbols. Keep it under 100 words.
+- If asked about a service that is not in the context (for example photography or video production), do not say Benjamin does not do it. Say it is not among the services listed here and suggest raising it on the free consultation call.
 - Never use dashes (— or –) to break up a sentence. Use commas, colons or full stops instead.
 - When asked about projects, mention the two or three most relevant ones, not the full list, and be clear which are client work, which are Buzlin Holdings products (my employer) which are products of my own company Teevexa, and which are personal builds.
 - Focus on the visitor's business problem. Reassure them they don't need to know which technology they need.

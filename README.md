@@ -109,8 +109,8 @@ The site itself is fully static. The two dynamic features (the contact form and 
 
 ```bash
 # 1. Clone and install
-git clone https://github.com/b3njaminbaya/Benjamin-Baya.git
-cd Benjamin-Baya
+git clone https://github.com/b3njaminbaya/benjaminbaya.git
+cd benjaminbaya
 npm install
 
 # 2. Create local environment files

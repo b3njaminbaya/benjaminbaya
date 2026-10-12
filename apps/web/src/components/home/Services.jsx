@@ -3,6 +3,7 @@ import { ArrowRight } from 'lucide-react';
 import { PILLARS } from '../../data/services';
 import Container from '../ui/Container';
 import SectionHeading from '../ui/SectionHeading';
+import BookingButton from '../ui/BookingButton';
 
 const Row = ({ label, children }) => (
   <div className="grid gap-1 border-t border-white/10 py-3.5 sm:grid-cols-[8.5rem_1fr] sm:gap-4">
@@ -19,7 +20,7 @@ const Services = () => (
         tone="dark"
         eyebrow="Services"
         title="Consult, build, automate, grow."
-        intro="Four connected capabilities that follow how businesses actually adopt technology: decide what’s worth doing, build it properly, remove the manual work, then use it to win and keep customers."
+        intro="Four connected capabilities that follow how businesses actually adopt technology: decide what’s worth doing, build it properly, remove the manual work, then use it to win customers."
       />
 
       {/* Client journey */}
@@ -65,7 +66,9 @@ const Services = () => (
 
             {p.proof && (
               <p className="border-t border-white/10 py-3.5 text-[0.95rem] text-white/80">
-                <span className="font-mono text-[0.68rem] uppercase tracking-[0.14em] text-white/45">In practice </span>
+                <span className="font-mono text-[0.68rem] uppercase tracking-[0.14em] text-white/45">
+                  {p.proof.label || 'In practice'}{' '}
+                </span>
                 <Link to={p.proof.to} className="font-semibold text-white underline decoration-white/30 underline-offset-4 hover:decoration-white">
                   {p.proof.text}
                 </Link>
@@ -81,6 +84,28 @@ const Services = () => (
             </ul>
           </article>
         ))}
+      </div>
+
+      {/* Consulting: how every engagement starts */}
+      <div
+        id="consulting"
+        className="reveal mt-5 grid scroll-mt-24 gap-8 rounded-2xl border border-white/10 bg-white/[0.03] p-6 sm:p-8 lg:grid-cols-12 lg:items-center"
+      >
+        <div className="lg:col-span-8">
+          <p className="font-mono text-[0.68rem] uppercase tracking-[0.14em] text-white/45">
+            Business technology consulting
+          </p>
+          <p className="mt-3 text-2xl font-semibold leading-snug tracking-tight sm:text-[1.7rem]">
+            You don’t need to know what technology you need. You need to explain the business problem.
+          </p>
+          <p className="mt-3 max-w-prose leading-relaxed text-white/70">
+            Advice from someone who also builds it, grounded in what’s realistic to build, maintain and afford,
+            including when the answer isn’t new software.
+          </p>
+        </div>
+        <div className="lg:col-span-4 lg:justify-self-end">
+          <BookingButton />
+        </div>
       </div>
     </Container>
   </section>
