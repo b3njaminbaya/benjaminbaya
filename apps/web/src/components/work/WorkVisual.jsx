@@ -26,14 +26,14 @@ const AssistantMock = () => (
 );
 
 // Real app screenshots (from the Google Play listings) in simple phone frames.
-const PhonesVisual = ({ phones }) => (
-  <div className="bg-grid absolute inset-0 flex items-end justify-center gap-[3.5%] bg-sunken px-[5%] pt-[5%]">
+const PhonesVisual = ({ phones, framed }) => (
+  <div className="bg-grid absolute inset-0 flex items-center justify-center gap-[4%] bg-sunken p-[5%]">
     {phones.map((ph, i) => (
       <div
         key={ph.src}
-        className={`aspect-[9/17] w-[26%] overflow-hidden rounded-t-[1.1rem] border-[3px] border-b-0 border-ink/85 bg-night shadow-[0_18px_40px_-18px_rgb(0_0_0/0.5)] ${
-          i === 1 ? 'mb-0' : '-mb-[6%]'
-        }`}
+        className={`aspect-[480/1000] overflow-hidden rounded-[0.7rem] border-2 border-ink/85 bg-night shadow-[0_18px_40px_-18px_rgb(0_0_0/0.5)] sm:rounded-[1.1rem] sm:border-[3px] ${
+          framed ? 'w-[24%] lg:w-[26%]' : 'w-[24%]'
+        } ${i === 1 ? '-translate-y-[4%]' : 'translate-y-[4%]'}`}
       >
         <img
           src={`/images/work/${ph.src}.webp`}
@@ -78,8 +78,14 @@ const SupportMock = () => (
   </div>
 );
 
-const WorkVisual = ({ study, sizes, priority = false, className = '' }) => (
-  <div className={`relative aspect-[16/9] overflow-hidden border-line bg-sunken ${className}`}>
+// `framed`: on wide screens the visual fills a taller column, so show the
+// whole screenshot as a framed image instead of cropping it to fit.
+const WorkVisual = ({ study, sizes, priority = false, framed = false, className = '' }) => (
+  <div
+    className={`relative aspect-[16/9] overflow-hidden border-line bg-sunken ${
+      framed && study.image ? 'lg:bg-grid lg:flex lg:items-center lg:justify-center lg:p-7 xl:p-10' : ''
+    } ${className}`}
+  >
     {study.image ? (
       <img
         src={workImage(study.image, 800)}
@@ -90,10 +96,12 @@ const WorkVisual = ({ study, sizes, priority = false, className = '' }) => (
         alt={study.imageAlt}
         loading={priority ? 'eager' : 'lazy'}
         decoding="async"
-        className="absolute inset-0 h-full w-full object-cover object-left-top"
+        className={`absolute inset-0 h-full w-full object-cover object-left-top ${
+          framed ? 'lg:static lg:h-auto lg:rounded-xl lg:border lg:border-line lg:shadow-lg' : ''
+        }`}
       />
     ) : study.visual === 'phones' ? (
-      <PhonesVisual phones={study.phones} />
+      <PhonesVisual phones={study.phones} framed={framed} />
     ) : study.visual === 'support' ? (
       <SupportMock />
     ) : (

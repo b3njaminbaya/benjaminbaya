@@ -18,11 +18,12 @@ const Tag = ({ children }) => (
 );
 
 const FeaturedCard = ({ study }) => (
-  <article className="reveal group relative grid overflow-hidden rounded-3xl border border-line bg-surface md:grid-cols-2">
+  <article className="reveal group relative grid overflow-hidden rounded-3xl border border-line bg-surface lg:grid-cols-[5fr_6fr]">
     <WorkVisual
       study={study}
-      sizes="(min-width: 1280px) 620px, (min-width: 768px) 50vw, 100vw"
-      className="border-b md:order-2 md:aspect-auto md:h-full md:min-h-[340px] md:border-b-0 md:border-l"
+      framed
+      sizes="(min-width: 1280px) 620px, (min-width: 1024px) 50vw, 100vw"
+      className="border-b lg:order-2 lg:aspect-auto lg:h-full lg:min-h-[340px] lg:border-b-0 lg:border-l"
     />
     <div className="flex flex-col p-6 sm:p-8 lg:p-10">
       <div className="flex flex-wrap items-center gap-2">
