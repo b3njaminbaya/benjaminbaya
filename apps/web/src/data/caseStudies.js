@@ -117,8 +117,9 @@ export const CASE_STUDIES = [
       'Role-based access where admins create roles and permissions without a code change, and an activity log on every change.',
       'Staff manage the portfolio, gallery, blog, testimonials and FAQs from the CRM, with automatic photo watermarking.',
       'Staff invitations and transactional email.',
+      'Search engine optimisation for the website.',
     ],
-    role: 'Designed and built the website and CRM end to end.',
+    role: 'Designed and built the website and CRM end to end, and did the search engine optimisation for the website.',
     tech: ['Next.js', 'TypeScript', 'Prisma', 'Neon Postgres', 'Clerk', 'Vercel Blob', 'Resend'],
     outcome:
       'The website and the staff CRM are both live. Business results haven’t been measured yet, so none are claimed here.',

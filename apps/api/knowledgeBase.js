@@ -21,7 +21,7 @@ const PORTFOLIO = {
     consult: 'Digital transformation, business process analysis, technology strategy and roadmaps, automation and AI adoption consulting, digital presence audits, business systems consulting.',
     build: 'Business websites, landing pages, e-commerce, web and mobile apps, SaaS platforms, business management and CRM systems, dashboards, APIs and integrations.',
     automate: 'Business process and workflow automation, CRM automation, AI agents and AI customer support, WhatsApp automation, integrations, internal tools, reporting automation.',
-    grow: 'SEO and local SEO, Google Business Profile, social media strategy and management, content strategy, Meta/Google/TikTok Ads, conversion tracking (Meta Pixel, TikTok Pixel), analytics, landing-page optimisation, lead generation. Creative production (photography, design, video) can support campaigns, but the focus is strategy and measurable results. He is not a full-service ad agency. In practice he manages social media and runs paid campaigns on Facebook, Instagram, TikTok and Google for client businesses and for his own company.',
+    grow: 'SEO and local SEO, Google Business Profile, social media strategy and management, content strategy, Meta/Google/TikTok Ads, conversion tracking (Meta Pixel, TikTok Pixel), analytics, landing-page optimisation, lead generation. The focus is strategy and measurable results. He is not a full-service ad agency. In practice he manages social media and runs paid campaigns on Facebook, Instagram, TikTok and Google for client businesses and for his own company. He did the search engine optimisation on seven websites: Becof Organic Chemicals, Buzlin, BuzRyde, Esteric Kitchens & Interior Designs, Morara Home Furniture, Precious Furniture Kenya and Teevexa.',
     approach: 'Clients do not need to know what technology they need. They only need to explain the business problem. The first conversation is about the problem, not selling a service.',
   },
 
@@ -63,7 +63,7 @@ const PORTFOLIO = {
     },
     {
       name: 'Esteric Kitchens & Interior Designs (client): website & CRM',
-      description: 'Marketing site with quote requests and portfolio, plus a CRM with a leads → customers → quotations → projects pipeline and data-driven roles.',
+      description: 'Marketing site with quote requests and portfolio, plus a CRM with a leads → customers → quotations → projects pipeline and data-driven roles. I also did the search engine optimisation for the website.',
       tech: ['Next.js', 'Prisma', 'Neon Postgres', 'Clerk'],
       url: 'https://esteric-web.vercel.app',
     },

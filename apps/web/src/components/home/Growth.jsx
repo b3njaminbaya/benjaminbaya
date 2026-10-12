@@ -4,6 +4,17 @@ import Container from '../ui/Container';
 import SectionHeading from '../ui/SectionHeading';
 import BookingButton from '../ui/BookingButton';
 
+// Websites whose search optimisation I did, each linked to its case study
+const SEO_WORK = [
+  { name: 'Becof Organic Chemicals', to: '/work/becof-organic-chemicals' },
+  { name: 'Buzlin', to: '/work/buzlin' },
+  { name: 'BuzRyde', to: '/work/buzryde' },
+  { name: 'Esteric Kitchens & Interior Designs', to: '/work/esteric-kitchens' },
+  { name: 'Morara Home Furniture', to: '/work/morara-home-furniture' },
+  { name: 'Precious Furniture Kenya', to: '/work/precious-furniture' },
+  { name: 'Teevexa', to: '/work/teevexa-platform' },
+];
+
 const Growth = () => (
   <section id="growth" aria-labelledby="growth-title" className="border-y border-line bg-surface py-24 lg:py-32">
     <Container>
@@ -16,23 +27,23 @@ const Growth = () => (
           intro="Using digital channels to attract and convert customers, built on a website that’s fast, findable and properly tracked. Not an advertising agency: an engineer who makes sure every channel can be traced back to results."
         />
         {/* Proof: this is current, hands-on work */}
-        <p className="reveal border-l-2 border-accent pl-5 leading-relaxed lg:col-span-5">
+        <div className="reveal border-l-2 border-accent pl-5 leading-relaxed lg:col-span-5">
           <span className="eyebrow mb-2 block !text-accent">In practice</span>
-          I manage social media and run paid campaigns on Facebook, Instagram, TikTok and Google for client businesses
-          and for my own company, and I built the search optimisation into the{' '}
-          <Link to="/work/becof-organic-chemicals" className="link-underline font-semibold">
-            Becof
-          </Link>
-          ,{' '}
-          <Link to="/work/buzryde" className="link-underline font-semibold">
-            BuzRyde
-          </Link>{' '}
-          and{' '}
-          <Link to="/work/morara-home-furniture" className="link-underline font-semibold">
-            Morara
-          </Link>{' '}
-          websites.
-        </p>
+          <p>
+            I manage social media and run paid campaigns on Facebook, Instagram, TikTok and Google for client
+            businesses and for my own company.
+          </p>
+          <p className="mt-4 text-sm font-semibold">Search optimisation on seven websites:</p>
+          <ul className="mt-2 flex flex-wrap gap-x-4 gap-y-1.5 text-sm">
+            {SEO_WORK.map((s) => (
+              <li key={s.to}>
+                <Link to={s.to} className="link-underline font-semibold">
+                  {s.name}
+                </Link>
+              </li>
+            ))}
+          </ul>
+        </div>
       </div>
 
       <div className="mt-14 grid gap-5 sm:grid-cols-2 lg:grid-cols-4">
