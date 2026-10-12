@@ -85,7 +85,7 @@ export const RESUME = {
   certifications: [
     'Launch Entrepreneurship, Queen’s University (2025)',
     'Customer Discovery, Design Thinking and High-Performance Teams, Queen’s University (2025)',
-    'Artificial Intelligence, Moringa School (2025)',
+    'Generative AI Essentials for Software Developers, Moringa School (2025)',
     'SME Growth Lab Digital Accelerator Program (2024)',
   ],
 };

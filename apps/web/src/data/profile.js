@@ -121,7 +121,12 @@ export const CERTIFICATIONS = [
   {
     group: 'Technology & growth',
     items: [
-      { title: 'Artificial Intelligence', org: 'Moringa School', date: '2025' },
+      {
+        title: 'Generative AI Essentials for Software Developers',
+        org: 'Moringa School',
+        date: '2025',
+        href: 'https://moringa.my.salesforce-sites.com/certificateStatus?id=a0PQ200000MtHdXMAV',
+      },
       { title: 'SME Growth Lab Digital Accelerator Program', org: 'SME Growth Lab Africa', date: '2024' },
     ],
   },
