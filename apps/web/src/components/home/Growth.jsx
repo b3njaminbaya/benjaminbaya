@@ -2,6 +2,7 @@ import { Link } from 'react-router-dom';
 import { GROWTH_AREAS } from '../../data/services';
 import Container from '../ui/Container';
 import SectionHeading from '../ui/SectionHeading';
+import BookingButton from '../ui/BookingButton';
 
 const Growth = () => (
   <section id="growth" aria-labelledby="growth-title" className="border-y border-line bg-surface py-24 lg:py-32">
@@ -12,11 +13,25 @@ const Growth = () => (
           className="lg:col-span-7"
           eyebrow="Digital growth"
           title="Marketing treated as a system you can measure."
-          intro="Using digital channels to attract, convert and retain customers, built on a website that’s fast, findable and properly tracked. Not an advertising agency: an engineer who makes sure every channel can be traced back to results."
+          intro="Using digital channels to attract and convert customers, built on a website that’s fast, findable and properly tracked. Not an advertising agency: an engineer who makes sure every channel can be traced back to results."
         />
-        <p className="reveal text-[0.95rem] leading-relaxed text-muted lg:col-span-5">
-          Creative production (photography, graphic design and short-form video) supports campaigns where it’s
-          needed. The strategic focus stays on the channels, the funnel and the numbers.
+        {/* Proof: this is current, hands-on work */}
+        <p className="reveal border-l-2 border-accent pl-5 leading-relaxed lg:col-span-5">
+          <span className="eyebrow mb-2 block !text-accent">In practice</span>
+          I manage social media and run paid campaigns on Facebook, Instagram, TikTok and Google for client businesses
+          and for my own company, and I built the search optimisation into the{' '}
+          <Link to="/work/becof-organic-chemicals" className="link-underline font-semibold">
+            Becof
+          </Link>
+          ,{' '}
+          <Link to="/work/buzryde" className="link-underline font-semibold">
+            BuzRyde
+          </Link>{' '}
+          and{' '}
+          <Link to="/work/morara-home-furniture" className="link-underline font-semibold">
+            Morara
+          </Link>{' '}
+          websites.
         </p>
       </div>
 
@@ -42,15 +57,10 @@ const Growth = () => (
         ))}
       </div>
 
-      <p className="reveal mt-10 max-w-3xl text-sm leading-relaxed text-muted">
-        <span className="font-semibold text-ink">In practice:</span> I currently run social media, Google and Meta
-        Ads, pixel tracking and SEO for{' '}
-        <Link to="/work/precious-furniture" className="link-underline font-semibold text-ink">
-          Precious Furniture Kenya
-        </Link>
-        , and built the SEO foundations for the Becof and BuzRyde websites. This site is built the same
-        way: prerendered pages, structured data, responsive images and accessible markup.
-      </p>
+      <div className="reveal mt-12 flex flex-col gap-4 sm:flex-row sm:items-center sm:gap-6">
+        <BookingButton>Talk about your online presence</BookingButton>
+        <p className="text-sm text-muted">A free 20-minute call to look at where your customers should be finding you.</p>
+      </div>
     </Container>
   </section>
 );

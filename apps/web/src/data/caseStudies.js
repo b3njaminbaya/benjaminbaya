@@ -30,9 +30,10 @@ export const CASE_STUDIES = [
       'Growth features: an affiliate programme, loyalty points and referrals, coupon management, and WhatsApp buttons on products and orders.',
       'Automated transactional emails for orders, partners, affiliates and contact enquiries.',
       'SEO and measurement: dynamic sitemap, product-rating structured data, noindex on private pages, Google Analytics behind cookie consent.',
+      'Ongoing social media management and paid campaigns for the business.',
     ],
     role:
-      'Lead developer: architecture, frontend, Supabase backend and serverless functions, M-Pesa integration, SEO and analytics, plus a full bug and UX audit of the platform, closed out item by item.',
+      'Lead developer: architecture, frontend, Supabase backend and serverless functions, M-Pesa integration, SEO and analytics, plus a full bug and UX audit of the platform, closed out item by item. I also manage the company’s social media.',
     tech: ['React', 'TypeScript', 'Tailwind CSS', 'Supabase (Postgres, Auth, RLS)', 'Edge Functions', 'M-Pesa Daraja API', 'Google Analytics'],
     outcome:
       'Live at becoforganicchemicals.com, taking real M-Pesa payments. Sales and traffic figures belong to the client and aren’t published here.',
