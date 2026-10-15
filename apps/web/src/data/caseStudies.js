@@ -60,10 +60,11 @@ export const CASE_STUDIES = [
       'New capabilities: unified sign-up and login with email OTP, live location tracking for at-location bookings, a shared multi-admin support chat, seller and courier onboarding with document collection and payouts, and shop ad creatives.',
       'Removed features Buzlin doesn’t use (auctions, restaurant tools) to simplify the product.',
       'CI/CD with GitHub Actions, file storage moved to Amazon S3, Android toolchains updated for 2026 Play Store requirements, and the move to the buzlin.ca domain.',
+      'Published the four Buzlin mobile apps (customer, seller, courier and POS) on Google Play, the Apple App Store and the Microsoft Store, handling every store submission myself.',
       'PesaPal mobile money payments for Kenya and Tanzania built into the mobile apps, waiting for PesaPal to approve API access before going live.',
     ],
     role:
-      'Lead software engineer at Buzlin Holdings Inc: audits, architecture decisions and hands-on development across the Laravel API, Next.js storefront, React admin and four Flutter apps.',
+      'Lead software engineer at Buzlin Holdings Inc: audits, architecture decisions and hands-on development across the Laravel API, Next.js storefront, React admin and four Flutter apps, and sole publisher of those apps on all three app stores.',
     tech: ['Laravel', 'PHP', 'Next.js', 'React', 'Flutter', 'Firebase', 'Amazon S3', 'PesaPal', 'GitHub Actions'],
     outcome:
       'Live at buzlin.ca with web and mobile apps. Usage figures are internal to Buzlin Holdings and aren’t published here.',
@@ -88,6 +89,7 @@ export const CASE_STUDIES = [
       'Overhauled the existing rider and driver apps: navigation rewrite, payments hardened across ride types, intercity rides with Stripe pre-authorisation, in-app support and inbox.',
       'Rebuilt the admin control panel: driver KYC and bans, payouts and wallet adjustments, disputes and support chat, audit logging, and intercity tooling.',
       'Growth tooling: campaign management, a rider referral programme with analytics, and complaint tracking.',
+      'Published the rider and driver apps on Google Play and the Apple App Store.',
       'Redesigned the website with English/French localisation, a Sanity-powered blog and promotions CMS, dynamic sitemaps and indexing fixes, plus rider and driver web flows.',
     ],
     role:

@@ -51,13 +51,13 @@ const PORTFOLIO = {
     },
     {
       name: 'Buzlin (Buzlin Holdings Inc, my employer, where I am lead software engineer): marketplace & service booking',
-      description: 'Audited, secured and modernised a licensed multi-vendor platform across seven apps: email-OTP login, live booking tracking, multi-admin support chat, seller/courier onboarding, CI/CD, S3 storage. PesaPal mobile money payments for Kenya and Tanzania are built into the mobile apps and waiting for PesaPal to approve API access before going live.',
+      description: 'Audited, secured and modernised a licensed multi-vendor platform across seven apps: email-OTP login, live booking tracking, multi-admin support chat, seller/courier onboarding, CI/CD, S3 storage. He published the four Buzlin mobile apps (Buzlin, Buzlin Seller, Buzlin Courier, Buzlin POS) himself on Google Play, the Apple App Store and the Microsoft Store. PesaPal mobile money payments for Kenya and Tanzania are built into the mobile apps and waiting for PesaPal to approve API access before going live.',
       tech: ['Laravel', 'Next.js', 'React', 'Flutter'],
       url: 'https://buzlin.ca',
     },
     {
       name: 'BuzRyde (BuzRyde Inc, a subsidiary of Buzlin Holdings Inc, my employer): ride-hailing in Canada',
-      description: 'Overhauled rider and driver apps (Stripe, intercity rides), rebuilt the admin control panel (KYC, payouts, disputes, campaigns, referrals) and redesigned the EN/FR website with a CMS and SEO.',
+      description: 'Overhauled rider and driver apps (Stripe, intercity rides), rebuilt the admin control panel (KYC, payouts, disputes, campaigns, referrals) and redesigned the EN/FR website with a CMS and SEO. He published the BuzRyde Rider and BuzRyde Driver apps himself on Google Play and the Apple App Store.',
       tech: ['Flutter', 'Firebase', 'Stripe', 'Laravel', 'React', 'Sanity'],
       url: 'https://www.buzryde.com',
     },
