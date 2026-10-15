@@ -103,8 +103,8 @@ const Resume = () => (
             </div>
           </Section>
 
-          <Section title="Client projects">
-            <ProjectList items={RESUME.clientProjects} />
+          <Section title="Business projects">
+            <ProjectList items={RESUME.businessProjects} />
           </Section>
 
           <Section title="Personal projects">

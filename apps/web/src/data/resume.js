@@ -42,7 +42,7 @@ export const RESUME = {
     },
   ],
 
-  clientProjects: [
+  businessProjects: [
     { name: 'Becof Organic Chemicals', to: '/work/becof-organic-chemicals', text: 'commerce platform with M-Pesa payments and distributor portals.' },
     { name: 'Esteric Kitchens & Interior Designs', to: '/work/esteric-kitchens', text: 'marketing website and internal CRM.' },
     { name: 'Melamart Enterprises', to: '/work/melamart-enterprises', text: 'website and equipment-hire management system.' },

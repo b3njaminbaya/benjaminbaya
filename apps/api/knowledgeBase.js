@@ -28,7 +28,7 @@ const PORTFOLIO = {
   teevexa: {
     name: 'Teevexa Ltd',
     website: 'https://www.teevexa.com',
-    description: 'The technology company Benjamin founded (incorporated in Kenya, March 2026). Benjamin leads consultation, strategy and architecture; Teevexa handles implementation and delivery on larger projects.',
+    description: 'The technology company Benjamin founded (founded and incorporated in Kenya on 3 March 2026). Benjamin leads consultation, strategy and architecture; Teevexa handles implementation and delivery on larger projects.',
   },
 
   skills: {
@@ -44,7 +44,7 @@ const PORTFOLIO = {
 
   projects: [
     {
-      name: 'Becof Organic Chemicals (client): commerce & operations platform',
+      name: 'Becof Organic Chemicals (business project; do not call it a client): commerce & operations platform',
       description: 'Online store with production M-Pesa payments and guest checkout, portals for farmers, distributors and experts, consultation booking, affiliate/loyalty/referral programmes, WhatsApp CTAs, SEO and Google Analytics. I also manage the company social media.',
       tech: ['React', 'TypeScript', 'Supabase', 'M-Pesa Daraja API'],
       url: 'https://www.becoforganicchemicals.com',
@@ -196,7 +196,7 @@ Guidelines:
 - Write plain text only: no markdown, no bold, no headings, no bullet symbols. Keep it under 100 words.
 - If asked about a service that is not in the context (for example photography or video production), do not say Benjamin does not do it. Say it is not among the services listed here and suggest raising it on the free consultation call.
 - Never use dashes (— or –) to break up a sentence. Use commas, colons or full stops instead.
-- When asked about projects, mention the two or three most relevant ones, not the full list, and be clear which are client work, which are Buzlin Holdings products (my employer) which are products of my own company Teevexa, and which are personal builds.
+- When asked about projects, mention the two or three most relevant ones, not the full list, and be clear which are client work, which are business projects (Becof Organic Chemicals), which are Buzlin Holdings products (my employer), which are products of my own company Teevexa, and which are personal builds.
 - Focus on the visitor's business problem. Reassure them they don't need to know which technology they need.
 - When someone wants help or to work together, invite them to book a consultation: https://www.teevexa.com/book-consultation (a free 20-minute Zoom call, Monday to Saturday, East Africa Time (EAT), no commitment).
 - For direct contact: b3njaminbaya@gmail.com or WhatsApp +254 794 126 508.
@@ -215,7 +215,7 @@ const FALLBACKS = {
 
   skills: `I work across the stack: React, Next.js and TypeScript on the frontend; Python, Node.js, PHP (Laravel) and Java on the backend; Flutter, React Native and Kotlin for mobile; PostgreSQL, MySQL and MongoDB for data; LLM APIs for AI features; and M-Pesa, PesaPal and Stripe for payments.`,
 
-  projects: `Client work includes the Becof Organic Chemicals commerce platform (live, with M-Pesa payments), a website and CRM for Esteric Kitchens, and a website and hire system for Melamart. At Buzlin Holdings I am the lead software engineer for Buzlin (marketplace) and BuzRyde (ride-hailing, run by the subsidiary BuzRyde Inc). Through my own company Teevexa I have shipped Teevexa Trace (supply chain traceability, two apps on Google Play), TeeDesk (open-source AI customer support) and the Teevexa platform. Tafsiri AI, a translation tool for Kenyan languages, is a personal build. Each has a case study on this site.`,
+  projects: `Business projects include the Becof Organic Chemicals commerce platform (live, with M-Pesa payments) and, for clients, a website and CRM for Esteric Kitchens and a website and hire system for Melamart. At Buzlin Holdings I am the lead software engineer for Buzlin (marketplace) and BuzRyde (ride-hailing, run by the subsidiary BuzRyde Inc). Through my own company Teevexa I have shipped Teevexa Trace (supply chain traceability, two apps on Google Play), TeeDesk (open-source AI customer support) and the Teevexa platform. Tafsiri AI, a translation tool for Kenyan languages, is a personal build. Each has a case study on this site.`,
 
   teevexa: `Teevexa Ltd is the technology company I founded. I lead the consultation, strategy and architecture; larger projects are delivered through Teevexa. You can book a consultation at teevexa.com/book-consultation.`,
 

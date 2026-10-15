@@ -25,7 +25,7 @@ const personSchema = () => ({
   email: `mailto:${PERSON.email}`,
   address: { '@type': 'PostalAddress', addressLocality: 'Nairobi', addressCountry: 'KE' },
   sameAs: [...SOCIALS.map((s) => s.href), TEEVEXA.url],
-  founder: { '@type': 'Organization', name: TEEVEXA.name, url: TEEVEXA.url },
+  founder: { '@type': 'Organization', name: TEEVEXA.name, url: TEEVEXA.url, foundingDate: '2026-03-03' },
   alumniOf: [
     { '@type': 'CollegeOrUniversity', name: 'Technical University of Kenya' },
     { '@type': 'EducationalOrganization', name: 'Moringa School' },

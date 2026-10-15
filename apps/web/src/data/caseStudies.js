@@ -3,6 +3,7 @@
 // so instead of guessing.
 //
 // kind: 'client'   → built for a client business
+//       'business' → platform built for a business that isn't presented as a client
 //       'employer' → product of Buzlin Holdings Inc, where I am the lead software engineer
 //       'teevexa'  → product of Teevexa Ltd, the company I founded
 //       'personal' → self-initiated product build
@@ -11,8 +12,8 @@ export const CASE_STUDIES = [
   {
     slug: 'becof-organic-chemicals',
     shortName: 'Becof Organic Chemicals',
-    kind: 'client',
-    label: 'Client · Agriculture · Kenya',
+    kind: 'business',
+    label: 'Agri-biotech · Kenya',
     client: 'Becof Organic Chemicals Limited',
     title: 'A commerce and operations platform for an agricultural biotech company',
     summary:
@@ -36,7 +37,7 @@ export const CASE_STUDIES = [
       'Lead developer: architecture, frontend, Supabase backend and serverless functions, M-Pesa integration, SEO and analytics, plus a full bug and UX audit of the platform, closed out item by item. I also manage the company’s social media.',
     tech: ['React', 'TypeScript', 'Tailwind CSS', 'Supabase (Postgres, Auth, RLS)', 'Edge Functions', 'M-Pesa Daraja API', 'Google Analytics'],
     outcome:
-      'Live at becoforganicchemicals.com, taking real M-Pesa payments. Sales and traffic figures belong to the client and aren’t published here.',
+      'Live at becoforganicchemicals.com, taking real M-Pesa payments. Sales and traffic figures belong to the company and aren’t published here.',
     links: [{ label: 'Visit the live site', href: 'https://www.becoforganicchemicals.com' }],
   },
   {
@@ -292,6 +293,7 @@ export const workImage = (name, width) => `/images/work/${name}-${width}.webp`;
 
 export const KIND_LABEL = {
   client: 'Client project',
+  business: 'Business project',
   employer: 'Buzlin Holdings product',
   teevexa: 'Teevexa product',
   personal: 'Personal product build',

@@ -32,7 +32,7 @@ export const TIMELINE = [
     org: 'Teevexa Ltd',
     href: 'https://www.teevexa.com',
     current: true,
-    body: 'Founded Teevexa to deliver software, AI and digital products for businesses. Incorporated as a private limited company in Kenya in March 2026.',
+    body: 'Founded Teevexa Ltd, incorporated as a private limited company in Kenya on 3 March 2026, to deliver software, AI and digital products for businesses.',
   },
 ];
 

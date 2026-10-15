@@ -5,7 +5,7 @@ import Container from '../ui/Container';
 import SectionHeading from '../ui/SectionHeading';
 import WorkVisual from '../work/WorkVisual';
 
-const realWorld = CASE_STUDIES.filter((c) => c.kind === 'client' || c.kind === 'employer');
+const realWorld = CASE_STUDIES.filter((c) => ['business', 'client', 'employer'].includes(c.kind));
 const teevexa = CASE_STUDIES.filter((c) => c.kind === 'teevexa');
 const featured = realWorld.slice(0, 3);
 const moreRealWorld = realWorld.slice(3);
@@ -88,12 +88,12 @@ const Work = () => (
         id="work-title"
         eyebrow="Selected work"
         title="Problems solved, not just things built."
-        intro="Client systems, products I engineer at Buzlin Holdings, products shipped by my own company Teevexa, and one personal build, each written up as the problem, what I built, my role, the technology and what changed. Where an outcome hasn’t been measured, I say so."
+        intro="Business systems, products I engineer at Buzlin Holdings, products shipped by my own company Teevexa, and one personal build, each written up as the problem, what I built, my role, the technology and what changed. Where an outcome hasn’t been measured, I say so."
       />
 
       <h3 className="eyebrow mb-6 mt-16 flex items-center gap-3">
         <span className="h-px w-8 bg-line" aria-hidden="true" />
-        Client &amp; employer projects
+        Business projects
       </h3>
       <div className="grid gap-6">
         {featured.map((s) => (

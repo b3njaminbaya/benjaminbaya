@@ -146,7 +146,7 @@ All content lives in data files. Change the data and the pages, navigation, site
 | File | What it holds |
 |---|---|
 | [`apps/web/src/data/site.js`](apps/web/src/data/site.js) | Name, title, contact details, booking link, social links, site URL |
-| [`apps/web/src/data/services.js`](apps/web/src/data/services.js) | The four service pillars, client problems, process, consulting and growth areas |
+| [`apps/web/src/data/services.js`](apps/web/src/data/services.js) | The four service pillars, client problems and process |
 | [`apps/web/src/data/caseStudies.js`](apps/web/src/data/caseStudies.js) | Case studies. Adding an entry creates its page and sitemap entry automatically |
 | [`apps/web/src/data/profile.js`](apps/web/src/data/profile.js) | Experience timeline, tech stack, education, certifications |
 | [`apps/web/src/seo.js`](apps/web/src/seo.js) | Page titles, descriptions and structured data |

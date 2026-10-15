@@ -56,7 +56,7 @@ const About = () => (
           </h3>
           <p className="mt-2 text-[0.95rem] leading-relaxed text-muted">
             I lead the consultation, strategy and architecture personally. When a project needs a delivery team,
-            it’s implemented through Teevexa, the technology company I founded, incorporated in Kenya in 2026. Teevexa also ships its own products, including{' '}
+            it’s implemented through Teevexa, the technology company I founded, incorporated in Kenya on 3 March 2026. Teevexa also ships its own products, including{' '}
             <Link to="/work/teevexa-trace" className="link-underline font-semibold text-ink">
               Teevexa Trace
             </Link>{' '}
