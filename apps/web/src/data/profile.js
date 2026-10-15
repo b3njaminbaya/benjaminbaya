@@ -28,7 +28,7 @@ export const TIMELINE = [
   },
   {
     period: 'Mar 2026 – Present',
-    title: 'Founder',
+    title: 'Founder & Lead Software Engineer',
     org: 'Teevexa Ltd',
     href: 'https://www.teevexa.com',
     current: true,

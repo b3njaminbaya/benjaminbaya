@@ -6,7 +6,7 @@ import Container from '../ui/Container';
 
 const PROOF = [
   { k: 'Currently', v: 'Lead Software Engineer, Buzlin Holdings (Buzlin & BuzRyde)' },
-  { k: 'Founder', v: 'Teevexa Ltd, technology implementation' },
+  { k: 'Founder', v: 'Teevexa Ltd, as lead software engineer' },
   { k: 'Background', v: 'B.Eng Chemical Engineering + software engineering' },
   { k: 'Clients', v: 'Agriculture, interiors, construction and retail businesses in Kenya' },
 ];

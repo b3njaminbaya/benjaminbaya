@@ -185,7 +185,7 @@ export const CASE_STUDIES = [
       'Compliance reports generated from the recorded events, and optional anchoring of events to a public blockchain so records can’t be quietly changed (built, switched off by default).',
       'Biometric login, push notifications and self-service account deletion in both apps.',
     ],
-    role: 'Founder and lead developer: product design, both mobile apps, the backend and the releases to Google Play.',
+    role: 'Founder and lead software engineer: product design, both mobile apps, the backend and the releases to Google Play.',
     tech: ['React Native (Expo)', 'TypeScript', 'Supabase (Postgres, Auth, Realtime)', 'Edge Functions', 'Google Maps', 'Polygon (optional)'],
     outcome:
       'Both apps are published on Google Play. The product is in pilot with early customers, with more being onboarded. Usage figures aren’t published here.',
@@ -217,7 +217,7 @@ export const CASE_STUDIES = [
       'Separate, isolated accounts for multiple businesses, each with its own branding, channels and settings.',
       'Analytics on conversation volume, sentiment and common questions, and a nightly job that improves intent recognition from agent feedback.',
     ],
-    role: 'Founder and lead developer: architecture, the AI pipeline, backend, dashboard and chat widget.',
+    role: 'Founder and lead software engineer: architecture, the AI pipeline, backend, dashboard and chat widget.',
     tech: ['React', 'TypeScript', 'FastAPI', 'PostgreSQL (pgvector)', 'Redis', 'Ollama (local LLM)', 'Docker', 'WhatsApp Cloud API'],
     outcome:
       'Released as open source under the MIT licence, built to be self-hosted. There is no hosted demo and no usage figures are claimed.',
@@ -247,7 +247,7 @@ export const CASE_STUDIES = [
       'Seven user roles enforced in the database, so each person sees only what they should.',
       'Ongoing social media management and paid campaigns for the company.',
     ],
-    role: 'Founder and lead developer: product design, architecture, security model and ongoing development, with AI-assisted development. I also manage the company’s social media and advertising.',
+    role: 'Founder and lead software engineer: product design, architecture, security model and ongoing development, with AI-assisted development. I also manage the company’s social media and advertising.',
     tech: ['React', 'TypeScript', 'Tailwind CSS', 'Supabase (Postgres, Auth, RLS)', 'Edge Functions', 'Zoom API'],
     outcome:
       'Live at teevexa.com and used to run Teevexa’s own client work, including the consultation booking linked from this site. Business figures aren’t published here.',

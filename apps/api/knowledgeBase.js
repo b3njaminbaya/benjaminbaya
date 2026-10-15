@@ -15,7 +15,7 @@ const PORTFOLIO = {
     booking: 'https://www.teevexa.com/book-consultation',
   },
 
-  bio: `Benjamin Baya is a software engineer and entrepreneur based in Nairobi, Kenya. He helps businesses build, automate and grow with technology: he first understands the business problem, recommends the right solution, then builds and implements it. He trained as a chemical engineer (B.Eng, Technical University of Kenya), which shapes his systems-thinking approach, and completed full-stack software engineering training at Moringa School. He interned as a Software Engineer at Sensys Kenya Ltd (July to September 2025), supporting core banking integrations with Java, Spring Boot and Temenos T24/Transact, building backend APIs for financial systems and automating data pipelines with Apache NiFi. He is currently the Lead Software Engineer at Buzlin Holdings Inc (Canada, remote) for Buzlin and BuzRyde (BuzRyde is run by the subsidiary BuzRyde Inc) and founded Teevexa Ltd, the technology company through which larger projects are delivered.`,
+  bio: `Benjamin Baya is a software engineer and entrepreneur based in Nairobi, Kenya. He helps businesses build, automate and grow with technology: he first understands the business problem, recommends the right solution, then builds and implements it. He trained as a chemical engineer (B.Eng, Technical University of Kenya), which shapes his systems-thinking approach, and completed full-stack software engineering training at Moringa School. He interned as a Software Engineer at Sensys Kenya Ltd (July to September 2025), supporting core banking integrations with Java, Spring Boot and Temenos T24/Transact, building backend APIs for financial systems and automating data pipelines with Apache NiFi. He is currently the Lead Software Engineer at Buzlin Holdings Inc (Canada, remote) for Buzlin and BuzRyde (BuzRyde is run by the subsidiary BuzRyde Inc) and is Founder & Lead Software Engineer of Teevexa Ltd, the technology company through which larger projects are delivered.`,
 
   services: {
     consult: 'Digital transformation, business process analysis, technology strategy and roadmaps, automation and AI adoption consulting, digital presence audits, business systems consulting.',
@@ -226,7 +226,7 @@ const FALLBACKS = {
 
   contact: `The best first step is a free 20-minute consultation on Zoom: teevexa.com/book-consultation. You can also email b3njaminbaya@gmail.com, WhatsApp +254 794 126 508, or use the contact form on this site.`,
 
-  bio: `I'm Benjamin Baya, a software engineer and entrepreneur in Nairobi, Kenya. I trained as a chemical engineer, moved into software, and now help businesses turn problems into working solutions: websites, systems, automation and digital growth. I'm currently the lead software engineer at Buzlin Holdings for Buzlin and BuzRyde, and founder of Teevexa.`,
+  bio: `I'm Benjamin Baya, a software engineer and entrepreneur in Nairobi, Kenya. I trained as a chemical engineer, moved into software, and now help businesses turn problems into working solutions: websites, systems, automation and digital growth. I'm currently the lead software engineer at Buzlin Holdings for Buzlin and BuzRyde, and founder and lead software engineer of Teevexa.`,
 
   github: `My GitHub is github.com/b3njaminbaya. You'll find several of my project repositories there.`,
 

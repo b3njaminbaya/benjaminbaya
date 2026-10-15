@@ -20,7 +20,7 @@ export const RESUME = {
       ],
     },
     {
-      role: 'Founder & Lead Developer',
+      role: 'Founder & Lead Software Engineer',
       dates: 'Mar 2026 - Present',
       org: 'Teevexa Ltd, Nairobi, Kenya',
       points: [
