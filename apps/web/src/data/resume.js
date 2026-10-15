@@ -7,14 +7,15 @@ export const RESUME = {
 
   experience: [
     {
-      role: 'Software Engineer',
+      role: 'Lead Software Engineer',
       dates: 'Aug 2025 - Present',
       org: 'Buzlin Holdings Inc, Canada (remote)',
       points: [
         'Modernised Buzlin, a multi-vendor marketplace, across seven web and mobile apps.',
-        'Overhauled the BuzRyde ride-hailing apps and admin panel, including payments and payouts.',
+        'Overhauled the ride-hailing apps and admin panel of BuzRyde Inc, a subsidiary, including payments and payouts.',
         'Added email OTP login, live booking tracking and a shared support chat.',
         'Set up CI/CD, hardened API security and prepared the apps for Google Play.',
+        'Built PesaPal mobile money payments for Kenya and Tanzania into the Buzlin apps (awaiting API approval).',
       ],
     },
     {

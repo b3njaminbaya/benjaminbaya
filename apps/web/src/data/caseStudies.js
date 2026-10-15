@@ -3,7 +3,7 @@
 // so instead of guessing.
 //
 // kind: 'client'   → built for a client business
-//       'employer' → product of Buzlin Holdings Inc, where I work as a software engineer
+//       'employer' → product of Buzlin Holdings Inc, where I am the lead software engineer
 //       'teevexa'  → product of Teevexa Ltd, the company I founded
 //       'personal' → self-initiated product build
 
@@ -60,10 +60,11 @@ export const CASE_STUDIES = [
       'New capabilities: unified sign-up and login with email OTP, live location tracking for at-location bookings, a shared multi-admin support chat, seller and courier onboarding with document collection and payouts, and shop ad creatives.',
       'Removed features Buzlin doesn’t use (auctions, restaurant tools) to simplify the product.',
       'CI/CD with GitHub Actions, file storage moved to Amazon S3, Android toolchains updated for 2026 Play Store requirements, and the move to the buzlin.ca domain.',
+      'PesaPal mobile money payments for Kenya and Tanzania built into the mobile apps, waiting for PesaPal to approve API access before going live.',
     ],
     role:
-      'Software engineer at Buzlin Holdings Inc: audits, architecture decisions and hands-on development across the Laravel API, Next.js storefront, React admin and four Flutter apps.',
-    tech: ['Laravel', 'PHP', 'Next.js', 'React', 'Flutter', 'Firebase', 'Amazon S3', 'GitHub Actions'],
+      'Lead software engineer at Buzlin Holdings Inc: audits, architecture decisions and hands-on development across the Laravel API, Next.js storefront, React admin and four Flutter apps.',
+    tech: ['Laravel', 'PHP', 'Next.js', 'React', 'Flutter', 'Firebase', 'Amazon S3', 'PesaPal', 'GitHub Actions'],
     outcome:
       'Live at buzlin.ca with web and mobile apps. Usage figures are internal to Buzlin Holdings and aren’t published here.',
     links: [{ label: 'Visit buzlin.ca', href: 'https://buzlin.ca' }],
@@ -72,8 +73,8 @@ export const CASE_STUDIES = [
     slug: 'buzryde',
     shortName: 'BuzRyde',
     kind: 'employer',
-    label: 'Buzlin Holdings Inc · Ride-hailing · Canada',
-    client: 'Buzlin Holdings Inc',
+    label: 'BuzRyde Inc · Ride-hailing · Canada',
+    client: 'BuzRyde Inc, a subsidiary of Buzlin Holdings Inc',
     title: 'Rider, driver and operations systems for a Canadian ride-hailing service',
     summary:
       'Rider and driver apps, an admin control panel with trust, support and growth tooling, and a bilingual, search-optimised website.',
@@ -90,10 +91,10 @@ export const CASE_STUDIES = [
       'Redesigned the website with English/French localisation, a Sanity-powered blog and promotions CMS, dynamic sitemaps and indexing fixes, plus rider and driver web flows.',
     ],
     role:
-      'Software engineer at Buzlin Holdings Inc: took over and extended the existing mobile apps and control panel, and redesigned and built out the website.',
+      'Lead software engineer at Buzlin Holdings Inc, which operates BuzRyde through its subsidiary BuzRyde Inc: took over and extended the existing mobile apps and control panel, and redesigned and built out the website.',
     tech: ['Flutter', 'Firebase (Firestore, FCM)', 'Stripe', 'Google Maps', 'Laravel', 'React', 'Sanity CMS'],
     outcome:
-      'The website is live at buzryde.com in English and French. Ride and user figures are internal to Buzlin Holdings and aren’t published here.',
+      'The website is live at buzryde.com in English and French. Ride and user figures are internal to BuzRyde Inc and aren’t published here.',
     links: [{ label: 'Visit buzryde.com', href: 'https://www.buzryde.com' }],
   },
   {

@@ -29,8 +29,8 @@ const About = () => (
             outputs, bottlenecks, and the points where things quietly go wrong.
           </p>
           <p>
-            I moved into software because it’s the most direct way I know to fix those bottlenecks. Today I work as
-            a software engineer at Buzlin Holdings on its marketplace and ride-hailing products, and I help
+            I moved into software because it’s the most direct way I know to fix those bottlenecks. Today I am the
+            lead software engineer at Buzlin Holdings for its marketplace and ride-hailing products, and I help
             businesses directly with technology strategy, custom software, AI-powered automation and digital growth.
           </p>
           <p>

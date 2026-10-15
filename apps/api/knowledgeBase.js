@@ -15,7 +15,7 @@ const PORTFOLIO = {
     booking: 'https://www.teevexa.com/book-consultation',
   },
 
-  bio: `Benjamin Baya is a software engineer and entrepreneur based in Nairobi, Kenya. He helps businesses build, automate and grow with technology: he first understands the business problem, recommends the right solution, then builds and implements it. He trained as a chemical engineer (B.Eng, Technical University of Kenya), which shapes his systems-thinking approach, and completed full-stack software engineering training at Moringa School. He interned as a Software Engineer at Sensys Kenya Ltd (July to September 2025), supporting core banking integrations with Java, Spring Boot and Temenos T24/Transact, building backend APIs for financial systems and automating data pipelines with Apache NiFi. He currently works as a Software Engineer at Buzlin Holdings Inc (Canada, remote) and founded Teevexa Ltd, the technology company through which larger projects are delivered.`,
+  bio: `Benjamin Baya is a software engineer and entrepreneur based in Nairobi, Kenya. He helps businesses build, automate and grow with technology: he first understands the business problem, recommends the right solution, then builds and implements it. He trained as a chemical engineer (B.Eng, Technical University of Kenya), which shapes his systems-thinking approach, and completed full-stack software engineering training at Moringa School. He interned as a Software Engineer at Sensys Kenya Ltd (July to September 2025), supporting core banking integrations with Java, Spring Boot and Temenos T24/Transact, building backend APIs for financial systems and automating data pipelines with Apache NiFi. He is currently the Lead Software Engineer at Buzlin Holdings Inc (Canada, remote) for Buzlin and BuzRyde (BuzRyde is run by the subsidiary BuzRyde Inc) and founded Teevexa Ltd, the technology company through which larger projects are delivered.`,
 
   services: {
     consult: 'Digital transformation, business process analysis, technology strategy and roadmaps, automation and AI adoption consulting, digital presence audits, business systems consulting.',
@@ -50,13 +50,13 @@ const PORTFOLIO = {
       url: 'https://www.becoforganicchemicals.com',
     },
     {
-      name: 'Buzlin (Buzlin Holdings Inc, my employer): marketplace & service booking',
-      description: 'Audited, secured and modernised a licensed multi-vendor platform across seven apps: email-OTP login, live booking tracking, multi-admin support chat, seller/courier onboarding, CI/CD, S3 storage.',
+      name: 'Buzlin (Buzlin Holdings Inc, my employer, where I am lead software engineer): marketplace & service booking',
+      description: 'Audited, secured and modernised a licensed multi-vendor platform across seven apps: email-OTP login, live booking tracking, multi-admin support chat, seller/courier onboarding, CI/CD, S3 storage. PesaPal mobile money payments for Kenya and Tanzania are built into the mobile apps and waiting for PesaPal to approve API access before going live.',
       tech: ['Laravel', 'Next.js', 'React', 'Flutter'],
       url: 'https://buzlin.ca',
     },
     {
-      name: 'BuzRyde (Buzlin Holdings Inc, my employer): ride-hailing in Canada',
+      name: 'BuzRyde (BuzRyde Inc, a subsidiary of Buzlin Holdings Inc, my employer): ride-hailing in Canada',
       description: 'Overhauled rider and driver apps (Stripe, intercity rides), rebuilt the admin control panel (KYC, payouts, disputes, campaigns, referrals) and redesigned the EN/FR website with a CMS and SEO.',
       tech: ['Flutter', 'Firebase', 'Stripe', 'Laravel', 'React', 'Sanity'],
       url: 'https://www.buzryde.com',
@@ -220,13 +220,13 @@ const FALLBACKS = {
 
   skills: `I work across the stack: React, Next.js and TypeScript on the frontend; Python, Node.js, PHP (Laravel) and Java on the backend; Flutter, React Native and Kotlin for mobile; PostgreSQL, MySQL and MongoDB for data; LLM APIs for AI features; and M-Pesa, PesaPal and Stripe for payments.`,
 
-  projects: `Client work includes the Becof Organic Chemicals commerce platform (live, with M-Pesa payments), a website and CRM for Esteric Kitchens, and a website and hire system for Melamart. At Buzlin Holdings I work on Buzlin (marketplace) and BuzRyde (ride-hailing). Through my own company Teevexa I have shipped Teevexa Trace (supply chain traceability, two apps on Google Play), TeeDesk (open-source AI customer support) and the Teevexa platform. Tafsiri AI, a translation tool for Kenyan languages, is a personal build. Each has a case study on this site.`,
+  projects: `Client work includes the Becof Organic Chemicals commerce platform (live, with M-Pesa payments), a website and CRM for Esteric Kitchens, and a website and hire system for Melamart. At Buzlin Holdings I am the lead software engineer for Buzlin (marketplace) and BuzRyde (ride-hailing, run by the subsidiary BuzRyde Inc). Through my own company Teevexa I have shipped Teevexa Trace (supply chain traceability, two apps on Google Play), TeeDesk (open-source AI customer support) and the Teevexa platform. Tafsiri AI, a translation tool for Kenyan languages, is a personal build. Each has a case study on this site.`,
 
   teevexa: `Teevexa Ltd is the technology company I founded. I lead the consultation, strategy and architecture; larger projects are delivered through Teevexa. You can book a consultation at teevexa.com/book-consultation.`,
 
   contact: `The best first step is a free 20-minute consultation on Zoom: teevexa.com/book-consultation. You can also email b3njaminbaya@gmail.com, WhatsApp +254 794 126 508, or use the contact form on this site.`,
 
-  bio: `I'm Benjamin Baya, a software engineer and entrepreneur in Nairobi, Kenya. I trained as a chemical engineer, moved into software, and now help businesses turn problems into working solutions: websites, systems, automation and digital growth. I'm currently a software engineer at Buzlin Holdings, working on Buzlin and BuzRyde, and founder of Teevexa.`,
+  bio: `I'm Benjamin Baya, a software engineer and entrepreneur in Nairobi, Kenya. I trained as a chemical engineer, moved into software, and now help businesses turn problems into working solutions: websites, systems, automation and digital growth. I'm currently the lead software engineer at Buzlin Holdings for Buzlin and BuzRyde, and founder of Teevexa.`,
 
   github: `My GitHub is github.com/b3njaminbaya. You'll find several of my project repositories there.`,
 

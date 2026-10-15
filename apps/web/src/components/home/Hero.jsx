@@ -5,7 +5,7 @@ import { PILLARS } from '../../data/services';
 import Container from '../ui/Container';
 
 const PROOF = [
-  { k: 'Currently', v: 'Software Engineer, Buzlin Holdings (Buzlin & BuzRyde)' },
+  { k: 'Currently', v: 'Lead Software Engineer, Buzlin Holdings (Buzlin & BuzRyde)' },
   { k: 'Founder', v: 'Teevexa Ltd, technology implementation' },
   { k: 'Background', v: 'B.Eng Chemical Engineering + software engineering' },
   { k: 'Clients', v: 'Agriculture, interiors, construction and retail businesses in Kenya' },
