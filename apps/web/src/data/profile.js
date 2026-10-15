@@ -34,13 +34,6 @@ export const TIMELINE = [
     current: true,
     body: 'Founded Teevexa to deliver software, AI and digital products for businesses. Incorporated as a private limited company in Kenya in March 2026.',
   },
-  {
-    period: 'Sep 2026 – Present',
-    title: 'Social Media & SEO',
-    org: 'Precious Furniture Kenya · client engagement',
-    current: true,
-    body: 'Social content for Facebook, Instagram and TikTok, Google, Meta and TikTok Ads, pixel tracking, SEO and Google Business Profile.',
-  },
 ];
 
 // Grouped by what it's for; only tools actually used.

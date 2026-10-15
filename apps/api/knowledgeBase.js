@@ -74,11 +74,6 @@ const PORTFOLIO = {
       url: 'https://melamart-enterprises.vercel.app',
     },
     {
-      name: 'Precious Furniture Kenya (current role since Sep 2026, listed under experience, not a case study): social media and SEO',
-      description: 'Social media content for FB/IG/TikTok, Google, Meta and TikTok Ads, Google tag and Meta Pixel, SEO, Google Business Profile and Search Console. Results not yet measured.',
-      tech: ['Meta Ads', 'Google Ads', 'Meta Pixel'],
-    },
-    {
       name: 'Teevexa Trace (Teevexa product): supply chain traceability',
       description: 'Two mobile apps published on Google Play (Teevexa Field for workers logging batch events with photos, voice notes and GPS, working offline; Teevexa Trace for producers and buyers with a live dashboard, map, trust score and PDF certificates), plus public batch verification on the web. In pilot with early customers, with more being onboarded.',
       tech: ['React Native (Expo)', 'TypeScript', 'Supabase'],

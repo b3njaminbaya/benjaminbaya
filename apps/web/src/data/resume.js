@@ -31,15 +31,6 @@ export const RESUME = {
       ],
     },
     {
-      role: 'Social Media & SEO (client engagement)',
-      dates: 'Sep 2026 - Present',
-      org: 'Precious Furniture Kenya',
-      points: [
-        'Manage social media content for Facebook, Instagram and TikTok.',
-        'Run Google, Meta and TikTok Ads, conversion tracking and search engine optimisation.',
-      ],
-    },
-    {
       role: 'Software Engineer Intern',
       dates: 'Jul - Sep 2025',
       org: 'Sensys Kenya Ltd, Nairobi, Kenya',

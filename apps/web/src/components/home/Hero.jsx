@@ -8,7 +8,6 @@ const PROOF = [
   { k: 'Currently', v: 'Lead Software Engineer, Buzlin Holdings (Buzlin & BuzRyde)' },
   { k: 'Founder', v: 'Teevexa Ltd, as lead software engineer' },
   { k: 'Background', v: 'B.Eng Chemical Engineering + software engineering' },
-  { k: 'Clients', v: 'Agriculture, interiors, construction and retail businesses in Kenya' },
 ];
 
 const Hero = () => (
@@ -84,7 +83,7 @@ const Hero = () => (
 
     {/* Proof strip */}
     <Container>
-      <dl className="grid grid-cols-1 gap-px overflow-hidden rounded-2xl border border-line bg-line sm:grid-cols-2 lg:grid-cols-4">
+      <dl className="grid grid-cols-1 gap-px overflow-hidden rounded-2xl border border-line bg-line sm:grid-cols-3">
         {PROOF.map(({ k, v }) => (
           <div key={k} className="bg-paper p-5">
             <dt className="eyebrow mb-1.5">{k}</dt>
