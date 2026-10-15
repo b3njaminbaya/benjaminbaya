@@ -51,7 +51,7 @@ const PORTFOLIO = {
     },
     {
       name: 'Buzlin (Buzlin Holdings Inc, my employer, where I am lead software engineer): marketplace & service booking',
-      description: 'Audited, secured and modernised a licensed multi-vendor platform across seven apps: email-OTP login, live booking tracking, multi-admin support chat, seller/courier onboarding, CI/CD, S3 storage. He published the four Buzlin mobile apps (Buzlin, Buzlin Seller, Buzlin Courier, Buzlin POS) himself on Google Play, the Apple App Store and the Microsoft Store. PesaPal mobile money payments for Kenya and Tanzania are built into the mobile apps and waiting for PesaPal to approve API access before going live.',
+      description: 'Audited, secured and modernised a licensed multi-vendor platform across seven apps: email and phone OTP login, live booking tracking, multi-admin support chat, seller/courier onboarding, CI/CD, S3 storage. He published the four Buzlin mobile apps (Buzlin, Buzlin Seller, Buzlin Courier, Buzlin POS) himself on Google Play, the Apple App Store and the Microsoft Store. He implemented all Buzlin payments himself: buyers pay by mobile money in Kenya and Tanzania (PesaPal), by bank through Stripe, or by PayPal, and sellers and couriers are paid out by bank, mobile money or PayPal.',
       tech: ['Laravel', 'Next.js', 'React', 'Flutter'],
       url: 'https://buzlin.ca',
     },

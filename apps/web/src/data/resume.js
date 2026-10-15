@@ -13,10 +13,10 @@ export const RESUME = {
       points: [
         'Modernised Buzlin, a multi-vendor marketplace, across seven web and mobile apps.',
         'Overhauled the ride-hailing apps and admin panel of BuzRyde Inc, a subsidiary, including payments and payouts.',
-        'Added email OTP login, live booking tracking and a shared support chat.',
+        'Added email and phone OTP login, live booking tracking and a shared support chat.',
         'Published the four Buzlin apps on Google Play, the App Store and the Microsoft Store, and both BuzRyde apps on Google Play and the App Store.',
         'Set up CI/CD and hardened API security.',
-        'Built PesaPal mobile money payments for Kenya and Tanzania into the Buzlin apps (awaiting API approval).',
+        'Implemented all Buzlin payments: buyers pay by mobile money in Kenya and Tanzania (PesaPal), bank through Stripe or PayPal; sellers and couriers are paid out by bank, mobile money or PayPal.',
       ],
     },
     {

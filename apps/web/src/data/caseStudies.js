@@ -57,15 +57,15 @@ export const CASE_STUDIES = [
     solution: [
       'Phased engineering, UX and security audits of every app, followed by a written modernisation roadmap.',
       'Security hardening: closed unauthenticated install endpoints, stopped leaking server paths in API errors, and tightened validation across the API.',
-      'New capabilities: unified sign-up and login with email OTP, live location tracking for at-location bookings, a shared multi-admin support chat, seller and courier onboarding with document collection and payouts, and shop ad creatives.',
+      'New capabilities: unified sign-up and login with email and phone OTP, live location tracking for at-location bookings, a shared multi-admin support chat, seller and courier onboarding with document collection and payouts, and shop ad creatives.',
       'Removed features Buzlin doesn’t use (auctions, restaurant tools) to simplify the product.',
       'CI/CD with GitHub Actions, file storage moved to Amazon S3, Android toolchains updated for 2026 Play Store requirements, and the move to the buzlin.ca domain.',
       'Published the four Buzlin mobile apps (customer, seller, courier and POS) on Google Play, the Apple App Store and the Microsoft Store, handling every store submission myself.',
-      'PesaPal mobile money payments for Kenya and Tanzania built into the mobile apps, waiting for PesaPal to approve API access before going live.',
+      'Payments built end to end: buyers pay for products and services by mobile money in Kenya and Tanzania (PesaPal), by bank through Stripe, or by PayPal, and sellers and couriers are paid out by bank, mobile money or PayPal.',
     ],
     role:
       'Lead software engineer at Buzlin Holdings Inc: audits, architecture decisions and hands-on development across the Laravel API, Next.js storefront, React admin and four Flutter apps, and sole publisher of those apps on all three app stores.',
-    tech: ['Laravel', 'PHP', 'Next.js', 'React', 'Flutter', 'Firebase', 'Amazon S3', 'PesaPal', 'GitHub Actions'],
+    tech: ['Laravel', 'PHP', 'Next.js', 'React', 'Flutter', 'Firebase', 'Stripe', 'PesaPal', 'PayPal', 'Amazon S3', 'GitHub Actions'],
     outcome:
       'Live at buzlin.ca with web and mobile apps. Usage figures are internal to Buzlin Holdings and aren’t published here.',
     links: [{ label: 'Visit buzlin.ca', href: 'https://buzlin.ca' }],
