@@ -27,6 +27,7 @@ export const RESUME = {
         'Built Teevexa Trace, a supply chain traceability product with two apps on Google Play, now in pilot.',
         'Built TeeDesk, an open-source AI customer support platform for web chat, WhatsApp and Telegram.',
         'Built the company platform: quote funnel, consultation booking, client portal and internal CRM.',
+        'Built IoT Custodian, a device security monitoring platform with machine-learning anomaly detection, incident management and vulnerability checks.',
         'Built CyberGuard AI, an open-source threat-detection dashboard.',
       ],
     },

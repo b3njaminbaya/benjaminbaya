@@ -118,6 +118,10 @@ const Work = () => (
           <CompactCard key={s.slug} study={s} index={i} />
         ))}
       </div>
+      <p className="reveal mt-6 text-sm leading-relaxed text-muted">
+        <span className="font-semibold text-ink">Also built at Teevexa:</span> IoT Custodian, a private device security
+        monitoring platform with machine-learning anomaly detection, automatic incident management and vulnerability checks.
+      </p>
 
       <h3 className="eyebrow mb-6 mt-20 flex items-center gap-3">
         <span className="h-px w-8 bg-line" aria-hidden="true" />

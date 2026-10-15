@@ -80,6 +80,11 @@ const PORTFOLIO = {
       url: 'https://benjaminbaya.com/work/teevexa-trace',
     },
     {
+      name: 'IoT Custodian (Teevexa product, private, no public link): device security monitoring',
+      description: 'Monitors internet-connected devices: each device has its own learned baseline plus a machine-learning model per device type, unusual readings open incidents automatically, device firmware is checked against the National Vulnerability Database, and alerts go to Slack, PagerDuty and Opsgenie. Includes role-based access and PDF/CSV security reports.',
+      tech: ['React', 'TypeScript', 'Supabase'],
+    },
+    {
       name: 'TeeDesk (Teevexa product): AI customer support',
       description: 'Open-source, self-hosted AI customer support: website chat widget, WhatsApp and Telegram, answers from a business knowledge base, handover to a human agent, analytics and separate accounts per business. Runs on a local AI model, so there are no per-message AI fees. No hosted demo.',
       tech: ['React', 'FastAPI', 'PostgreSQL (pgvector)', 'Ollama'],
@@ -215,7 +220,7 @@ const FALLBACKS = {
 
   skills: `I work across the stack: React, Next.js and TypeScript on the frontend; Python, Node.js, PHP (Laravel) and Java on the backend; Flutter, React Native and Kotlin for mobile; PostgreSQL, MySQL and MongoDB for data; LLM APIs for AI features; and M-Pesa, PesaPal and Stripe for payments.`,
 
-  projects: `Business projects include the Becof Organic Chemicals commerce platform (live, with M-Pesa payments) and, for clients, a website and CRM for Esteric Kitchens and a website and hire system for Melamart. At Buzlin Holdings I am the lead software engineer for Buzlin (marketplace) and BuzRyde (ride-hailing, run by the subsidiary BuzRyde Inc). Through my own company Teevexa I have shipped Teevexa Trace (supply chain traceability, two apps on Google Play), TeeDesk (open-source AI customer support) and the Teevexa platform. Tafsiri AI, a translation tool for Kenyan languages, is a personal build. Each has a case study on this site.`,
+  projects: `Business projects include the Becof Organic Chemicals commerce platform (live, with M-Pesa payments) and, for clients, a website and CRM for Esteric Kitchens and a website and hire system for Melamart. At Buzlin Holdings I am the lead software engineer for Buzlin (marketplace) and BuzRyde (ride-hailing, run by the subsidiary BuzRyde Inc). Through my own company Teevexa I have shipped Teevexa Trace (supply chain traceability, two apps on Google Play), TeeDesk (open-source AI customer support), IoT Custodian (device security monitoring, private) and the Teevexa platform. Tafsiri AI, a translation tool for Kenyan languages, is a personal build. Each has a case study on this site.`,
 
   teevexa: `Teevexa Ltd is the technology company I founded. I lead the consultation, strategy and architecture; larger projects are delivered through Teevexa. You can book a consultation at teevexa.com/book-consultation.`,
 
