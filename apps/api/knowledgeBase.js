@@ -13,6 +13,7 @@ const PORTFOLIO = {
     linkedin: 'https://linkedin.com/in/b3njaminbaya',
     portfolio: 'https://benjaminbaya.com',
     booking: 'https://www.teevexa.com/book-consultation',
+    quote: 'https://www.teevexa.com/start-project',
   },
 
   bio: `Benjamin Baya is a software engineer and entrepreneur based in Nairobi, Kenya. He helps businesses build, automate and grow with technology: he first understands the business problem, recommends the right solution, then builds and implements it. He trained as a chemical engineer (B.Eng, Technical University of Kenya), which shapes his systems-thinking approach, and completed full-stack software engineering training at Moringa School. He interned as a Software Engineer at Sensys Kenya Ltd (July to September 2025), supporting core banking integrations with Java, Spring Boot and Temenos T24/Transact, building backend APIs for financial systems and automating data pipelines with Apache NiFi. He is currently the Lead Software Engineer at Buzlin Holdings Inc (Canada, remote) for Buzlin and BuzRyde (BuzRyde is run by the subsidiary BuzRyde Inc) and is Founder & Lead Software Engineer of Teevexa Ltd, the technology company through which larger projects are delivered.`,
@@ -154,10 +155,12 @@ function buildContext(message) {
     sections.push(`PROJECTS:\n${lines.join('\n')}`);
   }
 
-  if (want(/teevexa|company|team|help me build|start project|hire|build.*for me|work together|collaborate|client|book|consult/)) {
+  if (want(/teevexa|company|team|help me build|start project|hire|build.*for me|work together|collaborate|client|book|consult|price|pricing|cost|quote|how much|budget|charge|package/)) {
     sections.push(
       `TEEVEXA: ${PORTFOLIO.teevexa.description} Website: ${PORTFOLIO.teevexa.website}\n` +
-      `BOOK A CONSULTATION: ${PORTFOLIO.identity.booking}`
+      `BOOK A CONSULTATION: ${PORTFOLIO.identity.booking}\n` +
+      `REQUEST A QUOTE: ${PORTFOLIO.identity.quote} (tailored quote within 24 hours)\n` +
+      `PRICING: prices depend on scope and are not published on this site. A packages and pricing sheet is available on request by email or WhatsApp.`
     );
   }
 
@@ -204,6 +207,7 @@ Guidelines:
 - When asked about projects, mention the two or three most relevant ones, not the full list, and be clear which are client work, which are business projects (Becof Organic Chemicals), which are Buzlin Holdings products (my employer), which are products of my own company Teevexa, and which are personal builds.
 - Focus on the visitor's business problem. Reassure them they don't need to know which technology they need.
 - When someone wants help or to work together, invite them to book a consultation: https://www.teevexa.com/book-consultation (a free 20-minute Zoom call, Monday to Saturday, East Africa Time (EAT), no commitment).
+- If asked about prices, costs or packages: never state a price. Say prices depend on the scope, then offer to request a quote at https://www.teevexa.com/start-project (a tailored quote within 24 hours) or to book the free consultation, and mention that a packages and pricing sheet can be sent on request by email or WhatsApp.
 - For direct contact: b3njaminbaya@gmail.com or WhatsApp +254 794 126 508.
 - Mention Teevexa (my technology company) only when delivery or larger projects come up.
 - If asked something not in the context, say so honestly and suggest booking a consultation or emailing.
@@ -216,6 +220,8 @@ ${context}`;
 // Used when the LLM API is unavailable. Covers the most common queries.
 
 const FALLBACKS = {
+  pricing: `Prices depend on what your business needs, so I don't publish them here. You can request a tailored quote at teevexa.com/start-project and get it within 24 hours, or book a free 20-minute consultation at teevexa.com/book-consultation. I can also send our packages and pricing sheet: email b3njaminbaya@gmail.com or WhatsApp +254 794 126 508.`,
+
   services: `I help businesses build, automate and grow with technology. That covers consulting on what you actually need, building websites, apps and business systems, automating repetitive work (including AI), and growing through SEO, ads and proper tracking. You don't need a technical brief: book a consultation at teevexa.com/book-consultation and tell me about the problem.`,
 
   skills: `I work across the stack: React, Next.js and TypeScript on the frontend; Python, Node.js, PHP (Laravel) and Java on the backend; Flutter, React Native and Kotlin for mobile; PostgreSQL, MySQL and MongoDB for data; LLM APIs for AI features; and M-Pesa, PesaPal and Stripe for payments.`,
@@ -235,6 +241,7 @@ const FALLBACKS = {
 
 function getFallbackResponse(message) {
   const lower = message.toLowerCase();
+  if (/price|pricing|cost|quote|how much|budget|charge|package/.test(lower)) return FALLBACKS.pricing;
   if (/\bbook|contact|email|reach|phone|whatsapp|touch/.test(lower)) return FALLBACKS.contact;
   if (/help|service|do you do|offer|automat|seo|market|grow|consult|problem|need/.test(lower)) return FALLBACKS.services;
   if (/skill|tech|stack|framework|language/.test(lower)) return FALLBACKS.skills;

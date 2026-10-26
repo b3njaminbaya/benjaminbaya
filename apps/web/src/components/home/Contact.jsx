@@ -1,6 +1,6 @@
 import { useState } from 'react';
 import { CheckCircle, AlertCircle, Mail, MessageCircle } from 'lucide-react';
-import { PERSON, CONSULTATION, WHATSAPP_LINK } from '../../data/site';
+import { PERSON, CONSULTATION, WHATSAPP_LINK, QUOTE_LINK } from '../../data/site';
 import Container from '../ui/Container';
 import BookingButton from '../ui/BookingButton';
 
@@ -176,6 +176,14 @@ const Contact = () => (
           </a>
         </div>
         <p className="mt-4 text-sm text-white/50">Consultations are scheduled through Teevexa’s booking calendar.</p>
+        <p className="mt-3 text-sm text-white/70">
+          Know what you need?{' '}
+          <a href={QUOTE_LINK} target="_blank" rel="noopener" className="font-semibold text-white underline decoration-white/40 underline-offset-4 hover:decoration-white">
+            Request a quote
+            <span className="sr-only"> (opens the quote request in a new tab)</span>
+          </a>{' '}
+          and get a tailored quote within 24 hours.
+        </p>
 
         {/* The consultation offer — facts mirror teevexa.com/book-consultation */}
         <div className="mt-10 rounded-2xl border border-white/10 bg-white/[0.03] p-6">

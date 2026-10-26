@@ -3,6 +3,7 @@ import { PILLARS } from '../../data/services';
 import Container from '../ui/Container';
 import SectionHeading from '../ui/SectionHeading';
 import BookingButton from '../ui/BookingButton';
+import { QUOTE_LINK } from '../../data/site';
 
 const Row = ({ label, children }) => (
   <div className="grid gap-1 border-t border-white/10 py-3.5 sm:grid-cols-[8.5rem_1fr] sm:gap-4">
@@ -87,7 +88,14 @@ const Services = () => (
 
       <div className="reveal mt-10 flex flex-wrap items-center gap-x-5 gap-y-3">
         <BookingButton />
-        <p className="text-sm text-white/60">A free 20-minute call about your business problem.</p>
+        <p className="text-sm text-white/60">
+          A free 20-minute call about your business problem. Already know what you need?{' '}
+          <a href={QUOTE_LINK} target="_blank" rel="noopener" className="font-semibold text-white underline decoration-white/40 underline-offset-4 hover:decoration-white">
+            Request a quote
+            <span className="sr-only"> (opens the quote request in a new tab)</span>
+          </a>
+          .
+        </p>
       </div>
     </Container>
   </section>

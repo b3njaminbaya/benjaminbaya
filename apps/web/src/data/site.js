@@ -18,6 +18,7 @@ export const PERSON = {
 };
 
 export const BOOKING_URL = 'https://www.teevexa.com/book-consultation';
+export const QUOTE_URL = 'https://www.teevexa.com/start-project';
 
 // Facts from the booking page — keep in step with teevexa.com/book-consultation
 export const CONSULTATION = {
@@ -33,9 +34,11 @@ export const CONSULTATION = {
 export const OUTBOUND = {
   consultation: { url: BOOKING_URL, title: 'Opening the booking page…' },
   whatsapp: { url: PERSON.whatsapp, title: 'Opening WhatsApp…' },
+  quote: { url: QUOTE_URL, title: 'Opening the quote request…' },
 };
 export const BOOKING_LINK = '/go/consultation';
 export const WHATSAPP_LINK = '/go/whatsapp';
+export const QUOTE_LINK = '/go/quote';
 
 export const TEEVEXA = {
   name: 'Teevexa Ltd',

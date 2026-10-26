@@ -41,7 +41,7 @@ for (const route of PRERENDER_ROUTES) {
 write('activity/index.html', page('/activity', { ssr: false }));
 
 // Outbound redirect pages — client-rendered, not indexed
-for (const key of ['consultation', 'whatsapp']) {
+for (const key of ['consultation', 'whatsapp', 'quote']) {
   write(`go/${key}/index.html`, page(`/go/${key}`, { ssr: false }));
 }
 
