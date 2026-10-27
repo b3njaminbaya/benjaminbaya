@@ -17,6 +17,7 @@ export const RESUME = {
         'Published the four Buzlin apps on Google Play, the App Store and the Microsoft Store, and both BuzRyde apps on Google Play and the App Store.',
         'Set up CI/CD and hardened API security.',
         'Implemented all Buzlin payments: buyers pay by mobile money in Kenya and Tanzania (PesaPal), bank through Stripe or PayPal; sellers and couriers are paid out by bank, mobile money or PayPal.',
+        'Led development of ArtisticBuz, a hair transplant estimate and clinic referral platform, and built the group’s corporate website.',
       ],
     },
     {

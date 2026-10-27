@@ -14,6 +14,7 @@ Character counts are after this work. Word counts are visible text in the raw HT
 | `/work/becof-organic-chemicals` | Case study (business project) | 60 | 146 | 1 | 432 | CreativeWork, BreadcrumbList, Person, Organization | Becof platform; e-commerce with M-Pesa |
 | `/work/buzlin` | Case study (employer product) | 59 | 139 | 1 | 494 | same | Buzlin; marketplace modernisation |
 | `/work/buzryde` | Case study (employer product) | 57 | 128 | 1 | 422 | same | BuzRyde; ride-hailing apps |
+| `/work/artisticbuz` | Case study (employer product) | 59 | 136 | 1 | – | same | ArtisticBuz; hair transplant cost estimator and clinic referrals |
 | `/work/esteric-kitchens` | Case study (client) | 59 | 128 | 1 | 376 | same | Website and CRM for interior design |
 | `/work/melamart-enterprises` | Case study (client) | 59 | 127 | 1 | 340 | same | Website and hire management system |
 | `/work/teevexa-trace` | Case study (Teevexa product) | 60 | 141 | 1 | 503 | same | "Teevexa Trace"; supply chain traceability |
@@ -22,12 +23,12 @@ Character counts are after this work. Word counts are visible text in the raw HT
 | `/work/tafsiri-ai` | Case study (personal build) | 60 | 133 | 1 | 353 | same | "Tafsiri AI"; Swahili/Somali translation |
 | `/resume` | Resume | 56 | 126 | 1 | 635 | Person, Organization | "Benjamin Baya resume / CV" |
 
-All 11 pages:
+All 12 pages (ArtisticBuz added after the first audit):
 - **Status:** return 200 live.
 - **Canonical:** self-referencing, with no trailing slash (except `/`).
 - **Robots:** `index, follow, max-image-preview:large`.
 - **Social tags:** Open Graph and Twitter tags present.
-- **Links:** reachable through crawlable internal links. The homepage links to all 9 case studies, the footer to 6 plus the resume, each case study to the next one, and the navbar to the resume. **No orphan pages.**
+- **Links:** reachable through crawlable internal links. The homepage links to all 10 case studies, the footer to 6 plus the resume, each case study to the next one, and the navbar to the resume. **No orphan pages.**
 
 ## Non-indexable pages (deliberately excluded)
 

@@ -63,6 +63,18 @@ const PORTFOLIO = {
       url: 'https://www.buzryde.com',
     },
     {
+      name: 'ArtisticBuz (Buzlin Holdings Inc product, my employer): hair transplant estimate and clinic referral platform',
+      description: 'Free graft and cost estimator with an interactive scalp map and PDF estimate, consultation requests with encrypted photo uploads, a patient portal, a lead pipeline that tracks referrals to partner clinics and calculates their 10% to 15% referral fees, bookings, Stripe deposits and instalments, and a content system in English, French, Swahili and Arabic. I am the lead software engineer and did most of the engineering; one other developer contributed to the early build. Lead and referral figures are internal.',
+      tech: ['Next.js', 'TypeScript', 'PostgreSQL', 'Stripe'],
+      url: 'https://www.artisticbuz.com',
+    },
+    {
+      name: 'Buzlin Holdings corporate website (my employer)',
+      description: 'The group\'s bilingual English and French corporate website with its own content, careers, newsroom and newsletter system.',
+      tech: ['React', 'TypeScript', 'Node.js', 'MySQL'],
+      url: 'https://www.buzlinholdingsinc.com',
+    },
+    {
       name: 'Esteric Kitchens & Interior Designs (client): website & CRM',
       description: 'Marketing site with quote requests and portfolio, plus a CRM with a leads → customers → quotations → projects pipeline and data-driven roles. I also did the search engine optimisation for the website.',
       tech: ['Next.js', 'Prisma', 'Neon Postgres', 'Clerk'],
@@ -147,7 +159,7 @@ function buildContext(message) {
     );
   }
 
-  if (want(/project|work|built|made|portfolio|app|website|demo|show me|example|client|donation|becof|buzlin|buzryde|esteric|melamart|sensys|precious|tafsiri|trace|teedesk|product/)) {
+  if (want(/project|work|built|made|portfolio|app|website|demo|show me|example|client|donation|becof|buzlin|buzryde|artisticbuz|hair|esteric|melamart|sensys|precious|tafsiri|trace|teedesk|product/)) {
     const lines = PORTFOLIO.projects.map(p => {
       const link = p.url ? ` (${p.url})` : '';
       return `  • ${p.name}: ${p.description} Tech: ${p.tech.join(', ')}${link}`;
@@ -226,7 +238,7 @@ const FALLBACKS = {
 
   skills: `I work across the stack: React, Next.js and TypeScript on the frontend; Python, Node.js, PHP (Laravel) and Java on the backend; Flutter, React Native and Kotlin for mobile; PostgreSQL, MySQL and MongoDB for data; LLM APIs for AI features; and M-Pesa, PesaPal and Stripe for payments.`,
 
-  projects: `Business projects include the Becof Organic Chemicals commerce platform (live, with M-Pesa payments) and, for clients, a website and CRM for Esteric Kitchens and a website and hire system for Melamart. At Buzlin Holdings I am the lead software engineer for Buzlin (marketplace) and BuzRyde (ride-hailing, run by the subsidiary BuzRyde Inc). Through my own company Teevexa I have shipped Teevexa Trace (supply chain traceability, two apps on Google Play), TeeDesk (open-source AI customer support), IoT Custodian (device security monitoring, private) and the Teevexa platform. Tafsiri AI, a translation tool for Kenyan languages, is a personal build. Each has a case study on this site.`,
+  projects: `Business projects include the Becof Organic Chemicals commerce platform (live, with M-Pesa payments) and, for clients, a website and CRM for Esteric Kitchens and a website and hire system for Melamart. At Buzlin Holdings I am the lead software engineer for Buzlin (marketplace), BuzRyde (ride-hailing, run by the subsidiary BuzRyde Inc) and ArtisticBuz (hair transplant estimates and clinic referrals), and I built the group's corporate website. Through my own company Teevexa I have shipped Teevexa Trace (supply chain traceability, two apps on Google Play), TeeDesk (open-source AI customer support), IoT Custodian (device security monitoring, private) and the Teevexa platform. Tafsiri AI, a translation tool for Kenyan languages, is a personal build. Each has a case study on this site.`,
 
   teevexa: `Teevexa Ltd is the technology company I founded. I lead the consultation, strategy and architecture; larger projects are delivered through Teevexa. You can book a consultation at teevexa.com/book-consultation.`,
 

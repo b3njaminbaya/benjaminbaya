@@ -115,6 +115,41 @@ export const CASE_STUDIES = [
     links: [{ label: 'Visit buzryde.com', href: 'https://www.buzryde.com' }],
   },
   {
+    slug: 'artisticbuz',
+    shortName: 'ArtisticBuz',
+    kind: 'employer',
+    label: 'Buzlin Holdings Inc · Health tech',
+    client: 'Buzlin Holdings Inc',
+    title: 'A free hair transplant estimate and clinic referral platform',
+    // Project period from the repositories' commit history
+    period: 'Dec 2025 – Present',
+    // Search result title and description (keep under 60 and 155 characters)
+    seoTitle: 'ArtisticBuz: Hair Transplant Cost Estimator | Benjamin Baya',
+    summary:
+      'A free graft and cost estimator that turns visitors into consultations, matches them with partner clinics and tracks every referral fee.',
+    pillars: ['Build', 'Automate', 'Grow'],
+    image: 'artisticbuz',
+    imageAlt: 'ArtisticBuz homepage: “Know how many hair grafts you need and what it could cost”',
+    liveUrl: 'https://www.artisticbuz.com',
+    problem:
+      'People facing hair loss rarely know how many grafts they need or what treatment costs before they speak to a clinic. ArtisticBuz is free for patients and earns a referral fee of 10% to 15% from partner clinics when a referred patient is treated, so every lead has to be tracked from first visit to treatment, with both sides seeing the same figures.',
+    solution: [
+      'A graft and cost estimator: visitors mark their hair loss areas on an interactive scalp map, get a graft and cost range by country, and can download it as a PDF.',
+      'Free consultation requests with encrypted photo uploads, and a patient portal for bookings, payment plans, pre-op and recovery steps, and documents.',
+      'A lead pipeline with reference codes and source tracking, automatic referral-fee commissions, disputes, and monthly statements per currency for partner clinics.',
+      'Bookings with slots, holds and reminders, and optional deposits and instalments through Stripe.',
+      'A content system for articles, treatments, clinics, FAQs and translations, with the interface in English, French, Swahili and Arabic.',
+      'Security for sensitive data: encrypted patient files, two-step sign-in and passkeys, six roles with their own permissions, an IP-restricted admin panel and an audit log.',
+      'Rebuilt in October 2026 onto the company’s own server, with a PostgreSQL database, a separate admin panel and a partner network, and no paid third-party platforms.',
+    ],
+    role:
+      'Lead software engineer at Buzlin Holdings Inc, which owns ArtisticBuz. I did most of the engineering: the estimator and its scalp map, the content system, the security and payment hardening, and the rebuild onto the company’s own server. One other developer contributed to the early build.',
+    tech: ['Next.js', 'TypeScript', 'PostgreSQL', 'Drizzle ORM', 'Better Auth', 'Stripe', 'Tailwind CSS'],
+    outcome:
+      'Live at artisticbuz.com, with the admin panel on its own subdomain. Lead and referral figures are internal to Buzlin Holdings and aren’t published here.',
+    links: [{ label: 'Visit artisticbuz.com', href: 'https://www.artisticbuz.com' }],
+  },
+  {
     slug: 'esteric-kitchens',
     shortName: 'Esteric Kitchens & Interiors',
     kind: 'client',
