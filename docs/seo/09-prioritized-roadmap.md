@@ -26,14 +26,15 @@
 
 | Item | Why it matters | What I need from you |
 |---|---|---|
-| Measured results per case study | The strongest content improvement possible | Any real figures clients agree to publish |
-| Project dates and `updated` dates | Honest freshness signals | Rough project periods per case study |
 | Removed case studies: 307 or 308 | 308 tells search engines the move is permanent | Which ones will never return |
 
 Resolved on 28 October 2026:
 - **Training crawlers:** allow all (no change to robots.txt).
 - **`areaServed: Worldwide`:** confirmed; Benjamin works with clients outside Kenya.
 - **FAQ:** not wanted anywhere on the site.
+- **Results:** internal; case studies keep saying figures aren't published.
+- **Project dates:** added as a `period` on every case study, taken from Benjamin's own commits in each repository and confirmed by him (deployed 28 October 2026).
+- **Production checks after deploy:** new titles, `index.html` redirects, PDF headers, `llms.txt` and IndexNow key verified live; IndexNow submission accepted (HTTP 202).
 
 ## Short term (1–3 months)
 
