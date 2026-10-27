@@ -18,7 +18,7 @@ Live requests to `/work/buzlin` with each crawler's user agent all returned **20
 | Google-Extended (token) | Opt-out token for Gemini training; does not affect Google Search | Allowed |
 | Applebot-Extended (token) | Opt-out token for Apple AI training | Allowed |
 
-**Recommendation (decision for Benjamin):** keep allowing all of them. This is public marketing content about you and your work, so wide exposure, including in training data, works in your favour, and nothing on the site is sensitive.
+**Decision (confirmed by Benjamin, 28 October 2026):** allow all of them, including training crawlers. This is public marketing content about you and your work, so wide exposure, including in training data, works in your favour, and nothing on the site is sensitive.
 
 If you'd rather opt out of **training only** while keeping search visibility, add to `robots.txt` (in `scripts/prerender.mjs`):
 

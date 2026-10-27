@@ -16,6 +16,8 @@ export const CASE_STUDIES = [
     label: 'Agri-biotech · Kenya',
     client: 'Becof Organic Chemicals Limited',
     title: 'A commerce and operations platform for an agricultural biotech company',
+    // Project period from the repositories' commit history
+    period: 'Feb 2026 – Present',
     // Search result title and description (keep under 60 and 155 characters)
     seoTitle: 'Becof Organic Chemicals: E-commerce Platform | Benjamin Baya',
     summary:
@@ -49,6 +51,8 @@ export const CASE_STUDIES = [
     label: 'Buzlin Holdings Inc · Marketplace · Canada',
     client: 'Buzlin Holdings Inc',
     title: 'Modernising a multi-vendor marketplace and service-booking platform',
+    // Project period from the repositories' commit history
+    period: 'Aug 2025 – Present',
     // Search result title and description (keep under 60 and 155 characters)
     seoTitle: 'Buzlin Marketplace Modernisation Case Study | Benjamin Baya',
     seoDescription:
@@ -84,6 +88,8 @@ export const CASE_STUDIES = [
     label: 'BuzRyde Inc · Ride-hailing · Canada',
     client: 'BuzRyde Inc, a subsidiary of Buzlin Holdings Inc',
     title: 'Rider, driver and operations systems for a Canadian ride-hailing service',
+    // Project period from the repositories' commit history
+    period: 'Jul 2025 – Present',
     // Search result title and description (keep under 60 and 155 characters)
     seoTitle: 'BuzRyde Ride-Hailing Apps and Admin Panel | Benjamin Baya',
     summary:
@@ -115,6 +121,8 @@ export const CASE_STUDIES = [
     label: 'Client · Interior design · Kenya',
     client: 'Esteric Kitchens & Interior Designs Ltd',
     title: 'A marketing website and CRM for a kitchen and interior design company',
+    // Project period from the repositories' commit history
+    period: 'Jul – Aug 2026',
     // Search result title and description (keep under 60 and 155 characters)
     seoTitle: 'Esteric Kitchens Website and CRM Case Study | Benjamin Baya',
     summary:
@@ -146,6 +154,8 @@ export const CASE_STUDIES = [
     label: 'Client · Construction equipment · Kenya',
     client: 'Melamart Enterprises Limited',
     title: 'Website and hire-management system for a scaffolding company',
+    // Project period from the repositories' commit history
+    period: 'Dec 2025 – Oct 2026',
     // Search result title and description (keep under 60 and 155 characters)
     seoTitle: 'Melamart Website and Hire Management System | Benjamin Baya',
     summary:
@@ -177,6 +187,8 @@ export const CASE_STUDIES = [
     label: 'Teevexa product · Supply chain',
     client: 'Teevexa Ltd',
     title: 'Teevexa Trace - supply chain traceability from the field to the buyer',
+    // Project period from the repositories' commit history
+    period: 'Apr 2026 – Present',
     // Search result title and description (keep under 60 and 155 characters)
     seoTitle: 'Teevexa Trace: Supply Chain Traceability App | Benjamin Baya',
     seoDescription:
@@ -219,6 +231,8 @@ export const CASE_STUDIES = [
     label: 'Teevexa product · AI support',
     client: 'Teevexa Ltd',
     title: 'TeeDesk - AI customer support a business can run on its own servers',
+    // Project period from the repositories' commit history
+    period: 'Sep 2025 – Sep 2026',
     // Search result title and description (keep under 60 and 155 characters)
     seoTitle: 'TeeDesk: Open-Source AI Customer Support | Benjamin Baya',
     seoDescription:
@@ -251,6 +265,8 @@ export const CASE_STUDIES = [
     label: 'Teevexa product · Business system',
     client: 'Teevexa Ltd',
     title: 'The Teevexa platform - one system to win and deliver client work',
+    // Project period from the repositories' commit history
+    period: 'Feb 2026 – Present',
     // Search result title and description (keep under 60 and 155 characters)
     seoTitle: 'Teevexa Platform: Client Portal and CRM | Benjamin Baya',
     summary:
@@ -283,6 +299,8 @@ export const CASE_STUDIES = [
     label: 'Personal build · AI',
     client: 'Product build',
     title: 'Tafsiri AI - machine translation for Kenya’s languages',
+    // Project period from the repositories' commit history
+    period: 'Aug 2025 – Sep 2026',
     // Search result title and description (keep under 60 and 155 characters)
     seoTitle: 'Tafsiri AI: Translation for Kenyan Languages | Benjamin Baya',
     summary:

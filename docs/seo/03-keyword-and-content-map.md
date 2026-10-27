@@ -37,7 +37,7 @@ So the portfolio should **not** grow separate service landing pages. New service
 1. **Measured outcomes.** Every case study says results aren't measured. Real figures (orders, bookings, time saved, ranking changes) would make the strongest content improvement. *Needs business input.*
 2. **Client-approved quotes.** None exist. Only add genuine, attributable quotes, and only then consider review markup.
 3. **Dates.** Case studies have no "when" (project period). Adding real dates helps both readers and the `updated` sitemap field. *Needs business input.*
-4. **A short FAQ** on the homepage, answering what clients actually ask (cost of a consultation, remote work, timelines, who delivers). Only worth adding if the answers are confirmed; FAQ rich results are no longer shown for most sites, so the value is clarity for readers and AI answers, not a rich snippet. *Needs business input.*
+4. **FAQ:** declined by Benjamin (28 October 2026). Not to be added.
 
 ## Not recommended
 

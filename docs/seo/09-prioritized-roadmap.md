@@ -26,12 +26,14 @@
 
 | Item | Why it matters | What I need from you |
 |---|---|---|
-| Training crawler policy | `05-ai-search-strategy.md` | Keep allowing all (recommended), or opt out of training only |
-| `areaServed: Worldwide` in the homepage structured data | It should be true | Do you take clients outside Kenya remotely? If not, change it to Kenya |
 | Measured results per case study | The strongest content improvement possible | Any real figures clients agree to publish |
 | Project dates and `updated` dates | Honest freshness signals | Rough project periods per case study |
-| Homepage FAQ | Clearer answers for people and AI tools | Approval and the confirmed answers |
 | Removed case studies: 307 or 308 | 308 tells search engines the move is permanent | Which ones will never return |
+
+Resolved on 28 October 2026:
+- **Training crawlers:** allow all (no change to robots.txt).
+- **`areaServed: Worldwide`:** confirmed; Benjamin works with clients outside Kenya.
+- **FAQ:** not wanted anywhere on the site.
 
 ## Short term (1–3 months)
 

@@ -46,14 +46,17 @@ const CaseStudy = () => {
           <p className="mt-6 max-w-prose text-xl leading-relaxed text-muted">{study.summary}</p>
         </div>
 
-        <dl className="mt-10 grid grid-cols-2 gap-px overflow-hidden rounded-2xl border border-line bg-line md:grid-cols-4">
+        <dl className="mt-10 grid grid-cols-2 gap-px overflow-hidden rounded-2xl border border-line bg-line md:grid-cols-5">
           {[
             ['For', study.client],
+            ['Period', study.period],
             ['Type', KIND_LABEL[study.kind]],
             ['Services', study.pillars.join(', ')],
             ['Stack', `${study.tech.slice(0, 3).join(', ')}${study.tech.length > 3 ? '…' : ''}`],
-          ].map(([k, v]) => (
-            <div key={k} className="bg-paper p-5">
+          ]
+            .filter(([, v]) => v)
+            .map(([k, v], i) => (
+            <div key={k} className={`bg-paper p-5 ${i === 0 ? 'col-span-2 md:col-span-1' : ''}`}>
               <dt className="eyebrow mb-1">{k}</dt>
               <dd className="text-sm font-semibold [overflow-wrap:anywhere]">{v}</dd>
             </div>
