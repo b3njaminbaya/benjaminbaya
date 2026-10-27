@@ -28,9 +28,23 @@ All changes made on 28 October 2026. Nothing has been deployed to production yet
 - **No URL changes:** existing URLs are clean and established.
 - **No FAQ, reviews, or new service or location pages:** they would need facts not supplied yet (see `09-prioritized-roadmap.md`).
 - **robots.txt AI policy unchanged:** it is a business decision (see `05-ai-search-strategy.md`).
-- **Removed case study redirects kept at 307,** as previously chosen.
-- **ESLint configuration not created:** fixing lint is outside SEO scope, and enabling it would surface unrelated warnings.
+- **Removed case study redirects:** kept at 307 in the first pass; deleted in the follow-up below.
+- **ESLint configuration:** not created in the first pass; added in the follow-up below.
 
 ## Preview deployment
 
 A protected Vercel **preview** (not production) was deployed from a local `vercel build` to verify the new redirects and headers. It is behind Vercel login and does not affect benjaminbaya.com.
+
+## Follow-up changes
+
+| File | Change |
+|---|---|
+| `apps/web/vercel.json` | Deleted the redirects for `/work/nyuzi`, `/work/ordo`, `/work/cyberguard-ai`, `/work/morara-home-furniture` and `/work/precious-furniture`. Those projects are permanently off the portfolio (they stay on GitHub), so the URLs now return 404 and search engines will drop them |
+| `apps/web/src/data/caseStudies.js`, `apps/web/src/pages/CaseStudy.jsx` | Project `period` per case study, from the repositories' commit history, shown on each case study page |
+| `apps/web/scripts/prerender.mjs` | The stylesheet (about 9 KB compressed) is inlined into every page, removing a render-blocking request. Local Lighthouse, mobile, 3 runs each: homepage LCP 2.3 s → 2.1 s |
+| `apps/web/public/images/og/*` | Social preview images: JPG copies (1200×675) of every case study screenshot, because WebP previews don't show reliably on LinkedIn and some apps; new designed images for Teevexa Trace and TeeDesk (1200×630) |
+| `apps/web/scripts/social-image-template.html` | Template for social images of case studies without a screenshot; regenerate with headless Chrome (command in the file) |
+| `apps/web/src/seo.js`, `apps/web/src/data/caseStudies.js` | `og:image` uses `/images/og/`; `ogImage` field for studies without a screenshot; correct dimensions and alt text |
+| `apps/web/scripts/check-seo.mjs` | New check: every indexable page has an `og:image` that exists in the build; warns if it isn't PNG or JPG |
+| `apps/web/eslint.config.mjs`, `apps/web/package.json` | ESLint 9 flat config (React, hooks, Node scripts); `@eslint/js` and `globals` added as dev dependencies; `npm run lint` passes with 0 errors and 0 warnings. `rel="noopener"` without `noreferrer` is allowed on purpose, so destination sites still see the referral |
+| `apps/web/src/data/site.js`, `apps/web/src/components/home/Services.jsx` | Line under Services linking to Teevexa's service pages (web development, mobile apps, e-commerce systems, business software, AI agents), so commercial searches are served by teevexa.com |

@@ -63,6 +63,15 @@ for (const route of routes) {
   if (canonical !== expected) errors.push(`${where}: canonical is ${canonical || 'missing'}, expected ${expected}`);
   if (/noindex/.test(robotsMeta)) errors.push(`${where}: in sitemap but marked noindex`);
 
+  // Social preview image must exist and be a format every platform shows
+  const ogImage = pick(html, /<meta property="og:image" content="([^"]*)"/);
+  if (!ogImage) errors.push(`${where}: missing og:image`);
+  else {
+    const ogPath = ogImage.startsWith(origin) ? ogImage.slice(origin.length) : null;
+    if (ogPath && !exists(ogPath.slice(1))) errors.push(`${where}: og:image ${ogPath} does not exist`);
+    if (!/\.(png|jpe?g)$/i.test(ogImage)) warnings.push(`${where}: og:image is not PNG or JPG (${ogImage})`);
+  }
+
   if (!body.trim()) errors.push(`${where}: no prerendered content`);
   const h1s = body.match(/<h1\b/g)?.length || 0;
   if (h1s !== 1) errors.push(`${where}: ${h1s} <h1> elements (expected 1)`);

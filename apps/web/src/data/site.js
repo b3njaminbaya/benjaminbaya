@@ -45,6 +45,16 @@ export const TEEVEXA = {
   url: 'https://www.teevexa.com',
 };
 
+// Teevexa's service pages. Commercial "hire a developer" searches belong on
+// teevexa.com, so the portfolio links there instead of duplicating the pages.
+export const TEEVEXA_SERVICES = [
+  { label: 'web development', href: 'https://www.teevexa.com/services/web-development' },
+  { label: 'mobile apps', href: 'https://www.teevexa.com/services/mobile-development' },
+  { label: 'e-commerce systems', href: 'https://www.teevexa.com/services/e-commerce-systems' },
+  { label: 'business software', href: 'https://www.teevexa.com/services/enterprise-software' },
+  { label: 'AI agents', href: 'https://www.teevexa.com/services/ai-agents' },
+];
+
 export const SOCIALS = [
   { label: 'LinkedIn', href: 'https://linkedin.com/in/b3njaminbaya' },
   { label: 'GitHub', href: 'https://github.com/b3njaminbaya' },

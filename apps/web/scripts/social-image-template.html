@@ -1,0 +1,95 @@
+<!doctype html>
+<!--
+  Social sharing image template for case studies without a screenshot.
+  Renders a 1200x630 card in the style of public/og-image.png.
+
+  Regenerate (from apps/web):
+    "/Applications/Google Chrome.app/Contents/MacOS/Google Chrome" --headless=new --hide-scrollbars \
+      --allow-file-access-from-files --window-size=1200,630 \
+      --screenshot=public/images/og/teevexa-trace.png "file://$PWD/scripts/social-image-template.html?study=trace"
+  Use ?study=teedesk for TeeDesk. Add a new entry to STUDIES below for another case study.
+-->
+<html lang="en">
+<head>
+<meta charset="utf-8" />
+<style>
+  @font-face { font-family: "Manrope"; src: url("../public/fonts/manrope-latin.woff2") format("woff2"); font-weight: 200 800; }
+  * { box-sizing: border-box; margin: 0; padding: 0; }
+  html, body { width: 1200px; height: 630px; overflow: hidden; }
+  body { font-family: "Manrope", Arial, sans-serif; background: #f6f5f1; color: #14161a; display: grid; grid-template-columns: 1fr 520px; }
+  .text { padding: 64px 40px 56px 64px; display: flex; flex-direction: column; }
+  .eyebrow { font-family: ui-monospace, Menlo, monospace; font-size: 15px; letter-spacing: 3.5px; text-transform: uppercase; color: #5b6170; }
+  h1 { margin-top: 26px; font-size: 64px; line-height: 1.02; font-weight: 800; letter-spacing: -2px; }
+  h1 span { color: #2447d6; }
+  .sub { margin-top: 22px; font-size: 25px; line-height: 1.35; color: #3b414c; max-width: 560px; }
+  .chips { margin-top: auto; display: flex; gap: 10px; }
+  .chip { border: 1.5px solid #d9d6cd; border-radius: 99px; padding: 9px 20px; font-size: 18px; font-weight: 700; background: #fff; }
+  .chip.on { background: #2447d6; border-color: #2447d6; color: #fff; }
+  .visual { position: relative; background: #eceae4; border-left: 1.5px solid #dcd9d1; overflow: hidden;
+    background-image: linear-gradient(#d9d6cd55 1px, transparent 1px), linear-gradient(90deg, #d9d6cd55 1px, transparent 1px);
+    background-size: 32px 32px; display: flex; align-items: center; justify-content: center; }
+  /* Trace: three phone screenshots */
+  .phones { display: flex; gap: 18px; align-items: center; }
+  .phone { width: 136px; aspect-ratio: 480/1000; border: 4px solid #14161a; border-radius: 22px; overflow: hidden; background: #0e1116;
+    box-shadow: 0 24px 50px -20px rgb(0 0 0 / 0.45); }
+  .phone img { width: 100%; height: 100%; object-fit: cover; object-position: top; display: block; }
+  .phone:nth-child(2) { transform: translateY(-18px); }
+  .phone:not(:nth-child(2)) { transform: translateY(18px); }
+  /* TeeDesk: support inbox mock */
+  .inbox { width: 440px; display: grid; grid-template-columns: 150px 1fr; background: #fff; border: 1.5px solid #dcd9d1; border-radius: 18px; overflow: hidden;
+    box-shadow: 0 24px 50px -24px rgb(0 0 0 / 0.35); font-size: 15px; }
+  .list { border-right: 1.5px solid #e6e3dc; padding: 12px; display: grid; gap: 8px; align-content: start; }
+  .item { border-radius: 10px; padding: 9px 10px; }
+  .item.on { background: #e8edfd; }
+  .ch { font-family: ui-monospace, Menlo, monospace; font-size: 10px; letter-spacing: 1.5px; text-transform: uppercase; color: #6b7180; }
+  .item.on .ch { color: #2447d6; }
+  .msg { font-weight: 600; margin-top: 3px; white-space: nowrap; overflow: hidden; text-overflow: ellipsis; }
+  .thread { padding: 16px; display: grid; gap: 10px; align-content: start; line-height: 1.35; }
+  .q { justify-self: end; background: #2447d6; color: #fff; border-radius: 14px 14px 4px 14px; padding: 10px 13px; }
+  .a { justify-self: start; background: #f1efe9; border-radius: 14px 14px 14px 4px; padding: 10px 13px; max-width: 92%; }
+  .tag { justify-self: start; border: 1.5px solid #dcd9d1; border-radius: 99px; padding: 4px 10px; font-family: ui-monospace, Menlo, monospace; font-size: 10px; letter-spacing: 1.5px; text-transform: uppercase; color: #6b7180; }
+</style>
+</head>
+<body>
+  <div class="text">
+    <p class="eyebrow">Case study · Benjamin Baya</p>
+    <h1 id="title"></h1>
+    <p class="sub" id="sub"></p>
+    <div class="chips" id="chips"></div>
+  </div>
+  <div class="visual" id="visual"></div>
+
+<script>
+  const STUDIES = {
+    trace: {
+      title: 'Teevexa <span>Trace</span>',
+      sub: 'Supply chain traceability from the field to the buyer, even with no signal.',
+      pillars: ['Build', 'Automate'],
+      visual: `<div class="phones">${[1, 2, 3].map((n) => `<div class="phone"><img src="../public/images/work/teevexa-trace-phone-${n}.webp" alt=""></div>`).join('')}</div>`,
+    },
+    teedesk: {
+      title: 'Tee<span>Desk</span>',
+      sub: 'Open-source AI customer support on web chat, WhatsApp and Telegram.',
+      pillars: ['Build', 'Automate'],
+      visual: `<div class="inbox">
+        <div class="list">
+          <div class="item on"><p class="ch">Web chat</p><p class="msg">Where is my order?</p></div>
+          <div class="item"><p class="ch">WhatsApp</p><p class="msg">Do you deliver to…</p></div>
+          <div class="item"><p class="ch">Telegram</p><p class="msg">Opening hours?</p></div>
+        </div>
+        <div class="thread">
+          <p class="q">Where is my order?</p>
+          <p class="a">It left our warehouse this morning. Here is your tracking link…</p>
+          <p class="tag">Answered from knowledge base</p>
+        </div>
+      </div>`,
+    },
+  };
+  const s = STUDIES[new URLSearchParams(location.search).get('study')] || STUDIES.trace;
+  document.getElementById('title').innerHTML = s.title;
+  document.getElementById('sub').textContent = s.sub;
+  document.getElementById('chips').innerHTML = s.pillars.map((p, i) => `<span class="chip ${i === 0 ? 'on' : ''}">${p}</span>`).join('');
+  document.getElementById('visual').innerHTML = s.visual;
+</script>
+</body>
+</html>

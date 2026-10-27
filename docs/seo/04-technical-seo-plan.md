@@ -14,7 +14,7 @@ Each item says what was decided and why. Status: **Done** (implemented and verif
 | Resume PDFs | `/resume.pdf`: HTTP `Link: rel="canonical"` → `/resume`. `/Benjamin_Mweri_Baya_Resume.pdf` (download copy): `X-Robots-Tag: noindex` | Done (verified on preview) |
 | Trailing slash, www, http | Already redirect with 308 | Done (pre-existing, verified live) |
 | Query parameters | Canonical tag to the clean URL; no parameter-driven pages exist | Done (pre-existing) |
-| Removed case studies | Keep 307 to `/#work`, chosen so a case study can return. If a page is gone for good, change to `permanent: true` (308) | Open (business decision) |
+| Removed case studies | Nyuzi, Ordo, CyberGuard AI, Morara and Precious Furniture Kenya are gone for good: redirects deleted, the URLs return 404 so search engines drop them | Done |
 | 404 | Real 404 status, `noindex`, helpful links | Done (pre-existing) |
 
 ## Rendering

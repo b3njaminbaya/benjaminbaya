@@ -3,7 +3,7 @@ import { PILLARS } from '../../data/services';
 import Container from '../ui/Container';
 import SectionHeading from '../ui/SectionHeading';
 import BookingButton from '../ui/BookingButton';
-import { QUOTE_LINK } from '../../data/site';
+import { QUOTE_LINK, TEEVEXA_SERVICES } from '../../data/site';
 
 const Row = ({ label, children }) => (
   <div className="grid gap-1 border-t border-white/10 py-3.5 sm:grid-cols-[8.5rem_1fr] sm:gap-4">
@@ -97,6 +97,19 @@ const Services = () => (
           .
         </p>
       </div>
+
+      <p className="reveal mt-5 text-sm leading-relaxed text-white/60">
+        Larger projects are delivered through Teevexa:{' '}
+        {TEEVEXA_SERVICES.map((s, i) => (
+          <span key={s.href}>
+            <a href={s.href} target="_blank" rel="noopener" className="font-semibold text-white/85 underline decoration-white/30 underline-offset-4 hover:decoration-white">
+              {s.label}
+            </a>
+            {i < TEEVEXA_SERVICES.length - 2 ? ', ' : i === TEEVEXA_SERVICES.length - 2 ? ' and ' : '.'}
+          </span>
+        ))}
+        <span className="sr-only"> (links open teevexa.com in a new tab)</span>
+      </p>
     </Container>
   </section>
 );

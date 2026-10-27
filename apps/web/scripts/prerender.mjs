@@ -15,7 +15,16 @@ const { render, getRouteMeta, renderHeadTags, getLastModified, renderLlmsTxt, PR
   pathToFileURL(path.join(ssrDir, entry)).href
 );
 
-const template = fs.readFileSync(path.join(dist, 'index.html'), 'utf8');
+// Inline the stylesheet into every page. It is small (about 9 KB compressed),
+// and inlining removes a render-blocking request, so the first paint (and the
+// hero headline, the homepage's largest paint) no longer waits for it.
+const stylesheetTag = /<link rel="stylesheet"[^>]*href="(\/assets\/[^"]+\.css)"[^>]*>/;
+let template = fs.readFileSync(path.join(dist, 'index.html'), 'utf8');
+const cssMatch = template.match(stylesheetTag);
+if (cssMatch) {
+  const css = fs.readFileSync(path.join(dist, cssMatch[1]), 'utf8');
+  template = template.replace(stylesheetTag, () => `<style>${css}</style>`);
+}
 const HEAD_BLOCK = /<!--head:start-->[\s\S]*?<!--head:end-->/;
 if (!HEAD_BLOCK.test(template) || !template.includes('<!--app-html-->')) {
   throw new Error('index.html is missing <!--head:start/end--> or <!--app-html--> markers');

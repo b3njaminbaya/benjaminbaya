@@ -22,26 +22,22 @@
 5. Check: `curl -I https://benjaminbaya.com/Benjamin_Mweri_Baya_Resume.pdf` shows `x-robots-tag: noindex`.
 6. Re-run Lighthouse or PageSpeed Insights on `/` (mobile) to record the post-change baseline.
 
-## Needs your input
-
-| Item | Why it matters | What I need from you |
-|---|---|---|
-| Removed case studies: 307 or 308 | 308 tells search engines the move is permanent | Which ones will never return |
-
 Resolved on 28 October 2026:
 - **Training crawlers:** allow all (no change to robots.txt).
 - **`areaServed: Worldwide`:** confirmed; Benjamin works with clients outside Kenya.
 - **FAQ:** not wanted anywhere on the site.
 - **Results:** internal; case studies keep saying figures aren't published.
 - **Project dates:** added as a `period` on every case study, taken from Benjamin's own commits in each repository and confirmed by him (deployed 28 October 2026).
+- **Removed case studies** (Nyuzi, Ordo, CyberGuard AI, Morara Home Furniture, Precious Furniture Kenya): they will not return, so their redirects were deleted and the old URLs now return 404, which removes them from search results. The projects stay on GitHub.
 - **Production checks after deploy:** new titles, `index.html` redirects, PDF headers, `llms.txt` and IndexNow key verified live; IndexNow submission accepted (HTTP 202).
 
-## Short term (1–3 months)
+## Short term
 
-- **Social images:** dedicated images for the Teevexa Trace and TeeDesk case studies (currently the default).
-- **Home LCP on mobile** (3.1 s lab): consider inlining critical CSS for the hero, or reducing the hero heading's font loading cost. Measure first with field data from Search Console's Core Web Vitals report once available.
-- **ESLint:** add `eslint.config.js` so `npm run lint` works again. Code quality, not SEO.
-- **Service queries:** link from the portfolio to the matching teevexa.com service pages, keeping service-intent pages on teevexa.com (see `03-keyword-and-content-map.md`).
+All four short-term items were completed on 28 October 2026:
+- **Social images:** dedicated images for Teevexa Trace and TeeDesk; JPG copies for every other case study.
+- **Homepage mobile speed:** inlined stylesheet. Live before: performance 95–98, LCP 2.0–2.2 s. Local after: LCP 2.1 s vs 2.3 s before. Re-measure live after deploy.
+- **ESLint:** working configuration; lint passes.
+- **Teevexa service links:** added under Services.
 
 ## Longer term
 

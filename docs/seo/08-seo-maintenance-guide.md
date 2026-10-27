@@ -25,7 +25,11 @@ The fields that matter for search:
 
 Never add numbers, quotes, ratings or claims that aren't real. The pages and the chatbot both repeat this data.
 
-**Screenshots:** add `<name>-800.webp` and `<name>-1600.webp` (16:9) to `apps/web/public/images/work/` and set `image: '<name>'`.
+**Screenshots:** add `<name>-800.webp` and `<name>-1600.webp` (16:9) to `apps/web/public/images/work/` and set `image: '<name>'`. Also add a JPG copy for social previews: `magick <name>-1600.webp -resize 1200x675 -quality 84 -strip ../og/<name>.jpg` (from `public/images/work/`). The build fails if it's missing.
+
+**No screenshot?** Add an entry to `apps/web/scripts/social-image-template.html`, render it with the command at the top of that file into `public/images/og/<slug>.png`, and set `ogImage: '/images/og/<slug>.png'`.
+
+**Code quality:** run `npm run lint --workspace=apps/web` before pushing.
 
 ## Removing a case study
 

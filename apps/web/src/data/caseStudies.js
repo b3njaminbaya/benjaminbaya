@@ -187,6 +187,8 @@ export const CASE_STUDIES = [
     label: 'Teevexa product · Supply chain',
     client: 'Teevexa Ltd',
     title: 'Teevexa Trace - supply chain traceability from the field to the buyer',
+    // Social sharing image (no screenshot); made from scripts/social-image-template.html
+    ogImage: '/images/og/teevexa-trace.png',
     // Project period from the repositories' commit history
     period: 'Apr 2026 – Present',
     // Search result title and description (keep under 60 and 155 characters)
@@ -231,6 +233,8 @@ export const CASE_STUDIES = [
     label: 'Teevexa product · AI support',
     client: 'Teevexa Ltd',
     title: 'TeeDesk - AI customer support a business can run on its own servers',
+    // Social sharing image (no screenshot); made from scripts/social-image-template.html
+    ogImage: '/images/og/teedesk.png',
     // Project period from the repositories' commit history
     period: 'Sep 2025 – Sep 2026',
     // Search result title and description (keep under 60 and 155 characters)

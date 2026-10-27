@@ -1,5 +1,5 @@
 import { SITE_URL, PERSON, TEEVEXA, SOCIALS, BOOKING_URL, QUOTE_URL } from './data/site';
-import { CASE_STUDIES, getCaseStudy, workImage } from './data/caseStudies';
+import { CASE_STUDIES, getCaseStudy } from './data/caseStudies';
 import { PILLARS } from './data/services';
 import { CERTIFICATIONS } from './data/profile';
 
@@ -135,16 +135,21 @@ export function getRouteMeta(pathname) {
     const study = getCaseStudy(workMatch[1]);
     if (study) {
       const url = `${SITE_URL}/work/${study.slug}`;
-      const image = study.image ? `${SITE_URL}${workImage(study.image, 1600)}` : DEFAULT_OG;
+      // Social previews use JPG/PNG copies in /images/og: WebP previews don't show reliably on LinkedIn and some apps
+      const image = study.image
+        ? `${SITE_URL}/images/og/${study.image}.jpg`
+        : study.ogImage
+          ? `${SITE_URL}${study.ogImage}`
+          : DEFAULT_OG;
       return {
         // Short search title and description per study, with safe fallbacks for new entries
         title: study.seoTitle || `${study.shortName} Case Study | ${PERSON.name}`,
         description: study.seoDescription || study.summary,
         canonical: url,
         image,
-        imageAlt: study.image ? study.imageAlt : undefined,
-        imageWidth: study.image ? 1600 : undefined,
-        imageHeight: study.image ? 900 : undefined,
+        imageAlt: study.image ? study.imageAlt : study.ogImage ? `${study.shortName} case study by ${PERSON.name}` : undefined,
+        imageWidth: study.image || study.ogImage ? 1200 : undefined,
+        imageHeight: study.image ? 675 : study.ogImage ? 630 : undefined,
         type: 'article',
         jsonLd: [
           {

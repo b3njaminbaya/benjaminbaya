@@ -47,7 +47,6 @@ All 11 pages:
 | `/work/<slug>/` (trailing slash) | `/work/<slug>` | 308 (`trailingSlash: false`) |
 | `/index.html`, `/<path>/index.html` | clean URL | 308 (**new**) |
 | `/work/micro-donations-platform` | `/#work` | 308 |
-| `/work/nyuzi`, `/work/ordo`, `/work/cyberguard-ai`, `/work/morara-home-furniture`, `/work/precious-furniture` | `/#work` | 307 (temporary by choice, so a case study can return) |
 
 Case variants (for example `/Resume`) return 404, which is correct for a static host. Tracking parameters (`?utm_…`) return 200 with the canonical tag pointing to the clean URL.
 
