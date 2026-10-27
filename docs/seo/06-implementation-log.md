@@ -41,7 +41,7 @@ A protected Vercel **preview** (not production) was deployed from a local `verce
 |---|---|
 | `apps/web/vercel.json` | Deleted the redirects for `/work/nyuzi`, `/work/ordo`, `/work/cyberguard-ai`, `/work/morara-home-furniture` and `/work/precious-furniture`. Those projects are permanently off the portfolio (they stay on GitHub), so the URLs now return 404 and search engines will drop them |
 | `apps/web/src/data/caseStudies.js`, `apps/web/src/pages/CaseStudy.jsx` | Project `period` per case study, from the repositories' commit history, shown on each case study page |
-| `apps/web/scripts/prerender.mjs` | The stylesheet (about 9 KB compressed) is inlined into every page, removing a render-blocking request. Local Lighthouse, mobile, 3 runs each: homepage LCP 2.3 s → 2.1 s |
+| `apps/web/scripts/prerender.mjs` | Tried inlining the stylesheet into every page; reverted. Locally it improved LCP (2.3 s → 2.1 s), but live there was no measurable gain (performance 93–95 vs 95–98 before; LCP 2.0–2.3 s both ways), and it stopped the stylesheet being cached between pages |
 | `apps/web/public/images/og/*` | Social preview images: JPG copies (1200×675) of every case study screenshot, because WebP previews don't show reliably on LinkedIn and some apps; new designed images for Teevexa Trace and TeeDesk (1200×630) |
 | `apps/web/scripts/social-image-template.html` | Template for social images of case studies without a screenshot; regenerate with headless Chrome (command in the file) |
 | `apps/web/src/seo.js`, `apps/web/src/data/caseStudies.js` | `og:image` uses `/images/og/`; `ogImage` field for studies without a screenshot; correct dimensions and alt text |

@@ -35,7 +35,7 @@ Resolved on 28 October 2026:
 
 All four short-term items were completed on 28 October 2026:
 - **Social images:** dedicated images for Teevexa Trace and TeeDesk; JPG copies for every other case study.
-- **Homepage mobile speed:** inlined stylesheet. Live before: performance 95–98, LCP 2.0–2.2 s. Local after: LCP 2.1 s vs 2.3 s before. Re-measure live after deploy.
+- **Homepage mobile speed:** the right-sized portrait brought it to performance 95–98 and LCP 2.0–2.2 s live (Google's "good" range). Inlining the stylesheet was tried and reverted, because it gave no measurable gain live.
 - **ESLint:** working configuration; lint passes.
 - **Teevexa service links:** added under Services.
 
