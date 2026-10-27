@@ -53,12 +53,13 @@ const Hero = () => (
             className="absolute inset-x-0 bottom-0 h-2/3 bg-gradient-to-t from-accent/15 to-transparent"
             aria-hidden="true"
           />
+          {/* Shown at about 57% of the panel width: the portrait fills 94% of a 4:5 panel */}
           <img
             src="/images/benjamin-baya.webp"
             srcSet="/images/benjamin-baya-400.webp 400w, /images/benjamin-baya.webp 720w"
-            sizes="(min-width: 1024px) 34vw, (min-width: 640px) 380px, 70vw"
+            sizes="(min-width: 1024px) 21vw, (min-width: 640px) 254px, 52vw"
             width="720"
-            height="1496"
+            height="1494"
             alt="Portrait of Benjamin Baya, software engineer and business technology consultant"
             fetchPriority="high"
             decoding="async"

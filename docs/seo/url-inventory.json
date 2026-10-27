@@ -1,0 +1,304 @@
+[
+ {
+  "route": "/",
+  "title": "Benjamin Baya | Software Engineer & Technology Consultant",
+  "titleLen": 57,
+  "desc": "Benjamin Baya helps businesses build, automate and grow with technology: websites, apps, business systems, AI automation and SEO. Based in Nairobi, Kenya.",
+  "descLen": 154,
+  "canon": "https://benjaminbaya.com/",
+  "robots": "index, follow, max-image-preview:large",
+  "h1": [
+   "I help businesses build , automate and grow with technology."
+  ],
+  "words": 2754,
+  "imgs": 11,
+  "ld": [
+   "Person+ProfessionalService+WebSite"
+  ],
+  "internalLinks": 23,
+  "ogImage": "https://benjaminbaya.com/og-image.png",
+  "indexable": true
+ },
+ {
+  "route": "/404.html",
+  "title": "Page not found - Benjamin Baya",
+  "titleLen": 30,
+  "desc": "This page doesn’t exist.",
+  "descLen": 24,
+  "canon": null,
+  "robots": "noindex, follow",
+  "h1": [
+   "This page doesn’t exist."
+  ],
+  "words": 144,
+  "imgs": 0,
+  "ld": [],
+  "internalLinks": 19,
+  "ogImage": "https://benjaminbaya.com/og-image.png",
+  "indexable": false
+ },
+ {
+  "route": "/activity",
+  "title": "Engineering Activity - Benjamin Baya",
+  "titleLen": 36,
+  "desc": "Live coding activity and GitHub contributions.",
+  "descLen": 46,
+  "canon": "https://benjaminbaya.com/activity",
+  "robots": "noindex, follow",
+  "h1": [],
+  "words": 1,
+  "imgs": 0,
+  "ld": [],
+  "internalLinks": 0,
+  "ogImage": "https://benjaminbaya.com/og-image.png",
+  "indexable": false
+ },
+ {
+  "route": "/go/consultation",
+  "title": "Redirecting… - Benjamin Baya",
+  "titleLen": 28,
+  "desc": "Redirecting.",
+  "descLen": 12,
+  "canon": null,
+  "robots": "noindex, nofollow",
+  "h1": [],
+  "words": 1,
+  "imgs": 0,
+  "ld": [],
+  "internalLinks": 0,
+  "ogImage": "https://benjaminbaya.com/og-image.png",
+  "indexable": false
+ },
+ {
+  "route": "/go/quote",
+  "title": "Redirecting… - Benjamin Baya",
+  "titleLen": 28,
+  "desc": "Redirecting.",
+  "descLen": 12,
+  "canon": null,
+  "robots": "noindex, nofollow",
+  "h1": [],
+  "words": 1,
+  "imgs": 0,
+  "ld": [],
+  "internalLinks": 0,
+  "ogImage": "https://benjaminbaya.com/og-image.png",
+  "indexable": false
+ },
+ {
+  "route": "/go/whatsapp",
+  "title": "Redirecting… - Benjamin Baya",
+  "titleLen": 28,
+  "desc": "Redirecting.",
+  "descLen": 12,
+  "canon": null,
+  "robots": "noindex, nofollow",
+  "h1": [],
+  "words": 1,
+  "imgs": 0,
+  "ld": [],
+  "internalLinks": 0,
+  "ogImage": "https://benjaminbaya.com/og-image.png",
+  "indexable": false
+ },
+ {
+  "route": "/resume",
+  "title": "Benjamin Baya Resume | Software Engineer, Nairobi, Kenya",
+  "titleLen": 56,
+  "desc": "Resume of Benjamin Baya, Software Engineer & Business Technology Consultant based in Nairobi, Kenya. View or download the PDF.",
+  "descLen": 126,
+  "canon": "https://benjaminbaya.com/resume",
+  "robots": "index, follow, max-image-preview:large",
+  "h1": [
+   "Benjamin Baya"
+  ],
+  "words": 635,
+  "imgs": 0,
+  "ld": [
+   "Person"
+  ],
+  "internalLinks": 22,
+  "ogImage": "https://benjaminbaya.com/og-image.png",
+  "indexable": true
+ },
+ {
+  "route": "/work/becof-organic-chemicals",
+  "title": "Becof Organic Chemicals: E-commerce Platform | Benjamin Baya",
+  "titleLen": 60,
+  "desc": "Online sales with M-Pesa, distributor and farmer portals, expert consultations and growth tools: the digital backbone of an agricultural business.",
+  "descLen": 146,
+  "canon": "https://benjaminbaya.com/work/becof-organic-chemicals",
+  "robots": "index, follow, max-image-preview:large",
+  "h1": [
+   "A commerce and operations platform for an agricultural biotech company"
+  ],
+  "words": 432,
+  "imgs": 1,
+  "ld": [
+   "CreativeWork+BreadcrumbList+Person"
+  ],
+  "internalLinks": 19,
+  "ogImage": "https://benjaminbaya.com/images/work/becof-1600.webp",
+  "indexable": true
+ },
+ {
+  "route": "/work/buzlin",
+  "title": "Buzlin Marketplace Modernisation Case Study | Benjamin Baya",
+  "titleLen": 59,
+  "desc": "How seven connected Buzlin apps (customer, seller, courier, POS, admin and API) were modernised, secured and published on three app stores.",
+  "descLen": 139,
+  "canon": "https://benjaminbaya.com/work/buzlin",
+  "robots": "index, follow, max-image-preview:large",
+  "h1": [
+   "Modernising a multi-vendor marketplace and service-booking platform"
+  ],
+  "words": 494,
+  "imgs": 1,
+  "ld": [
+   "CreativeWork+BreadcrumbList+Person"
+  ],
+  "internalLinks": 19,
+  "ogImage": "https://benjaminbaya.com/images/work/buzlin-1600.webp",
+  "indexable": true
+ },
+ {
+  "route": "/work/buzryde",
+  "title": "BuzRyde Ride-Hailing Apps and Admin Panel | Benjamin Baya",
+  "titleLen": 57,
+  "desc": "Rider and driver apps, an admin control panel with trust, support and growth tooling, and a bilingual, search-optimised website.",
+  "descLen": 128,
+  "canon": "https://benjaminbaya.com/work/buzryde",
+  "robots": "index, follow, max-image-preview:large",
+  "h1": [
+   "Rider, driver and operations systems for a Canadian ride-hailing service"
+  ],
+  "words": 422,
+  "imgs": 1,
+  "ld": [
+   "CreativeWork+BreadcrumbList+Person"
+  ],
+  "internalLinks": 19,
+  "ogImage": "https://benjaminbaya.com/images/work/buzryde-1600.webp",
+  "indexable": true
+ },
+ {
+  "route": "/work/esteric-kitchens",
+  "title": "Esteric Kitchens Website and CRM Case Study | Benjamin Baya",
+  "titleLen": 59,
+  "desc": "A public site that turns visitors into quote requests, and an internal CRM that tracks every lead through to a finished project.",
+  "descLen": 128,
+  "canon": "https://benjaminbaya.com/work/esteric-kitchens",
+  "robots": "index, follow, max-image-preview:large",
+  "h1": [
+   "A marketing website and CRM for a kitchen and interior design company"
+  ],
+  "words": 376,
+  "imgs": 1,
+  "ld": [
+   "CreativeWork+BreadcrumbList+Person"
+  ],
+  "internalLinks": 19,
+  "ogImage": "https://benjaminbaya.com/images/work/esteric-1600.webp",
+  "indexable": true
+ },
+ {
+  "route": "/work/melamart-enterprises",
+  "title": "Melamart Website and Hire Management System | Benjamin Baya",
+  "titleLen": 59,
+  "desc": "A lead-focused website for two branches, and a secured, redesigned admin system for equipment hire, orders and overdue returns.",
+  "descLen": 127,
+  "canon": "https://benjaminbaya.com/work/melamart-enterprises",
+  "robots": "index, follow, max-image-preview:large",
+  "h1": [
+   "Website and hire-management system for a scaffolding company"
+  ],
+  "words": 340,
+  "imgs": 1,
+  "ld": [
+   "CreativeWork+BreadcrumbList+Person"
+  ],
+  "internalLinks": 19,
+  "ogImage": "https://benjaminbaya.com/images/work/melamart-1600.webp",
+  "indexable": true
+ },
+ {
+  "route": "/work/tafsiri-ai",
+  "title": "Tafsiri AI: Translation for Kenyan Languages | Benjamin Baya",
+  "titleLen": 60,
+  "desc": "Swahili, Somali and English translation on a fine-tunable neural model, with an active-learning loop that improves quality over time.",
+  "descLen": 133,
+  "canon": "https://benjaminbaya.com/work/tafsiri-ai",
+  "robots": "index, follow, max-image-preview:large",
+  "h1": [
+   "Tafsiri AI - machine translation for Kenya’s languages"
+  ],
+  "words": 353,
+  "imgs": 1,
+  "ld": [
+   "CreativeWork+BreadcrumbList+Person"
+  ],
+  "internalLinks": 19,
+  "ogImage": "https://benjaminbaya.com/images/work/tafsiri-1600.webp",
+  "indexable": true
+ },
+ {
+  "route": "/work/teedesk",
+  "title": "TeeDesk: Open-Source AI Customer Support | Benjamin Baya",
+  "titleLen": 56,
+  "desc": "An open-source AI support platform that answers customers on web chat, WhatsApp and Telegram from a business’s own documents, with human handover.",
+  "descLen": 146,
+  "canon": "https://benjaminbaya.com/work/teedesk",
+  "robots": "index, follow, max-image-preview:large",
+  "h1": [
+   "TeeDesk - AI customer support a business can run on its own servers"
+  ],
+  "words": 456,
+  "imgs": 0,
+  "ld": [
+   "CreativeWork+BreadcrumbList+Person"
+  ],
+  "internalLinks": 20,
+  "ogImage": "https://benjaminbaya.com/og-image.png",
+  "indexable": true
+ },
+ {
+  "route": "/work/teevexa-platform",
+  "title": "Teevexa Platform: Client Portal and CRM | Benjamin Baya",
+  "titleLen": 55,
+  "desc": "The website, quote funnel, consultation booking, client portal and internal CRM that Teevexa runs on.",
+  "descLen": 101,
+  "canon": "https://benjaminbaya.com/work/teevexa-platform",
+  "robots": "index, follow, max-image-preview:large",
+  "h1": [
+   "The Teevexa platform - one system to win and deliver client work"
+  ],
+  "words": 420,
+  "imgs": 1,
+  "ld": [
+   "CreativeWork+BreadcrumbList+Person"
+  ],
+  "internalLinks": 20,
+  "ogImage": "https://benjaminbaya.com/images/work/teevexa-platform-1600.webp",
+  "indexable": true
+ },
+ {
+  "route": "/work/teevexa-trace",
+  "title": "Teevexa Trace: Supply Chain Traceability App | Benjamin Baya",
+  "titleLen": 60,
+  "desc": "Two offline-first mobile apps and a public verification page that record each step of a product batch’s journey, from the field to the buyer.",
+  "descLen": 141,
+  "canon": "https://benjaminbaya.com/work/teevexa-trace",
+  "robots": "index, follow, max-image-preview:large",
+  "h1": [
+   "Teevexa Trace - supply chain traceability from the field to the buyer"
+  ],
+  "words": 503,
+  "imgs": 3,
+  "ld": [
+   "CreativeWork+BreadcrumbList+Person"
+  ],
+  "internalLinks": 20,
+  "ogImage": "https://benjaminbaya.com/og-image.png",
+  "indexable": true
+ }
+]

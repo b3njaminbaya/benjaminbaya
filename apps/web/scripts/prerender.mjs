@@ -11,7 +11,7 @@ const dist = path.join(root, 'dist');
 const ssrDir = path.join(root, 'dist-ssr');
 
 const entry = fs.readdirSync(ssrDir).find((f) => /^entry-server\.(m?js)$/.test(f));
-const { render, getRouteMeta, renderHeadTags, PRERENDER_ROUTES, SITE_URL } = await import(
+const { render, getRouteMeta, renderHeadTags, getLastModified, renderLlmsTxt, PRERENDER_ROUTES, SITE_URL } = await import(
   pathToFileURL(path.join(ssrDir, entry)).href
 );
 
@@ -49,11 +49,10 @@ for (const key of ['consultation', 'whatsapp', 'quote']) {
 write('404.html', page('/__not-found__'));
 
 // sitemap.xml
-const today = new Date().toISOString().slice(0, 10);
 const urls = PRERENDER_ROUTES.map((r) => {
   const loc = r === '/' ? `${SITE_URL}/` : `${SITE_URL}${r}`;
-  const priority = r === '/' ? '1.0' : r.startsWith('/work/') ? '0.8' : '0.5';
-  return `  <url>\n    <loc>${loc}</loc>\n    <lastmod>${today}</lastmod>\n    <priority>${priority}</priority>\n  </url>`;
+  const lastmod = getLastModified(r);
+  return `  <url>\n    <loc>${loc}</loc>${lastmod ? `\n    <lastmod>${lastmod}</lastmod>` : ''}\n  </url>`;
 }).join('\n');
 fs.writeFileSync(
   path.join(dist, 'sitemap.xml'),
@@ -65,6 +64,8 @@ fs.writeFileSync(
   path.join(dist, 'robots.txt'),
   `User-agent: *\nAllow: /\nDisallow: /activity\nDisallow: /go/\n\nSitemap: ${SITE_URL}/sitemap.xml\n`,
 );
-console.log('  wrote        dist/sitemap.xml, dist/robots.txt');
+// llms.txt: optional plain-text summary for AI tools (see renderLlmsTxt)
+fs.writeFileSync(path.join(dist, 'llms.txt'), renderLlmsTxt());
+console.log('  wrote        dist/sitemap.xml, dist/robots.txt, dist/llms.txt');
 
 fs.rmSync(ssrDir, { recursive: true, force: true });

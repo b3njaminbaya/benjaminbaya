@@ -1,17 +1,19 @@
-import { SITE_URL, PERSON, TEEVEXA, SOCIALS, BOOKING_URL } from './data/site';
+import { SITE_URL, PERSON, TEEVEXA, SOCIALS, BOOKING_URL, QUOTE_URL } from './data/site';
 import { CASE_STUDIES, getCaseStudy, workImage } from './data/caseStudies';
 import { PILLARS } from './data/services';
 import { CERTIFICATIONS } from './data/profile';
 
 const DEFAULT_OG = `${SITE_URL}/og-image.png`;
 
-const HOME_TITLE = 'Benjamin Baya - Software Engineer & Business Technology Consultant';
+const HOME_TITLE = 'Benjamin Baya | Software Engineer & Technology Consultant';
 const HOME_DESCRIPTION =
-  'Benjamin Baya helps businesses build, automate and grow with technology: websites, web and mobile apps, business systems, AI automation, SEO and digital growth. Based in Nairobi, Kenya.';
+  'Benjamin Baya helps businesses build, automate and grow with technology: websites, apps, business systems, AI automation and SEO. Based in Nairobi, Kenya.';
 
 const PERSON_ID = `${SITE_URL}/#person`;
 const SERVICE_ID = `${SITE_URL}/#service`;
 const WEBSITE_ID = `${SITE_URL}/#website`;
+// Same @id as the Organization markup on teevexa.com, so both sites describe one entity
+const TEEVEXA_ID = `${TEEVEXA.url}/#organization`;
 
 const personSchema = () => ({
   '@type': 'Person',
@@ -25,7 +27,7 @@ const personSchema = () => ({
   email: `mailto:${PERSON.email}`,
   address: { '@type': 'PostalAddress', addressLocality: 'Nairobi', addressCountry: 'KE' },
   sameAs: [...SOCIALS.map((s) => s.href), TEEVEXA.url],
-  founder: { '@type': 'Organization', name: TEEVEXA.name, url: TEEVEXA.url, foundingDate: '2026-03-03' },
+  worksFor: [{ '@type': 'Organization', name: 'Buzlin Holdings Inc', url: 'https://buzlin.ca' }, { '@id': TEEVEXA_ID }],
   alumniOf: [
     { '@type': 'CollegeOrUniversity', name: 'Technical University of Kenya' },
     { '@type': 'EducationalOrganization', name: 'Moringa School' },
@@ -50,6 +52,17 @@ const personSchema = () => ({
     'Search engine optimisation',
     'Digital marketing',
   ],
+});
+
+// Person has no `founder` property in schema.org; the founding link lives on the organisation
+const teevexaSchema = () => ({
+  '@type': 'Organization',
+  '@id': TEEVEXA_ID,
+  name: TEEVEXA.name,
+  url: TEEVEXA.url,
+  foundingDate: '2026-03-03',
+  founder: { '@id': PERSON_ID },
+  address: { '@type': 'PostalAddress', addressLocality: 'Nairobi', addressCountry: 'KE' },
 });
 
 const serviceSchema = () => ({
@@ -113,7 +126,7 @@ export function getRouteMeta(pathname) {
       canonical: `${SITE_URL}/`,
       image: DEFAULT_OG,
       type: 'profile',
-      jsonLd: [personSchema(), serviceSchema(), websiteSchema()],
+      jsonLd: [personSchema(), teevexaSchema(), serviceSchema(), websiteSchema()],
     };
   }
 
@@ -124,22 +137,32 @@ export function getRouteMeta(pathname) {
       const url = `${SITE_URL}/work/${study.slug}`;
       const image = study.image ? `${SITE_URL}${workImage(study.image, 1600)}` : DEFAULT_OG;
       return {
-        title: `${study.title} - Case Study | ${PERSON.name}`,
-        description: study.summary,
+        // Short search title and description per study, with safe fallbacks for new entries
+        title: study.seoTitle || `${study.shortName} Case Study | ${PERSON.name}`,
+        description: study.seoDescription || study.summary,
         canonical: url,
         image,
+        imageAlt: study.image ? study.imageAlt : undefined,
+        imageWidth: study.image ? 1600 : undefined,
+        imageHeight: study.image ? 900 : undefined,
         type: 'article',
         jsonLd: [
           {
             '@type': 'CreativeWork',
+            '@id': `${url}#casestudy`,
             name: study.title,
             headline: study.title,
             description: study.summary,
             url,
+            mainEntityOfPage: url,
             image,
             author: { '@id': PERSON_ID },
+            creator: { '@id': PERSON_ID },
+            isPartOf: { '@id': WEBSITE_ID },
             keywords: study.tech.join(', '),
             about: study.client,
+            inLanguage: 'en',
+            ...(study.updated ? { dateModified: study.updated } : {}),
           },
           breadcrumb([
             { name: 'Home', url: `${SITE_URL}/` },
@@ -147,6 +170,7 @@ export function getRouteMeta(pathname) {
             { name: study.title, url },
           ]),
           personSchema(),
+          teevexaSchema(),
         ],
       };
     }
@@ -166,12 +190,12 @@ export function getRouteMeta(pathname) {
 
   if (path === '/resume') {
     return {
-      title: `Resume - ${PERSON.name}`,
+      title: `${PERSON.name} Resume | Software Engineer, Nairobi, Kenya`,
       description: `Resume of ${PERSON.name}, ${PERSON.shortTitle} based in Nairobi, Kenya. View or download the PDF.`,
       canonical: `${SITE_URL}/resume`,
       image: DEFAULT_OG,
       type: 'profile',
-      jsonLd: [personSchema()],
+      jsonLd: [personSchema(), teevexaSchema()],
     };
   }
 
@@ -201,6 +225,49 @@ export function getRouteMeta(pathname) {
 // Indexable routes — drives prerendering and sitemap.xml
 export const PRERENDER_ROUTES = ['/', ...CASE_STUDIES.map((c) => `/work/${c.slug}`), '/resume'];
 
+// <lastmod> for the sitemap: only when a real content date is known (a case
+// study's `updated` field). A build date on every URL would teach search
+// engines to ignore the value.
+export function getLastModified(route) {
+  const m = route.match(/^\/work\/([^/]+)$/);
+  return (m && getCaseStudy(m[1])?.updated) || null;
+}
+
+/**
+ * /llms.txt: a plain-text summary of the site for AI tools (an emerging,
+ * optional convention; search engines do not require it). Generated from the
+ * same data as the pages so it never drifts from what the site says.
+ */
+export function renderLlmsTxt() {
+  const lines = [
+    `# ${PERSON.name}`,
+    '',
+    `> ${PERSON.name} is a software engineer and business technology consultant in ${PERSON.location}. He helps businesses build, automate and grow with technology. He is the lead software engineer at Buzlin Holdings Inc and the founder and lead software engineer of ${TEEVEXA.name}, through which larger projects are delivered.`,
+    '',
+    '## Services',
+    '',
+    ...PILLARS.map((p) => `- ${p.name}: ${p.what}`),
+    '',
+    '## Case studies',
+    '',
+    ...CASE_STUDIES.map((c) => `- [${c.shortName}](${SITE_URL}/work/${c.slug}): ${c.summary}`),
+    '',
+    '## Pages',
+    '',
+    `- [Home](${SITE_URL}/): services, selected work, background and contact`,
+    `- [Resume](${SITE_URL}/resume): experience, projects, skills and education`,
+    '',
+    '## Contact',
+    '',
+    `- Free 20-minute consultation: ${BOOKING_URL}`,
+    `- Request a quote: ${QUOTE_URL}`,
+    `- Email: ${PERSON.email}`,
+    `- Phone and WhatsApp: ${PERSON.phoneDisplay}`,
+    '',
+  ];
+  return lines.join('\n');
+}
+
 const esc = (s) =>
   String(s).replace(/&/g, '&amp;').replace(/</g, '&lt;').replace(/>/g, '&gt;').replace(/"/g, '&quot;');
 
@@ -220,18 +287,16 @@ export function renderHeadTags(meta) {
     `<meta property="og:title" content="${esc(meta.title)}" />`,
     `<meta property="og:description" content="${esc(meta.description)}" />`,
     `<meta property="og:image" content="${meta.image}" />`,
-    `<meta property="og:image:alt" content="${esc(`${PERSON.name} - ${PERSON.positioning}`)}" />`,
+    `<meta property="og:image:alt" content="${esc(meta.imageAlt || `${PERSON.name} - ${PERSON.positioning}`)}" />`,
     `<meta name="twitter:card" content="summary_large_image" />`,
     `<meta name="twitter:title" content="${esc(meta.title)}" />`,
     `<meta name="twitter:description" content="${esc(meta.description)}" />`,
     `<meta name="twitter:image" content="${meta.image}" />`,
   );
   if (meta.canonical) tags.push(`<meta property="og:url" content="${meta.canonical}" />`);
-  if (meta.image === DEFAULT_OG) {
-    tags.push(
-      `<meta property="og:image:width" content="1200" />`,
-      `<meta property="og:image:height" content="630" />`,
-    );
+  const [w, h] = meta.image === DEFAULT_OG ? [1200, 630] : [meta.imageWidth, meta.imageHeight];
+  if (w && h) {
+    tags.push(`<meta property="og:image:width" content="${w}" />`, `<meta property="og:image:height" content="${h}" />`);
   }
   if (meta.jsonLd?.length) {
     const graph = { '@context': 'https://schema.org', '@graph': meta.jsonLd };

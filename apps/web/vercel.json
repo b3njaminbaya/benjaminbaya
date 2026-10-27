@@ -52,9 +52,28 @@
       "source": "/work/ordo",
       "destination": "/#work",
       "permanent": false
+    },
+    {
+      "source": "/index.html",
+      "destination": "/",
+      "permanent": true
+    },
+    {
+      "source": "/:path*/index.html",
+      "destination": "/:path*",
+      "permanent": true
     }
   ],
   "headers": [
+    {
+      "source": "/resume.pdf",
+      "headers": [
+        {
+          "key": "Link",
+          "value": "<https://benjaminbaya.com/resume>; rel=\"canonical\""
+        }
+      ]
+    },
     {
       "source": "/Benjamin_Mweri_Baya_Resume.pdf",
       "headers": [
@@ -65,6 +84,10 @@
         {
           "key": "Content-Type",
           "value": "application/pdf"
+        },
+        {
+          "key": "X-Robots-Tag",
+          "value": "noindex"
         }
       ]
     },

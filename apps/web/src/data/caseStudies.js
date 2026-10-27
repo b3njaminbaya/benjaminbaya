@@ -16,6 +16,8 @@ export const CASE_STUDIES = [
     label: 'Agri-biotech · Kenya',
     client: 'Becof Organic Chemicals Limited',
     title: 'A commerce and operations platform for an agricultural biotech company',
+    // Search result title and description (keep under 60 and 155 characters)
+    seoTitle: 'Becof Organic Chemicals: E-commerce Platform | Benjamin Baya',
     summary:
       'Online sales with M-Pesa, distributor and farmer portals, expert consultations and growth tools: the digital backbone of an agricultural business.',
     pillars: ['Build', 'Automate', 'Grow'],
@@ -47,6 +49,10 @@ export const CASE_STUDIES = [
     label: 'Buzlin Holdings Inc · Marketplace · Canada',
     client: 'Buzlin Holdings Inc',
     title: 'Modernising a multi-vendor marketplace and service-booking platform',
+    // Search result title and description (keep under 60 and 155 characters)
+    seoTitle: 'Buzlin Marketplace Modernisation Case Study | Benjamin Baya',
+    seoDescription:
+      'How seven connected Buzlin apps (customer, seller, courier, POS, admin and API) were modernised, secured and published on three app stores.',
     summary:
       'Seven connected apps (customer web and mobile, seller, courier, POS, admin and API) taken from a licensed codebase to a hardened, rebranded production platform.',
     pillars: ['Build', 'Automate', 'Consult'],
@@ -78,6 +84,8 @@ export const CASE_STUDIES = [
     label: 'BuzRyde Inc · Ride-hailing · Canada',
     client: 'BuzRyde Inc, a subsidiary of Buzlin Holdings Inc',
     title: 'Rider, driver and operations systems for a Canadian ride-hailing service',
+    // Search result title and description (keep under 60 and 155 characters)
+    seoTitle: 'BuzRyde Ride-Hailing Apps and Admin Panel | Benjamin Baya',
     summary:
       'Rider and driver apps, an admin control panel with trust, support and growth tooling, and a bilingual, search-optimised website.',
     pillars: ['Build', 'Automate', 'Grow'],
@@ -107,6 +115,8 @@ export const CASE_STUDIES = [
     label: 'Client · Interior design · Kenya',
     client: 'Esteric Kitchens & Interior Designs Ltd',
     title: 'A marketing website and CRM for a kitchen and interior design company',
+    // Search result title and description (keep under 60 and 155 characters)
+    seoTitle: 'Esteric Kitchens Website and CRM Case Study | Benjamin Baya',
     summary:
       'A public site that turns visitors into quote requests, and an internal CRM that tracks every lead through to a finished project.',
     pillars: ['Build', 'Automate', 'Grow'],
@@ -136,6 +146,8 @@ export const CASE_STUDIES = [
     label: 'Client · Construction equipment · Kenya',
     client: 'Melamart Enterprises Limited',
     title: 'Website and hire-management system for a scaffolding company',
+    // Search result title and description (keep under 60 and 155 characters)
+    seoTitle: 'Melamart Website and Hire Management System | Benjamin Baya',
     summary:
       'A lead-focused website for two branches, and a secured, redesigned admin system for equipment hire, orders and overdue returns.',
     pillars: ['Build', 'Automate'],
@@ -165,6 +177,10 @@ export const CASE_STUDIES = [
     label: 'Teevexa product · Supply chain',
     client: 'Teevexa Ltd',
     title: 'Teevexa Trace - supply chain traceability from the field to the buyer',
+    // Search result title and description (keep under 60 and 155 characters)
+    seoTitle: 'Teevexa Trace: Supply Chain Traceability App | Benjamin Baya',
+    seoDescription:
+      'Two offline-first mobile apps and a public verification page that record each step of a product batch’s journey, from the field to the buyer.',
     summary:
       'Two mobile apps and a public verification page that record what happens to a product batch at every step, even with no signal, and let anyone check its journey.',
     pillars: ['Build', 'Automate'],
@@ -203,6 +219,10 @@ export const CASE_STUDIES = [
     label: 'Teevexa product · AI support',
     client: 'Teevexa Ltd',
     title: 'TeeDesk - AI customer support a business can run on its own servers',
+    // Search result title and description (keep under 60 and 155 characters)
+    seoTitle: 'TeeDesk: Open-Source AI Customer Support | Benjamin Baya',
+    seoDescription:
+      'An open-source AI support platform that answers customers on web chat, WhatsApp and Telegram from a business’s own documents, with human handover.',
     summary:
       'An open-source support platform that answers customers on a website, WhatsApp and Telegram from the business’s own documents, and hands over to a person when it isn’t sure.',
     pillars: ['Automate', 'Build'],
@@ -231,6 +251,8 @@ export const CASE_STUDIES = [
     label: 'Teevexa product · Business system',
     client: 'Teevexa Ltd',
     title: 'The Teevexa platform - one system to win and deliver client work',
+    // Search result title and description (keep under 60 and 155 characters)
+    seoTitle: 'Teevexa Platform: Client Portal and CRM | Benjamin Baya',
     summary:
       'The website, quote funnel, consultation booking, client portal and internal CRM that Teevexa runs on.',
     pillars: ['Build', 'Automate', 'Grow'],
@@ -261,6 +283,8 @@ export const CASE_STUDIES = [
     label: 'Personal build · AI',
     client: 'Product build',
     title: 'Tafsiri AI - machine translation for Kenya’s languages',
+    // Search result title and description (keep under 60 and 155 characters)
+    seoTitle: 'Tafsiri AI: Translation for Kenyan Languages | Benjamin Baya',
     summary:
       'Swahili, Somali and English translation on a fine-tunable neural model, with an active-learning loop that improves quality over time.',
     pillars: ['Build', 'Automate'],
