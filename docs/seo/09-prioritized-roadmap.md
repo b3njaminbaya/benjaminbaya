@@ -18,7 +18,7 @@
 1. Push the commit so the changes go live.
 2. Run `npm run indexnow --workspace=apps/web` once.
 3. Search Console: resubmit `sitemap.xml`; run the Rich Results Test on `/` and one case study.
-4. Set up Bing Webmaster Tools by importing from Search Console. It also feeds Copilot and other engines.
+4. ~~Set up Bing Webmaster Tools by importing from Search Console.~~ Done: benjaminbaya.com imported from Search Console.
 5. Check: `curl -I https://benjaminbaya.com/Benjamin_Mweri_Baya_Resume.pdf` shows `x-robots-tag: noindex`.
 6. Re-run Lighthouse or PageSpeed Insights on `/` (mobile) to record the post-change baseline.
 
