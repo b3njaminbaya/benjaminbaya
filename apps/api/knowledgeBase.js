@@ -64,7 +64,7 @@ const PORTFOLIO = {
     },
     {
       name: 'ArtisticBuz (Buzlin Holdings Inc product, my employer): hair transplant estimate and clinic referral platform',
-      description: 'Free graft and cost estimator with an interactive scalp map and PDF estimate, consultation requests with encrypted photo uploads, a patient portal, a lead pipeline that tracks referrals to partner clinics and calculates their 10% to 15% referral fees, bookings, Stripe deposits and instalments, and a content system in English, French, Swahili and Arabic. I am Head of Engineering at Buzlin Holdings, lead engineer on ArtisticBuz, and did most of the engineering; one other developer contributed to the early build. Lead and referral figures are internal.',
+      description: 'Free graft and cost estimator with an interactive scalp map and PDF estimate, consultation requests with encrypted photo uploads, a patient portal, a lead pipeline that tracks referrals to partner clinics and calculates their 10% to 15% referral fees, bookings, Stripe deposits and instalments, and a content system in English, French, Swahili and Arabic. As Head of Engineering at Buzlin Holdings I built most of the platform myself. Lead and referral figures are internal.',
       tech: ['Next.js', 'TypeScript', 'PostgreSQL', 'Stripe'],
       url: 'https://www.artisticbuz.com',
     },

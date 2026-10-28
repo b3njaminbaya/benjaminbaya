@@ -143,7 +143,7 @@ export const CASE_STUDIES = [
       'Rebuilt in October 2026 onto the company’s own server, with a PostgreSQL database, a separate admin panel and a partner network, and no paid third-party platforms.',
     ],
     role:
-      'Head of Engineering at Buzlin Holdings Inc, which owns ArtisticBuz, and lead engineer on the product. I did most of the engineering: the estimator and its scalp map, the content system, the security and payment hardening, and the rebuild onto the company’s own server. One other developer contributed to the early build.',
+      'Head of Engineering at Buzlin Holdings Inc, which owns ArtisticBuz: built most of the platform, including the estimator and its scalp map, the content system, the security and payment hardening, and the rebuild onto the company’s own server.',
     tech: ['Next.js', 'TypeScript', 'PostgreSQL', 'Drizzle ORM', 'Better Auth', 'Stripe', 'Tailwind CSS'],
     outcome:
       'Live at artisticbuz.com, with the admin panel on its own subdomain. Lead and referral figures are internal to Buzlin Holdings and aren’t published here.',
