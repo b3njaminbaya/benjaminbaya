@@ -6,8 +6,8 @@ import Container from '../ui/Container';
 
 const PROOF = [
   { k: 'Currently', v: 'Head of Engineering, Buzlin Holdings Inc' },
-  { k: 'Founder', v: 'Teevexa Ltd, as lead software engineer' },
-  { k: 'Background', v: 'B.Eng Chemical Engineering + software engineering' },
+  { k: 'Founder', v: 'Teevexa Ltd, a software and AI company' },
+  { k: 'Background', v: 'B.Eng Chemical Engineering · Software Engineering Certificate' },
 ];
 
 const Hero = () => (

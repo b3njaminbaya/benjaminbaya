@@ -30,9 +30,10 @@ const About = () => (
           </p>
           <p>
             I moved into software because it’s the most direct way I know to fix those bottlenecks. Today I am the
-            Head of Engineering at Buzlin Holdings, leading the developers behind its marketplace, ride-hailing and
-            health-tech products, and I help
-            businesses directly with technology strategy, custom software, AI-powered automation and digital growth.
+            Head of Engineering at Buzlin Holdings. I lead the developers and stay hands-on myself, from the
+            architecture and the code to shipping it: servers, CI/CD pipelines and app store releases for its
+            marketplace, ride-hailing and health-tech products. I also help businesses directly with technology
+            strategy, custom software, AI-powered automation and digital growth.
           </p>
           <p>
             What I care about is practical value: understanding the business first, being honest about what
@@ -105,6 +106,7 @@ const About = () => (
                   ) : (
                     t.org
                   )}
+                  {t.place && ` · ${t.place}`}
                 </p>
                 <p className="mt-2 text-[0.95rem] leading-relaxed text-muted">{t.body}</p>
               </li>
