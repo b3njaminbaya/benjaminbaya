@@ -247,7 +247,7 @@ export function renderLlmsTxt() {
   const lines = [
     `# ${PERSON.name}`,
     '',
-    `> ${PERSON.name} is a software engineer and business technology consultant in ${PERSON.location}. He helps businesses build, automate and grow with technology. He is the lead software engineer at Buzlin Holdings Inc and the founder and lead software engineer of ${TEEVEXA.name}, through which larger projects are delivered.`,
+    `> ${PERSON.name} is a software engineer and business technology consultant in ${PERSON.location}. He helps businesses build, automate and grow with technology. He is Head of Engineering at Buzlin Holdings Inc and the founder and lead software engineer of ${TEEVEXA.name}, through which larger projects are delivered.`,
     '',
     '## Services',
     '',

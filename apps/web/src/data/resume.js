@@ -7,10 +7,11 @@ export const RESUME = {
 
   experience: [
     {
-      role: 'Lead Software Engineer',
+      role: 'Head of Engineering',
       dates: 'Aug 2025 - Present',
       org: 'Buzlin Holdings Inc, Canada (remote)',
       points: [
+        'Lead all developers across the group’s products: Buzlin, BuzRyde and ArtisticBuz.',
         'Modernised Buzlin, a multi-vendor marketplace, across seven web and mobile apps.',
         'Overhauled the ride-hailing apps and admin panel of BuzRyde Inc, a subsidiary, including payments and payouts.',
         'Added email and phone OTP login, live booking tracking and a shared support chat.',

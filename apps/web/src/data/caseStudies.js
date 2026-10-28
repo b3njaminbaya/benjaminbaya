@@ -4,7 +4,7 @@
 //
 // kind: 'client'   → built for a client business
 //       'business' → platform built for a business that isn't presented as a client
-//       'employer' → product of Buzlin Holdings Inc, where I am the lead software engineer
+//       'employer' → product of Buzlin Holdings Inc, where I am Head of Engineering
 //       'teevexa'  → product of Teevexa Ltd, the company I founded
 //       'personal' → self-initiated product build
 
@@ -75,7 +75,7 @@ export const CASE_STUDIES = [
       'Payments built end to end: buyers pay for products and services by mobile money in Kenya and Tanzania (PesaPal), by bank through Stripe, or by PayPal, and sellers and couriers are paid out by bank, mobile money or PayPal.',
     ],
     role:
-      'Lead software engineer at Buzlin Holdings Inc: audits, architecture decisions and hands-on development across the Laravel API, Next.js storefront, React admin and four Flutter apps, and sole publisher of those apps on all three app stores.',
+      'Head of Engineering at Buzlin Holdings Inc: audits, architecture decisions and hands-on development across the Laravel API, Next.js storefront, React admin and four Flutter apps, and sole publisher of those apps on all three app stores.',
     tech: ['Laravel', 'PHP', 'Next.js', 'React', 'Flutter', 'Firebase', 'Stripe', 'PesaPal', 'PayPal', 'Amazon S3', 'GitHub Actions'],
     outcome:
       'Live at buzlin.ca with web and mobile apps. Usage figures are internal to Buzlin Holdings and aren’t published here.',
@@ -108,7 +108,7 @@ export const CASE_STUDIES = [
       'Redesigned the website with English/French localisation, a Sanity-powered blog and promotions CMS, dynamic sitemaps and indexing fixes, plus rider and driver web flows.',
     ],
     role:
-      'Lead software engineer at Buzlin Holdings Inc, which operates BuzRyde through its subsidiary BuzRyde Inc: took over and extended the existing mobile apps and control panel, and redesigned and built out the website.',
+      'Head of Engineering at Buzlin Holdings Inc, which operates BuzRyde through its subsidiary BuzRyde Inc: took over and extended the existing mobile apps and control panel, and redesigned and built out the website.',
     tech: ['Flutter', 'Firebase (Firestore, FCM)', 'Stripe', 'Google Maps', 'Laravel', 'React', 'Sanity CMS'],
     outcome:
       'The website is live at buzryde.com in English and French. Ride and user figures are internal to BuzRyde Inc and aren’t published here.',
@@ -143,7 +143,7 @@ export const CASE_STUDIES = [
       'Rebuilt in October 2026 onto the company’s own server, with a PostgreSQL database, a separate admin panel and a partner network, and no paid third-party platforms.',
     ],
     role:
-      'Lead software engineer at Buzlin Holdings Inc, which owns ArtisticBuz. I did most of the engineering: the estimator and its scalp map, the content system, the security and payment hardening, and the rebuild onto the company’s own server. One other developer contributed to the early build.',
+      'Head of Engineering at Buzlin Holdings Inc, which owns ArtisticBuz, and lead engineer on the product. I did most of the engineering: the estimator and its scalp map, the content system, the security and payment hardening, and the rebuild onto the company’s own server. One other developer contributed to the early build.',
     tech: ['Next.js', 'TypeScript', 'PostgreSQL', 'Drizzle ORM', 'Better Auth', 'Stripe', 'Tailwind CSS'],
     outcome:
       'Live at artisticbuz.com, with the admin panel on its own subdomain. Lead and referral figures are internal to Buzlin Holdings and aren’t published here.',

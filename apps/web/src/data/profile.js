@@ -21,10 +21,10 @@ export const TIMELINE = [
   },
   {
     period: 'Aug 2025 – Present',
-    title: 'Lead Software Engineer',
+    title: 'Head of Engineering',
     org: 'Buzlin Holdings Inc · Canada (remote)',
     current: true,
-    body: 'Lead engineer for the group’s two products: Buzlin, a marketplace and service-booking platform, and BuzRyde, a ride-hailing service run by the subsidiary BuzRyde Inc, across web, mobile, admin and API.',
+    body: 'Lead all developers across the group’s products, and lead engineer on Buzlin, a marketplace and service-booking platform, BuzRyde, a ride-hailing service run by the subsidiary BuzRyde Inc, and ArtisticBuz, a hair transplant estimate and clinic referral platform, across web, mobile, admin and API.',
   },
   {
     period: 'Mar 2026 – Present',
